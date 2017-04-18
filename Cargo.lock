@@ -3,6 +3,7 @@ name = "gameoflife"
 version = "0.1.0"
 dependencies = [
  "gtk 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "lazy_static 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "relm 0.6.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "relm-derive 0.1.4 (registry+https://github.com/rust-lang/crates.io-index)",
 ]

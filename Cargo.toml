@@ -7,3 +7,4 @@ authors = ["Do Duy <doduycm@gmail.com>"]
 gtk = "0.1.2"
 relm = "0.6.6"
 relm-derive = "0.1.2"
+lazy_static = "0.2.8"
