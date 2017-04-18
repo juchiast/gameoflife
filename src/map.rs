@@ -138,7 +138,6 @@ impl Map {
         for pos in new_dead {
             self.set_cell_dead(&pos);
         }
-        self.check();
     }
 
     /// Return list of alive cells within the rectangle from `top_left`
