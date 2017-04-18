@@ -1,16 +1,14 @@
 use ::std::collections::BTreeMap;
+use ::std::collections::BTreeSet;
+
+const DX: [i32; 8] = [-1, 0, 1, -1, 1, -1, 0, 1];
+const DY: [i32; 8] = [-1, -1, -1, 0, 0, 1, 1, 1];
 
 #[derive(Eq, Ord, PartialEq, PartialOrd)]
 #[derive(Clone)]
 pub struct Pos {
     pub x: i32,
     pub y: i32,
-}
-
-pub struct Map {
-    cells: BTreeMap<Pos, u8>,
-    changed: Vec<Pos>,
-    state_eval_table: [u8; 256],
 }
 
 /// Return new position from `x` and `y`
@@ -22,13 +20,40 @@ pub fn pos(x: i32, y: i32) -> Pos {
     }
 }
 
+struct Neighbors{
+    origin: Pos,
+    i: usize,
+}
+
+fn neighbors(origin: &Pos) -> Neighbors {
+    Neighbors {
+        origin: origin.clone(),
+        i: 0,
+    }
+}
+
+impl Iterator for Neighbors {
+    type Item = (Pos, usize);
+    fn next(&mut self) -> Option<Self::Item> {
+        if self.i >= 8 { None }
+        else {
+            self.i += 1;
+            let j = self.i - 1;
+            Some( (pos(self.origin.x+DX[j], self.origin.y+DY[j]), j) )
+        }
+    }
+}
+
+pub struct Map {
+    pub neighbors_state: BTreeMap<Pos, u8>,
+    alive_cells: BTreeSet<Pos>,
+    state_eval_table: [u8; 256],
+}
+
 fn new_state_eval_table() -> [u8; 256] {
     let mut result = [0; 256];
     for i in 0..256 {
-        let mut count: usize = 0;
-        for k in 0..8 {
-            count += (i>>k)&1;
-        }
+        let mut count = usize::count_ones(i);
         if count == 3 { result[i] = 2; }
         else if count == 2 {result[i] = 1; }
     }
@@ -36,11 +61,36 @@ fn new_state_eval_table() -> [u8; 256] {
 }
 
 impl Map {
+    pub fn print(&self) {
+        let vec: Vec<_> = self.alive_cells.iter().map(|pos| (pos.x, pos.y)).collect();
+        println!("{:?}", vec);
+    }
+
+    pub fn is_empty(&self) -> bool {
+        self.alive_cells.is_empty()
+    }
+
+    pub fn count_alive_cells(&self) -> usize {
+        self.alive_cells.len()
+    }
+
+    pub fn check(&self) {
+        for (pos, state) in &self.neighbors_state {
+            let mut new = 0;
+            for (nei, i) in neighbors(&pos) {
+                if self.cell_is_alive(&nei) {
+                    new |= 1<<i;
+                }
+            }
+            assert_eq!(new, *state);
+        }
+    }
+
     /// Return a new empty map
     pub fn new() -> Map {
         Map {
-            cells: BTreeMap::new(),
-            changed: Vec::new(),
+            neighbors_state: BTreeMap::new(),
+            alive_cells: BTreeSet::new(),
             state_eval_table: new_state_eval_table(),
         }
     }
@@ -55,28 +105,74 @@ impl Map {
     }
 
     /// Generate next generation
-    pub fn next_generation(&mut self) {}
+    pub fn next_generation(&mut self) {
+        let new_alive = self.neighbors_state.iter().filter_map(|(pos, state)| {
+            if self.eval_state(*state) == 2 {
+                Some(pos.clone())
+            } else { None }
+        }).collect::<Vec<_>>();
+        let new_dead = self.neighbors_state.iter().filter_map(|(pos, state)| {
+            if self.eval_state(*state) == 0 {
+                Some(pos.clone())
+            } else { None }
+        }).collect::<Vec<_>>();
+
+        for pos in new_alive {
+            self.set_cell_alive(&pos);
+        }
+        for pos in new_dead {
+            self.set_cell_dead(&pos);
+        }
+        self.check();
+    }
 
     /// Return list of alive cells within the rectangle from `top_left`
     /// to `bottom_right`
     pub fn get_alive_cells_in(&self, top_left: Pos, bottom_right: Pos) -> Vec<Pos> {
-        self.cells.iter().filter(|&(pos, state)| {
-            self.eval_state(*state) != 0 &&
+        self.alive_cells.iter().filter(|&pos| {
             top_left.x <= pos.x && pos.x <= bottom_right.x &&
             top_left.y <= pos.y && pos.y <= bottom_right.y
-        }).map(|(pos, _)| pos.clone()).collect()
+        }).cloned().collect()
     }
 
     /// Force a cell to be alive
-    pub fn set_cell_alive(&mut self, pos: &Pos) {}
+    pub fn set_cell_alive(&mut self, pos: &Pos) {
+        if self.alive_cells.insert(pos.clone()) {
+            let mut new_state = 0;
+            for (nei, i) in neighbors(pos) {
+                if self.cell_is_alive(&nei) {
+                    new_state |= 1<<i;
+                }
+                let state = self.neighbors_state.entry(nei).or_insert(0);
+                *state |= 1<<(7^i);
+            }
+            let mut state = self.neighbors_state.entry(pos.clone()).or_insert(0);
+            *state = new_state;
+        }
+    }
 
     /// Kill a cell
-    pub fn set_cell_dead(&mut self, pos: &Pos) {}
+    pub fn set_cell_dead(&mut self, pos: &Pos) {
+        if self.alive_cells.remove(pos) {
+            for (nei, i) in neighbors(pos) {
+                let mut rm = false;
+                if let Some(mut state) = self.neighbors_state.get_mut(&nei) {
+                    *state &= !(1<<(7^i));
+                    if *state == 0 {
+                        rm = true;
+                    }
+                }
+                if rm {
+                    self.neighbors_state.remove(&nei);
+                }
+            }
+        }
+    }
 
     /// Check if a cell is alive or not
     #[inline]
     pub fn cell_is_alive(&self, pos: &Pos) -> bool {
-        self.cells.contains_key(pos) && self.eval_state(self.cells[pos]) != 0
+        self.alive_cells.contains(pos)
     }
 
     #[inline]
