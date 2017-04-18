@@ -1,0 +1,9 @@
+[package]
+name = "gameoflife"
+version = "0.1.0"
+authors = ["Do Duy <doduycm@gmail.com>"]
+
+[dependencies]
+gtk = "0.1.2"
+relm = "0.6.6"
+relm-derive = "0.1.2"
