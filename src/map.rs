@@ -20,12 +20,12 @@ pub fn pos(x: i32, y: i32) -> Pos {
     }
 }
 
-struct Neighbors{
+pub struct Neighbors{
     origin: Pos,
     i: usize,
 }
 
-fn neighbors(origin: &Pos) -> Neighbors {
+pub fn neighbors(origin: &Pos) -> Neighbors {
     Neighbors {
         origin: origin.clone(),
         i: 0,
@@ -55,7 +55,7 @@ fn new_state_eval_table() -> [u8; 256] {
     for i in 0..256 {
         let mut count = usize::count_ones(i);
         if count == 3 { result[i] = 2; }
-        else if count == 2 {result[i] = 1; }
+        else if count == 2 { result[i] = 1; }
     }
     result
 }
@@ -82,7 +82,22 @@ impl Map {
                     new |= 1<<i;
                 }
             }
+            //assert!(new != 0);
             assert_eq!(new, *state);
+        }
+
+        for pos in &self.alive_cells {
+            for (pos, _) in neighbors(&pos) {
+                let state = self.neighbors_state[&pos];
+                let mut new = 0;
+                for (nei, i) in neighbors(&pos) {
+                    if self.cell_is_alive(&nei) {
+                        new |= 1<<i;
+                    }
+                }
+                //assert!(new != 0);
+                assert_eq!(new, state);
+            }
         }
     }
 
@@ -162,7 +177,7 @@ impl Map {
                         rm = true;
                     }
                 }
-                if rm {
+                if rm && !self.cell_is_alive(&nei) {
                     self.neighbors_state.remove(&nei);
                 }
             }
