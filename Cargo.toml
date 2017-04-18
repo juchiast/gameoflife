@@ -6,6 +6,7 @@ authors = ["Do Duy <doduycm@gmail.com>"]
 [dependencies]
 relm = "0.6.6"
 relm-derive = "0.1.2"
+tokio-core = "0.1.6"
 
 [dependencies.gtk]
 version = "0.1.2"

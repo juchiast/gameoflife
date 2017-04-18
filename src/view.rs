@@ -2,14 +2,17 @@ use ::*;
 use relm::{Relm, RemoteRelm, Widget};
 use gtk::prelude::*;
 use gtk::{Window, WindowType, DrawingArea, Button, ScrolledWindow};
+use tokio_core::reactor::Interval;
+use std::time::Duration;
 
 use map::*;
 
 #[derive(Clone)]
 pub struct Model {}
 
-#[derive(Msg)]
+#[derive(SimpleMsg)]
 pub enum Msg {
+    Tick,
     Quit,
 }
 
@@ -41,13 +44,21 @@ impl Widget for Win {
         }
     }
 
+    fn subscriptions(relm: &Relm<Msg>) {
+        let stream = Interval::new(Duration::from_secs(1), relm.handle()).unwrap();
+        relm.connect_exec_ignore_err(stream, Msg::Tick);
+    }
+
     fn update(&mut self, event: Msg, _model: &mut Model) {
         match event {
+            Tick => {
+                println!("asdf");
+            }
             Quit => gtk::main_quit()
         }
     }
 
-    fn view(relm: RemoteRelm<Msg>, _model: &Self::Model) -> Self {
+    fn view(relm: RemoteRelm<Msg>, model: &Self::Model) -> Self {
         let window = Window::new(WindowType::Toplevel);
         let hbox = gtk::Box::new(gtk::Orientation::Horizontal, 0);
         let button_box = gtk::ButtonBox::new(gtk::Orientation::Vertical);
@@ -92,4 +103,3 @@ impl Widget for Win {
         }
     }
 }
-
