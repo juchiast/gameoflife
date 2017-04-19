@@ -3,7 +3,7 @@ name = "gameoflife"
 version = "0.1.0"
 dependencies = [
  "gtk 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "relm 0.6.6 (registry+https://github.com/rust-lang/crates.io-index)",
+ "relm 0.7.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "relm-derive 0.1.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "tokio-core 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -355,7 +355,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "relm"
-version = "0.6.6"
+version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "futures 0.1.13 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -512,7 +512,7 @@ dependencies = [
 "checksum pango-sys 0.3.3 (registry+https://github.com/rust-lang/crates.io-index)" = "f29f64bc081e778cb897e3ef20aae178150d165d0eb77065b9e20437407c5546"
 "checksum pkg-config 0.3.9 (registry+https://github.com/rust-lang/crates.io-index)" = "3a8b4c6b8165cd1a1cd4b9b120978131389f64bdaf456435caa41e630edba903"
 "checksum quote 0.3.15 (registry+https://github.com/rust-lang/crates.io-index)" = "7a6e920b65c65f10b2ae65c831a81a073a89edd28c7cce89475bff467ab4167a"
-"checksum relm 0.6.6 (registry+https://github.com/rust-lang/crates.io-index)" = "4b179cd8fde7dca250907da89247742576d9071342838c5a410bc63443720930"
+"checksum relm 0.7.0 (registry+https://github.com/rust-lang/crates.io-index)" = "47861f2413cda768f05dc02eb99e0e047e6878287119ffa09587f2f7fe628abb"
 "checksum relm-core 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)" = "10cbe302238e13c194b2b0175a5262de9f5f7e33b8f39e0541ea0473f998e13c"
 "checksum relm-derive 0.1.4 (registry+https://github.com/rust-lang/crates.io-index)" = "cd3e00d219586bc49bbeadd15cdb27a8314dae8966ca0235089c939ffc7701a9"
 "checksum relm-gen-widget 0.1.8 (registry+https://github.com/rust-lang/crates.io-index)" = "0cff5d4d31167fa146215c3095164e8d93deaf8be6773d6d56597351c00c7dc7"

@@ -10,6 +10,8 @@ use map::*;
 #[derive(Clone)]
 pub struct Model {}
 
+use self::Msg::*;
+
 #[derive(SimpleMsg)]
 pub enum Msg {
     Tick,
@@ -31,25 +33,25 @@ pub struct Win {
 }
 
 impl Widget for Win {
-    type Container = Window;
+    type Root = Window;
     type Model = Model;
     type Msg = Msg;
 
-    fn container(&self) -> &Self::Container {
+    fn root(&self) -> &Self::Root {
         &self.window
     }
 
-    fn model() -> Model {
+    fn model() -> Self::Model {
         Model {
         }
     }
 
     fn subscriptions(relm: &Relm<Msg>) {
         let stream = Interval::new(Duration::from_secs(1), relm.handle()).unwrap();
-        relm.connect_exec_ignore_err(stream, Msg::Tick);
+        relm.connect_exec_ignore_err(stream, Tick);
     }
 
-    fn update(&mut self, event: Msg, _model: &mut Model) {
+    fn update(&mut self, event: Msg, _model: &mut Self::Model) {
         match event {
             Tick => {
                 println!("asdf");

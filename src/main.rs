@@ -1,5 +1,4 @@
-#![feature(unboxed_closures)]
-#![feature(fn_traits)]
+#![feature(fn_traits, unboxed_closures)]
 
 extern crate gtk;
 #[macro_use]
