@@ -10,8 +10,6 @@ use map::*;
 #[derive(Clone)]
 pub struct Model {}
 
-use self::Msg::*;
-
 #[derive(SimpleMsg)]
 pub enum Msg {
     Tick,
@@ -48,15 +46,15 @@ impl Widget for Win {
 
     fn subscriptions(relm: &Relm<Msg>) {
         let stream = Interval::new(Duration::from_secs(1), relm.handle()).unwrap();
-        relm.connect_exec_ignore_err(stream, Tick);
+        relm.connect_exec_ignore_err(stream, Msg::Tick);
     }
 
     fn update(&mut self, event: Msg, _model: &mut Self::Model) {
         match event {
-            Tick => {
+            Msg::Tick => {
                 println!("asdf");
             }
-            Quit => gtk::main_quit()
+            Msg::Quit => gtk::main_quit()
         }
     }
 
