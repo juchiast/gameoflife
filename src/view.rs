@@ -10,6 +10,10 @@ use map::*;
 #[derive(Clone)]
 pub struct Model {}
 
+#[derive(Clone)]
+pub struct CairoSurface(cairo::Surface);
+unsafe impl Send for CairoSurface {}
+
 #[derive(SimpleMsg)]
 pub enum Msg {
     Tick,
@@ -40,25 +44,28 @@ impl Widget for Win {
     }
 
     fn model() -> Self::Model {
-        Model {
-        }
+        Model {}
     }
 
     fn subscriptions(relm: &Relm<Msg>) {
-        let stream = Interval::new(Duration::from_secs(1), relm.handle()).unwrap();
+        let stream = Interval::new(Duration::from_millis(50), relm.handle()).unwrap();
         relm.connect_exec_ignore_err(stream, Msg::Tick);
     }
 
     fn update(&mut self, event: Msg, _model: &mut Self::Model) {
         match event {
             Msg::Tick => {
-                println!("asdf");
-            }
-            Msg::Quit => gtk::main_quit()
+                use gdk::prelude::ContextExt;
+                let cr = cairo::Context::create_from_window(&self.area.get_window().unwrap());
+                cr.set_source_rgb(0., 0., 0.);
+                cr.paint();
+            },
+            Msg::Quit => gtk::main_quit(),
+            _ => {},
         }
     }
 
-    fn view(relm: RemoteRelm<Msg>, model: &Self::Model) -> Self {
+    fn view(relm: RemoteRelm<Msg>, _model: &Self::Model) -> Self {
         let window = Window::new(WindowType::Toplevel);
         let hbox = gtk::Box::new(gtk::Orientation::Horizontal, 0);
         let button_box = gtk::ButtonBox::new(gtk::Orientation::Vertical);
@@ -73,10 +80,8 @@ impl Widget for Win {
         scroller.set_size_request(600, 600);
         // disable auto-hide scrollbar
         scroller.set_overlay_scrolling(false);
-
-        connect!(relm, window, connect_delete_event(_, _) (Some(Msg::Quit), Inhibit(false)));
-
         button_box.set_layout(gtk::ButtonBoxStyle::Start);
+
         button_box.pack_start(&pause_button, false, false, 0);
         button_box.pack_start(&next_button, false, false, 0);
         button_box.pack_start(&random_button, false, false, 0);
@@ -89,6 +94,36 @@ impl Widget for Win {
         window.add(&hbox);
         window.set_title("Game of Life");
         window.show_all();
+
+        connect!(relm, window, connect_delete_event(_, _) (Some(Msg::Quit), Inhibit(false)));
+
+        //connect!(relm, area, connect_draw(_, cr) (Some(Msg::Draw(CairoContext(cr.clone()))), Inhibit(true)));
+        /*
+        {
+            let stream = relm.stream().clone();
+            area.connect_draw(move |this, cr| {
+                let (msg, return_value) = {
+                    let cr = CairoContext(cr.clone());
+                    (Some(Msg::Draw(cr)), Inhibit(true))
+                };
+                let msg: Option<_> = msg.into();
+                if let Some(msg) = msg {
+                    println!("Before Emit");
+                    stream.emit(msg);
+                    println!("After Emit");
+                }
+                return_value
+            });
+        }
+        */
+        /*
+        area.connect_draw(move |_, cr| {
+            cr.set_source_surface();
+            cr.set_source_rgb(0.5, 0.5, 0.5);
+            cr.paint();
+            Inhibit(true)
+        });
+        */
         Win {
             hbox: hbox,
             button_box: button_box,

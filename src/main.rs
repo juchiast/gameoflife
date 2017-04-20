@@ -1,6 +1,8 @@
 #![feature(fn_traits, unboxed_closures)]
 
 extern crate gtk;
+extern crate gdk;
+extern crate cairo;
 #[macro_use]
 extern crate relm;
 #[macro_use]

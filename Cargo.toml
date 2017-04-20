@@ -7,6 +7,8 @@ authors = ["Do Duy <doduycm@gmail.com>"]
 relm = "0.7.0"
 relm-derive = "0.1.2"
 tokio-core = "0.1.6"
+cairo-rs = "0.1.2"
+gdk = "0.5.2"
 
 [dependencies.gtk]
 version = "0.1.2"
