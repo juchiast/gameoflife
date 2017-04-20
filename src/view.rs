@@ -97,33 +97,6 @@ impl Widget for Win {
 
         connect!(relm, window, connect_delete_event(_, _) (Some(Msg::Quit), Inhibit(false)));
 
-        //connect!(relm, area, connect_draw(_, cr) (Some(Msg::Draw(CairoContext(cr.clone()))), Inhibit(true)));
-        /*
-        {
-            let stream = relm.stream().clone();
-            area.connect_draw(move |this, cr| {
-                let (msg, return_value) = {
-                    let cr = CairoContext(cr.clone());
-                    (Some(Msg::Draw(cr)), Inhibit(true))
-                };
-                let msg: Option<_> = msg.into();
-                if let Some(msg) = msg {
-                    println!("Before Emit");
-                    stream.emit(msg);
-                    println!("After Emit");
-                }
-                return_value
-            });
-        }
-        */
-        /*
-        area.connect_draw(move |_, cr| {
-            cr.set_source_surface();
-            cr.set_source_rgb(0.5, 0.5, 0.5);
-            cr.paint();
-            Inhibit(true)
-        });
-        */
         Win {
             hbox: hbox,
             button_box: button_box,
