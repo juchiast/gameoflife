@@ -12,10 +12,6 @@ pub struct Model {
     map: Map,
 }
 
-#[derive(Clone)]
-pub struct CairoSurface(cairo::Surface);
-unsafe impl Send for CairoSurface {}
-
 #[derive(SimpleMsg)]
 pub enum Msg {
     Tick,
@@ -47,7 +43,7 @@ impl Widget for Win {
 
     fn model() -> Self::Model {
         Model {
-            map: acorn(),
+            map: blom(),
         }
     }
 

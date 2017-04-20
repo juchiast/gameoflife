@@ -203,6 +203,15 @@ pub fn acorn() -> Map {
     Map::new_from_alive_list(&list)
 }
 
+/// Blom methuselah
+pub fn blom() -> Map {
+    let list = [pos(1, 1), pos(12, 1),
+    pos(2, 2), pos(3, 2), pos(4, 2), pos(5, 2), pos(12, 2),
+    pos(3, 3), pos(4, 3), pos(12, 3),
+    pos(11, 4), pos(11, 5), pos(9, 5)];
+    Map::new_from_alive_list(&list)
+}
+
 #[test]
 #[ignore]
 fn test_with_acorn() {
