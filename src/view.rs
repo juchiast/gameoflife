@@ -47,7 +47,7 @@ impl Widget for Win {
 
     fn model() -> Self::Model {
         Model {
-            map: chaos(),
+            map: acorn(),
         }
     }
 
@@ -72,7 +72,6 @@ impl Widget for Win {
                 cr.fill();
             },
             Msg::Quit => gtk::main_quit(),
-            _ => {},
         }
     }
 

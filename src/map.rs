@@ -61,20 +61,15 @@ impl Clone for Map {
 
 fn new_state_eval_table() -> [u8; 256] {
     let mut result = [0; 256];
-    for i in 0..256 {
-        let mut count = usize::count_ones(i);
-        if count == 3 { result[i] = 2; }
-        else if count == 2 { result[i] = 1; }
+    for (i, x) in result.iter_mut().enumerate() {
+        let count = usize::count_ones(i);
+        if count == 3 { *x = 2; }
+        else if count == 2 { *x = 1; }
     }
     result
 }
 
 impl Map {
-    pub fn print(&self) {
-        let vec: Vec<_> = self.alive_cells.iter().map(|pos| (pos.x, pos.y)).collect();
-        println!("{:?}", vec);
-    }
-
     pub fn is_empty(&self) -> bool {
         self.alive_cells.is_empty()
     }
@@ -86,17 +81,16 @@ impl Map {
     pub fn check(&self) {
         for (pos, state) in &self.neighbors_state {
             let mut new = 0;
-            for (nei, i) in neighbors(&pos) {
+            for (nei, i) in neighbors(pos) {
                 if self.cell_is_alive(&nei) {
                     new |= 1<<i;
                 }
             }
-            //assert!(new != 0);
             assert_eq!(new, *state);
         }
 
         for pos in &self.alive_cells {
-            for (pos, _) in neighbors(&pos) {
+            for (pos, _) in neighbors(pos) {
                 let state = self.neighbors_state[&pos];
                 let mut new = 0;
                 for (nei, i) in neighbors(&pos) {
@@ -104,7 +98,6 @@ impl Map {
                         new |= 1<<i;
                     }
                 }
-                //assert!(new != 0);
                 assert_eq!(new, state);
             }
         }
@@ -123,7 +116,7 @@ impl Map {
     pub fn new_from_alive_list(list: &[Pos]) -> Map {
         let mut result = Map::new();
         for pos in list {
-            result.set_cell_alive(&pos);
+            result.set_cell_alive(pos);
         }
         result
     }
@@ -204,17 +197,29 @@ impl Map {
     }
 }
 
-pub fn chaos() -> Map {
+/// Acorn methuselah
+pub fn acorn() -> Map {
     let list = [pos(3, 2), pos(5, 3), pos(2, 4), pos(3, 4), pos(6, 4), pos(7, 4), pos(8, 4)];
     Map::new_from_alive_list(&list)
 }
 
-fn map_test() {
-    let mut map = chaos();
+#[test]
+#[ignore]
+fn test_with_acorn() {
+    let mut map = acorn();
     let mut i = 0;
-    while !map.is_empty() {
+    let mut max_population = 0;
+    let mut max_generation = 0;
+    while i<=6000 {
+        assert!(i<5206 || map.count_alive_cells()==633);
+        if map.count_alive_cells() > max_population {
+            max_population = map.count_alive_cells();
+            max_generation = i;
+        }
         i+=1;
         map.next_generation();
-        println!("{} {} {}", i, map.count_alive_cells(), map.neighbors_state.len());
+        map.check();
     }
+    assert_eq!(max_population, 1057);
+    assert_eq!(max_generation, 4408);
 }
