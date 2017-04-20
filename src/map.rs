@@ -45,9 +45,18 @@ impl Iterator for Neighbors {
 }
 
 pub struct Map {
-    pub neighbors_state: BTreeMap<Pos, u8>,
-    alive_cells: BTreeSet<Pos>,
+    neighbors_state: BTreeMap<Pos, u8>,
+    pub alive_cells: BTreeSet<Pos>,
     state_eval_table: [u8; 256],
+}
+impl Clone for Map {
+    fn clone(&self) -> Map {
+        Map {
+            neighbors_state: self.neighbors_state.clone(),
+            alive_cells: self.alive_cells.clone(),
+            state_eval_table: self.state_eval_table,
+        }
+    }
 }
 
 fn new_state_eval_table() -> [u8; 256] {
@@ -195,9 +204,13 @@ impl Map {
     }
 }
 
-fn map_test() {
+pub fn chaos() -> Map {
     let list = [pos(3, 2), pos(5, 3), pos(2, 4), pos(3, 4), pos(6, 4), pos(7, 4), pos(8, 4)];
-    let mut map = Map::new_from_alive_list(&list);
+    Map::new_from_alive_list(&list)
+}
+
+fn map_test() {
+    let mut map = chaos();
     let mut i = 0;
     while !map.is_empty() {
         i+=1;

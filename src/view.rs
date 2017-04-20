@@ -8,7 +8,9 @@ use std::time::Duration;
 use map::*;
 
 #[derive(Clone)]
-pub struct Model {}
+pub struct Model {
+    map: Map,
+}
 
 #[derive(Clone)]
 pub struct CairoSurface(cairo::Surface);
@@ -44,21 +46,30 @@ impl Widget for Win {
     }
 
     fn model() -> Self::Model {
-        Model {}
+        Model {
+            map: chaos(),
+        }
     }
 
     fn subscriptions(relm: &Relm<Msg>) {
-        let stream = Interval::new(Duration::from_millis(50), relm.handle()).unwrap();
+        let stream = Interval::new(Duration::from_millis(30), relm.handle()).unwrap();
         relm.connect_exec_ignore_err(stream, Msg::Tick);
     }
 
-    fn update(&mut self, event: Msg, _model: &mut Self::Model) {
+    fn update(&mut self, event: Msg, model: &mut Self::Model) {
         match event {
             Msg::Tick => {
+                model.map.next_generation();
                 use gdk::prelude::ContextExt;
                 let cr = cairo::Context::create_from_window(&self.area.get_window().unwrap());
-                cr.set_source_rgb(0., 0., 0.);
+                cr.set_source_rgb(1., 1., 1.);
                 cr.paint();
+                cr.scale(2., 2.);
+                cr.set_source_rgb(0., 0., 0.);
+                for pos in &model.map.alive_cells {
+                    cr.rectangle(pos.x as f64+100., pos.y as f64+100., 1., 1.);
+                }
+                cr.fill();
             },
             Msg::Quit => gtk::main_quit(),
             _ => {},
