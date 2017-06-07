@@ -13,5 +13,6 @@ mod map;
 mod view;
 
 fn main() {
+    std::env::set_var("GDK_BACKEND", "x11");
     relm::run::<view::Win>().unwrap();
 }

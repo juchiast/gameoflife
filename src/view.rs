@@ -28,7 +28,6 @@ pub struct Win {
     zoom_in_button: Button,
     zoom_out_button: Button,
     area: DrawingArea,
-    scroller: ScrolledWindow,
     window: Window,
 }
 
@@ -82,10 +81,7 @@ impl Widget for Win {
         let zoom_in_button = Button::new_with_label("Zoom in");
         let zoom_out_button = Button::new_with_label("Zoom out");
         let area = DrawingArea::new();
-        let scroller = ScrolledWindow::new(None, None);
-        scroller.set_size_request(600, 600);
-        // disable auto-hide scrollbar
-        scroller.set_overlay_scrolling(false);
+        area.set_size_request(500, 500);
         button_box.set_layout(gtk::ButtonBoxStyle::Start);
 
         button_box.pack_start(&pause_button, false, false, 0);
@@ -94,8 +90,7 @@ impl Widget for Win {
         button_box.pack_start(&clear_button, false, false, 0);
         button_box.pack_start(&zoom_in_button, false, false, 0);
         button_box.pack_start(&zoom_out_button, false, false, 0);
-        scroller.add(&area);
-        hbox.pack_start(&scroller, false, false, 0);
+        hbox.pack_start(&area, false, false, 0);
         hbox.pack_start(&button_box, false, false, 0);
         window.add(&hbox);
         window.set_title("Game of Life");
@@ -112,7 +107,6 @@ impl Widget for Win {
             zoom_in_button: zoom_in_button,
             zoom_out_button: zoom_out_button,
             area: area,
-            scroller: scroller,
             window: window,
         }
     }
