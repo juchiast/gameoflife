@@ -9,6 +9,9 @@ relm-derive = "0.1.2"
 tokio-core = "0.1.6"
 cairo-rs = "0.1.2"
 gdk = "0.5.2"
+serde = "1.0.8"
+serde_json = "1.0.2"
+serde_derive = "1.0.8"
 
 [dependencies.gtk]
 version = "0.1.2"

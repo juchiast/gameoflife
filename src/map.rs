@@ -1,11 +1,13 @@
-use ::std::collections::BTreeMap;
-use ::std::collections::BTreeSet;
+use ::*;
+use std::collections::BTreeMap;
+use std::collections::BTreeSet;
+use std::path::Path;
 
 const DX: [i32; 8] = [-1, 0, 1, -1, 1, -1, 0, 1];
 const DY: [i32; 8] = [-1, -1, -1, 0, 0, 1, 1, 1];
 
-#[derive(Eq, Ord, PartialEq, PartialOrd)]
-#[derive(Clone)]
+#[derive(Eq, Ord, PartialEq, PartialOrd, Clone)]
+#[derive(Deserialize, Serialize)]
 pub struct Pos {
     pub x: i32,
     pub y: i32,
@@ -49,27 +51,50 @@ pub struct Map {
     pub alive_cells: BTreeSet<Pos>,
     state_eval_table: [u8; 256],
 }
-impl Clone for Map {
-    fn clone(&self) -> Map {
-        Map {
-            neighbors_state: self.neighbors_state.clone(),
-            alive_cells: self.alive_cells.clone(),
-            state_eval_table: self.state_eval_table,
-        }
-    }
-}
-
-fn new_state_eval_table() -> [u8; 256] {
-    let mut result = [0; 256];
-    for (i, x) in result.iter_mut().enumerate() {
-        let count = usize::count_ones(i);
-        if count == 3 { *x = 2; }
-        else if count == 2 { *x = 1; }
-    }
-    result
-}
 
 impl Map {
+    /// Acorn methuselah
+    pub fn acorn() -> Map {
+        let list = [pos(3, 2), pos(5, 3), pos(2, 4), pos(3, 4), pos(6, 4), pos(7, 4), pos(8, 4)];
+        Map::new_from_alive_list(&list)
+    }
+
+    /// Blom methuselah
+    pub fn blom() -> Map {
+        let list = [pos(1, 1), pos(12, 1),
+        pos(2, 2), pos(3, 2), pos(4, 2), pos(5, 2), pos(12, 2),
+        pos(3, 3), pos(4, 3), pos(12, 3),
+        pos(11, 4), pos(11, 5), pos(9, 5)];
+        Map::new_from_alive_list(&list)
+    }
+    pub fn save<P: AsRef<Path>>(&self, path: P) -> std::io::Result<()> {
+        use std::fs;
+        use std::io::Write;
+        use std::io::BufWriter;
+        let file = fs::File::create(path)?;
+        let mut writer = BufWriter::new(file);
+        for x in &self.alive_cells {
+            if let Ok(mut s) = serde_json::to_string(x) {
+                s.push('\n');
+                writer.write_all(s.as_bytes())?;
+            }
+        }
+        Ok(())
+    }
+    pub fn open<P: AsRef<Path>>(path: P) -> std::io::Result<Map> {
+        use std::fs;
+        use std::io::Read;
+        let mut contents = String::new();
+        let mut file = fs::File::open(path)?;
+        file.read_to_string(&mut contents)?;
+        let mut map = Map::new();
+        for line in contents.lines() {
+            if let Ok(pos) = serde_json::from_str::<Pos>(line) {
+                map.set_cell_alive(&pos);
+            }
+        }
+        Ok(map)
+    }
     pub fn is_empty(&self) -> bool {
         self.alive_cells.is_empty()
     }
@@ -113,7 +138,8 @@ impl Map {
     }
 
     /// Return a new map from list of alive cells
-    pub fn new_from_alive_list(list: &[Pos]) -> Map {
+    pub fn new_from_alive_list<'a, I>(list: I) -> Map
+    where I: IntoIterator<Item=&'a Pos> {
         let mut result = Map::new();
         for pos in list {
             result.set_cell_alive(pos);
@@ -144,11 +170,11 @@ impl Map {
 
     /// Return list of alive cells within the rectangle from `top_left`
     /// to `bottom_right`
-    pub fn get_alive_cells_in(&self, top_left: Pos, bottom_right: Pos) -> Vec<Pos> {
+    pub fn get_alive_cells_in(&self, top_left: Pos, bottom_right: Pos) -> Vec<&Pos> {
         self.alive_cells.iter().filter(|&pos| {
             top_left.x <= pos.x && pos.x <= bottom_right.x &&
             top_left.y <= pos.y && pos.y <= bottom_right.y
-        }).cloned().collect()
+        }).collect()
     }
 
     /// Force a cell to be alive
@@ -197,20 +223,28 @@ impl Map {
     }
 }
 
-/// Acorn methuselah
-pub fn acorn() -> Map {
-    let list = [pos(3, 2), pos(5, 3), pos(2, 4), pos(3, 4), pos(6, 4), pos(7, 4), pos(8, 4)];
-    Map::new_from_alive_list(&list)
+impl Clone for Map {
+    fn clone(&self) -> Map {
+        Map {
+            neighbors_state: self.neighbors_state.clone(),
+            alive_cells: self.alive_cells.clone(),
+            state_eval_table: self.state_eval_table,
+        }
+    }
 }
 
-/// Blom methuselah
-pub fn blom() -> Map {
-    let list = [pos(1, 1), pos(12, 1),
-    pos(2, 2), pos(3, 2), pos(4, 2), pos(5, 2), pos(12, 2),
-    pos(3, 3), pos(4, 3), pos(12, 3),
-    pos(11, 4), pos(11, 5), pos(9, 5)];
-    Map::new_from_alive_list(&list)
+fn new_state_eval_table() -> [u8; 256] {
+    let mut result = [0; 256];
+    for (i, x) in result.iter_mut().enumerate() {
+        let count = usize::count_ones(i);
+        if count == 3 { *x = 2; }
+        else if count == 2 { *x = 1; }
+    }
+    result
 }
+
+
+
 
 #[test]
 #[ignore]

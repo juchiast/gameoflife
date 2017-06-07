@@ -1,7 +1,8 @@
 use ::*;
 use relm::{Relm, RemoteRelm, Widget};
 use gtk::prelude::*;
-use gtk::{Window, WindowType, DrawingArea, Button, ScrolledWindow};
+use gtk::{Window, WindowType, DrawingArea, Button};
+use gtk::{FileChooserDialog};
 use tokio_core::reactor::Interval;
 use std::time::Duration;
 
@@ -14,6 +15,8 @@ pub struct Model {
 
 #[derive(SimpleMsg)]
 pub enum Msg {
+    Save,
+    Open,
     Tick,
     Quit,
 }
@@ -22,11 +25,8 @@ pub enum Msg {
 pub struct Win {
     hbox: gtk::Box,
     button_box: gtk::ButtonBox,
-    pause_button: Button,
-    next_button: Button,
-    clear_button: Button,
-    zoom_in_button: Button,
-    zoom_out_button: Button,
+    open_button: Button,
+    save_button: Button,
     area: DrawingArea,
     window: Window,
 }
@@ -42,7 +42,7 @@ impl Widget for Win {
 
     fn model() -> Self::Model {
         Model {
-            map: blom(),
+            map: Map::blom(),
         }
     }
 
@@ -66,6 +66,38 @@ impl Widget for Win {
                 }
                 cr.fill();
             },
+            Msg::Save => {
+                let dialog = FileChooserDialog::new(
+                    Some("Save File"),
+                    Some(&self.window),
+                    gtk::FileChooserAction::Save);
+                let cancel: i32 = gtk::ResponseType::Cancel.into();
+                let accept: i32 = gtk::ResponseType::Accept.into();
+                dialog.add_button("Cancel", cancel);
+                dialog.add_button("Save", accept);
+                if accept == dialog.run() {
+                    if let Some(path) = dialog.get_filename() {
+                        model.map.save(path).unwrap();
+                    }
+                }
+                dialog.close();
+            },
+            Msg::Open => {
+                let dialog = FileChooserDialog::new(
+                    Some("Open File"),
+                    Some(&self.window),
+                    gtk::FileChooserAction::Open);
+                let cancel: i32 = gtk::ResponseType::Cancel.into();
+                let accept: i32 = gtk::ResponseType::Accept.into();
+                dialog.add_button("Cancel", cancel);
+                dialog.add_button("Open", accept);
+                if accept == dialog.run() {
+                    if let Some(path) = dialog.get_filename() {
+                        model.map = Map::open(path).unwrap();
+                    }
+                }
+                dialog.close();
+            },
             Msg::Quit => gtk::main_quit(),
         }
     }
@@ -74,22 +106,14 @@ impl Widget for Win {
         let window = Window::new(WindowType::Toplevel);
         let hbox = gtk::Box::new(gtk::Orientation::Horizontal, 0);
         let button_box = gtk::ButtonBox::new(gtk::Orientation::Vertical);
-        let pause_button = Button::new_with_label("Start");
-        let random_button = Button::new_with_label("Randomize");
-        let next_button = Button::new_with_label("Next");
-        let clear_button = Button::new_with_label("Clear");
-        let zoom_in_button = Button::new_with_label("Zoom in");
-        let zoom_out_button = Button::new_with_label("Zoom out");
+        let open_button = Button::new_with_label("Open");
+        let save_button = Button::new_with_label("Save");
         let area = DrawingArea::new();
         area.set_size_request(500, 500);
         button_box.set_layout(gtk::ButtonBoxStyle::Start);
 
-        button_box.pack_start(&pause_button, false, false, 0);
-        button_box.pack_start(&next_button, false, false, 0);
-        button_box.pack_start(&random_button, false, false, 0);
-        button_box.pack_start(&clear_button, false, false, 0);
-        button_box.pack_start(&zoom_in_button, false, false, 0);
-        button_box.pack_start(&zoom_out_button, false, false, 0);
+        button_box.pack_start(&open_button, false, false, 0);
+        button_box.pack_start(&save_button, false, false, 0);
         hbox.pack_start(&area, false, false, 0);
         hbox.pack_start(&button_box, false, false, 0);
         window.add(&hbox);
@@ -97,15 +121,14 @@ impl Widget for Win {
         window.show_all();
 
         connect!(relm, window, connect_delete_event(_, _) (Some(Msg::Quit), Inhibit(false)));
+        connect!(relm, save_button, connect_clicked(_), Msg::Save);
+        connect!(relm, open_button, connect_clicked(_), Msg::Open);
 
         Win {
             hbox: hbox,
             button_box: button_box,
-            pause_button: pause_button,
-            next_button: next_button,
-            clear_button: clear_button,
-            zoom_in_button: zoom_in_button,
-            zoom_out_button: zoom_out_button,
+            open_button: open_button,
+            save_button: save_button,
             area: area,
             window: window,
         }
