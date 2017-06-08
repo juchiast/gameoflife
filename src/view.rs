@@ -11,10 +11,12 @@ use map::*;
 #[derive(Clone)]
 pub struct Model {
     map: Map,
+    size: Pos,
 }
 
 #[derive(SimpleMsg)]
 pub enum Msg {
+    Motion(((f64, f64), u32)),
     Save,
     Open,
     Tick,
@@ -43,6 +45,7 @@ impl Widget for Win {
     fn model() -> Self::Model {
         Model {
             map: Map::blom(),
+            size: pos(0, 0),
         }
     }
 
@@ -98,6 +101,9 @@ impl Widget for Win {
                 }
                 dialog.close();
             },
+            Msg::Motion(((x, y), t)) => {
+                println!("({}, {}), {}", x, y, t);
+            },
             Msg::Quit => gtk::main_quit(),
         }
     }
@@ -110,6 +116,8 @@ impl Widget for Win {
         let save_button = Button::new_with_label("Save");
         let area = DrawingArea::new();
         area.set_size_request(500, 500);
+        area.set_events(area.get_events() | gdk::POINTER_MOTION_MASK.bits() as i32);
+        area.set_events(area.get_events() | gdk::BUTTON_PRESS_MASK.bits() as i32);
         button_box.set_layout(gtk::ButtonBoxStyle::Start);
 
         button_box.pack_start(&open_button, false, false, 0);
@@ -121,6 +129,7 @@ impl Widget for Win {
         window.show_all();
 
         connect!(relm, window, connect_delete_event(_, _) (Some(Msg::Quit), Inhibit(false)));
+        connect!(relm, area, connect_motion_notify_event(_, ev) (Some(Msg::Motion((ev.get_position(), 0))), Inhibit(false)));
         connect!(relm, save_button, connect_clicked(_), Msg::Save);
         connect!(relm, open_button, connect_clicked(_), Msg::Open);
 
