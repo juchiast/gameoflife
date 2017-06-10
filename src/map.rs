@@ -6,7 +6,7 @@ use std::path::Path;
 const DX: [i32; 8] = [-1, 0, 1, -1, 1, -1, 0, 1];
 const DY: [i32; 8] = [-1, -1, -1, 0, 0, 1, 1, 1];
 
-#[derive(Eq, Ord, PartialEq, PartialOrd, Clone)]
+#[derive(Eq, Ord, PartialEq, PartialOrd, Clone, Copy)]
 #[derive(Deserialize, Serialize)]
 pub struct Pos {
     pub x: i32,
@@ -29,7 +29,7 @@ pub struct Neighbors{
 
 pub fn neighbors(origin: &Pos) -> Neighbors {
     Neighbors {
-        origin: origin.clone(),
+        origin: *origin,
         i: 0,
     }
 }
@@ -151,12 +151,12 @@ impl Map {
     pub fn next_generation(&mut self) {
         let new_alive = self.neighbors_state.iter().filter_map(|(pos, state)| {
             if self.eval_state(*state) == 2 {
-                Some(pos.clone())
+                Some(*pos)
             } else { None }
         }).collect::<Vec<_>>();
         let new_dead = self.neighbors_state.iter().filter_map(|(pos, state)| {
             if self.eval_state(*state) == 0 {
-                Some(pos.clone())
+                Some(*pos)
             } else { None }
         }).collect::<Vec<_>>();
 
@@ -180,7 +180,7 @@ impl Map {
 
     /// Force a cell to be alive
     pub fn set_cell_alive(&mut self, pos: &Pos) {
-        if self.alive_cells.insert(pos.clone()) {
+        if self.alive_cells.insert(*pos) {
             let mut new_state = 0;
             for (nei, i) in neighbors(pos) {
                 if self.cell_is_alive(&nei) {
@@ -189,7 +189,7 @@ impl Map {
                 let state = self.neighbors_state.entry(nei).or_insert(0);
                 *state |= 1<<(7^i);
             }
-            let mut state = self.neighbors_state.entry(pos.clone()).or_insert(0);
+            let mut state = self.neighbors_state.entry(*pos).or_insert(0);
             *state = new_state;
         }
     }

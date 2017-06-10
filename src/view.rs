@@ -83,7 +83,7 @@ impl Widget for Win {
             MyMsg::Tick => {
                 model.map.next_generation();
                 let top_left = pos(model.center.x - model.size.x / 2, model.center.y - model.size.y / 2);
-                let cells = model.map.get_alive_cells_in(top_left.clone(), model.size.clone());
+                let cells = model.map.get_alive_cells_in(top_left, model.size);
                 self.draw(cells, model, &top_left);
             },
             MyMsg::Save => {
