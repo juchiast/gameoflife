@@ -12,6 +12,18 @@ use map::*;
 pub struct Model {
     map: Map,
     size: Pos,
+    center: Pos,
+    scale: i32,
+}
+impl Model {
+    fn new() -> Self {
+        Model {
+            map: Map::acorn(),
+            size: pos(250, 250),
+            center: pos(0, 0),
+            scale: 2,
+        }
+    }
 }
 
 #[derive(SimpleMsg)]
@@ -33,6 +45,21 @@ pub struct Win {
     window: Window,
 }
 
+impl Win {
+    fn draw(&mut self, cells: Vec<&Pos>, model: &Model, top_left: &Pos) {
+        use gdk::prelude::ContextExt;
+        let cr = cairo::Context::create_from_window(&self.area.get_window().unwrap());
+        cr.set_source_rgb(1., 1., 1.);
+        cr.paint();
+        cr.scale(model.scale as f64, model.scale as f64);
+        cr.set_source_rgb(0., 0., 0.);
+        for pos in cells {
+            cr.rectangle((pos.x - top_left.x) as f64, (pos.y - top_left.y) as f64, 1., 1.);
+        }
+        cr.fill();
+    }
+}
+
 impl Widget for Win {
     type Root = Window;
     type Model = Model;
@@ -43,10 +70,7 @@ impl Widget for Win {
     }
 
     fn model() -> Self::Model {
-        Model {
-            map: Map::blom(),
-            size: pos(0, 0),
-        }
+        Model::new()
     }
 
     fn subscriptions(relm: &Relm<Msg>) {
@@ -58,16 +82,9 @@ impl Widget for Win {
         match event {
             Msg::Tick => {
                 model.map.next_generation();
-                use gdk::prelude::ContextExt;
-                let cr = cairo::Context::create_from_window(&self.area.get_window().unwrap());
-                cr.set_source_rgb(1., 1., 1.);
-                cr.paint();
-                cr.scale(2., 2.);
-                cr.set_source_rgb(0., 0., 0.);
-                for pos in &model.map.alive_cells {
-                    cr.rectangle(pos.x as f64+100., pos.y as f64+100., 1., 1.);
-                }
-                cr.fill();
+                let top_left = pos(model.center.x - model.size.x / 2, model.center.y - model.size.y / 2);
+                let cells = model.map.get_alive_cells_in(top_left.clone(), model.size.clone());
+                self.draw(cells, model, &top_left);
             },
             Msg::Save => {
                 let dialog = FileChooserDialog::new(
@@ -108,14 +125,14 @@ impl Widget for Win {
         }
     }
 
-    fn view(relm: RemoteRelm<Msg>, _model: &Self::Model) -> Self {
+    fn view(relm: RemoteRelm<Msg>, model: &Self::Model) -> Self {
         let window = Window::new(WindowType::Toplevel);
         let hbox = gtk::Box::new(gtk::Orientation::Horizontal, 0);
         let button_box = gtk::ButtonBox::new(gtk::Orientation::Vertical);
         let open_button = Button::new_with_label("Open");
         let save_button = Button::new_with_label("Save");
         let area = DrawingArea::new();
-        area.set_size_request(500, 500);
+        area.set_size_request(model.size.x * model.scale, model.size.y * model.scale);
         area.set_events(area.get_events() | gdk::POINTER_MOTION_MASK.bits() as i32);
         area.set_events(area.get_events() | gdk::BUTTON_PRESS_MASK.bits() as i32);
         button_box.set_layout(gtk::ButtonBoxStyle::Start);
