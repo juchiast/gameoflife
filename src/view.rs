@@ -9,15 +9,15 @@ use std::time::Duration;
 use map::*;
 
 #[derive(Clone)]
-pub struct Model {
+pub struct MyModel {
     map: Map,
     size: Pos,
     center: Pos,
     scale: i32,
 }
-impl Model {
+impl MyModel {
     fn new() -> Self {
-        Model {
+        MyModel {
             map: Map::acorn(),
             size: pos(250, 250),
             center: pos(0, 0),
@@ -27,7 +27,7 @@ impl Model {
 }
 
 #[derive(SimpleMsg)]
-pub enum Msg {
+pub enum MyMsg {
     Motion(((f64, f64), u32)),
     Save,
     Open,
@@ -46,7 +46,7 @@ pub struct Win {
 }
 
 impl Win {
-    fn draw(&mut self, cells: Vec<&Pos>, model: &Model, top_left: &Pos) {
+    fn draw(&mut self, cells: Vec<&Pos>, model: &MyModel, top_left: &Pos) {
         use gdk::prelude::ContextExt;
         let cr = cairo::Context::create_from_window(&self.area.get_window().unwrap());
         cr.set_source_rgb(1., 1., 1.);
@@ -62,31 +62,31 @@ impl Win {
 
 impl Widget for Win {
     type Root = Window;
-    type Model = Model;
-    type Msg = Msg;
+    type Model = MyModel;
+    type Msg = MyMsg;
 
     fn root(&self) -> &Self::Root {
         &self.window
     }
 
-    fn model() -> Self::Model {
-        Model::new()
+    fn model() -> MyModel {
+        MyModel::new()
     }
 
-    fn subscriptions(relm: &Relm<Msg>) {
+    fn subscriptions(relm: &Relm<MyMsg>) {
         let stream = Interval::new(Duration::from_millis(30), relm.handle()).unwrap();
-        relm.connect_exec_ignore_err(stream, Msg::Tick);
+        relm.connect_exec_ignore_err(stream, MyMsg::Tick);
     }
 
-    fn update(&mut self, event: Msg, model: &mut Self::Model) {
+    fn update(&mut self, event: MyMsg, model: &mut MyModel) {
         match event {
-            Msg::Tick => {
+            MyMsg::Tick => {
                 model.map.next_generation();
                 let top_left = pos(model.center.x - model.size.x / 2, model.center.y - model.size.y / 2);
                 let cells = model.map.get_alive_cells_in(top_left.clone(), model.size.clone());
                 self.draw(cells, model, &top_left);
             },
-            Msg::Save => {
+            MyMsg::Save => {
                 let dialog = FileChooserDialog::new(
                     Some("Save File"),
                     Some(&self.window),
@@ -102,7 +102,7 @@ impl Widget for Win {
                 }
                 dialog.close();
             },
-            Msg::Open => {
+            MyMsg::Open => {
                 let dialog = FileChooserDialog::new(
                     Some("Open File"),
                     Some(&self.window),
@@ -118,14 +118,14 @@ impl Widget for Win {
                 }
                 dialog.close();
             },
-            Msg::Motion(((x, y), t)) => {
+            MyMsg::Motion(((x, y), t)) => {
                 println!("({}, {}), {}", x, y, t);
             },
-            Msg::Quit => gtk::main_quit(),
+            MyMsg::Quit => gtk::main_quit(),
         }
     }
 
-    fn view(relm: RemoteRelm<Msg>, model: &Self::Model) -> Self {
+    fn view(relm: RemoteRelm<MyMsg>, model: &MyModel) -> Self {
         let window = Window::new(WindowType::Toplevel);
         let hbox = gtk::Box::new(gtk::Orientation::Horizontal, 0);
         let button_box = gtk::ButtonBox::new(gtk::Orientation::Vertical);
@@ -145,10 +145,10 @@ impl Widget for Win {
         window.set_title("Game of Life");
         window.show_all();
 
-        connect!(relm, window, connect_delete_event(_, _) (Some(Msg::Quit), Inhibit(false)));
-        connect!(relm, area, connect_motion_notify_event(_, ev) (Some(Msg::Motion((ev.get_position(), 0))), Inhibit(false)));
-        connect!(relm, save_button, connect_clicked(_), Msg::Save);
-        connect!(relm, open_button, connect_clicked(_), Msg::Open);
+        connect!(relm, window, connect_delete_event(_, _) (Some(MyMsg::Quit), Inhibit(false)));
+        connect!(relm, area, connect_motion_notify_event(_, ev) (Some(MyMsg::Motion((ev.get_position(), 0))), Inhibit(false)));
+        connect!(relm, save_button, connect_clicked(_), MyMsg::Save);
+        connect!(relm, open_button, connect_clicked(_), MyMsg::Open);
 
         Win {
             hbox: hbox,
