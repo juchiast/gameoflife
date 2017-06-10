@@ -14,6 +14,7 @@ pub struct MyModel {
     size: Pos,
     center: Pos,
     scale: i32,
+    mouse: Option<Pos>,
 }
 impl MyModel {
     fn new() -> Self {
@@ -22,13 +23,14 @@ impl MyModel {
             size: pos(250, 250),
             center: pos(0, 0),
             scale: 2,
+            mouse: None,
         }
     }
 }
 
 #[derive(SimpleMsg)]
 pub enum MyMsg {
-    Motion(((f64, f64), u32)),
+    Motion(((f64, f64), gdk::ModifierType)),
     Save,
     Open,
     Tick,
@@ -119,7 +121,28 @@ impl Widget for Win {
                 dialog.close();
             },
             MyMsg::Motion(((x, y), t)) => {
-                println!("({}, {}), {}", x, y, t);
+                let p = pos(x as i32, y as i32);
+                if (t & gdk::BUTTON1_MASK).bits() != 0 {
+                    if model.mouse != None {
+                        let mut old_pos = model.mouse.unwrap();
+                        let new_center = pos(
+                            model.center.x + (old_pos.x - p.x) / model.scale,
+                            model.center.y + (old_pos.y - p.y) / model.scale
+                            );
+                        if new_center.x != model.center.x {
+                            old_pos.x = p.x;
+                        }
+                        if new_center.y != model.center.y {
+                            old_pos.y = p.y;
+                        }
+                        model.center = new_center;
+                        model.mouse = Some(old_pos);
+                    } else {
+                        model.mouse = Some(p);
+                    }
+                } else {
+                    model.mouse = None;
+                }
             },
             MyMsg::Quit => gtk::main_quit(),
         }
@@ -146,7 +169,7 @@ impl Widget for Win {
         window.show_all();
 
         connect!(relm, window, connect_delete_event(_, _) (Some(MyMsg::Quit), Inhibit(false)));
-        connect!(relm, area, connect_motion_notify_event(_, ev) (Some(MyMsg::Motion((ev.get_position(), 0))), Inhibit(false)));
+        connect!(relm, area, connect_motion_notify_event(_, ev) (Some(MyMsg::Motion((ev.get_position(), ev.get_state()))), Inhibit(false)));
         connect!(relm, save_button, connect_clicked(_), MyMsg::Save);
         connect!(relm, open_button, connect_clicked(_), MyMsg::Open);
 
