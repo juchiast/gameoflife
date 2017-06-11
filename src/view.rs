@@ -65,13 +65,14 @@ impl Win {
 impl Widget for Win {
     type Root = Window;
     type Model = MyModel;
+    type ModelParam = ();
     type Msg = MyMsg;
 
     fn root(&self) -> &Self::Root {
         &self.window
     }
 
-    fn model() -> MyModel {
+    fn model(_: ()) -> MyModel {
         MyModel::new()
     }
 
@@ -148,7 +149,7 @@ impl Widget for Win {
         }
     }
 
-    fn view(relm: RemoteRelm<MyMsg>, model: &MyModel) -> Self {
+    fn view(relm: &RemoteRelm<Self>, model: &MyModel) -> Self {
         let window = Window::new(WindowType::Toplevel);
         let hbox = gtk::Box::new(gtk::Orientation::Horizontal, 0);
         let button_box = gtk::ButtonBox::new(gtk::Orientation::Vertical);
