@@ -82,14 +82,15 @@ impl Widget for Win {
     }
 
     fn update(&mut self, event: MyMsg, model: &mut MyModel) {
+        use self::MyMsg::*;
         match event {
-            MyMsg::Tick => {
+            Tick => {
                 model.map.next_generation();
                 let top_left = pos(model.center.x - model.size.x / 2, model.center.y - model.size.y / 2);
                 let cells = model.map.get_alive_cells_in(top_left, model.size);
                 self.draw(cells, model, &top_left);
             },
-            MyMsg::Save => {
+            Save => {
                 let dialog = FileChooserDialog::new(
                     Some("Save File"),
                     Some(&self.window),
@@ -105,7 +106,7 @@ impl Widget for Win {
                 }
                 dialog.close();
             },
-            MyMsg::Open => {
+            Open => {
                 let dialog = FileChooserDialog::new(
                     Some("Open File"),
                     Some(&self.window),
@@ -121,7 +122,7 @@ impl Widget for Win {
                 }
                 dialog.close();
             },
-            MyMsg::Motion(((x, y), t)) => {
+            Motion(((x, y), t)) => {
                 let p = pos(x as i32, y as i32);
                 if (t & gdk::BUTTON1_MASK).bits() != 0 {
                     if model.mouse != None {
@@ -145,7 +146,7 @@ impl Widget for Win {
                     model.mouse = None;
                 }
             },
-            MyMsg::Quit => gtk::main_quit(),
+            Quit => gtk::main_quit(),
         }
     }
 
@@ -169,10 +170,11 @@ impl Widget for Win {
         window.set_title("Game of Life");
         window.show_all();
 
-        connect!(relm, window, connect_delete_event(_, _) (Some(MyMsg::Quit), Inhibit(false)));
-        connect!(relm, area, connect_motion_notify_event(_, ev) (Some(MyMsg::Motion((ev.get_position(), ev.get_state()))), Inhibit(false)));
-        connect!(relm, save_button, connect_clicked(_), MyMsg::Save);
-        connect!(relm, open_button, connect_clicked(_), MyMsg::Open);
+        use self::MyMsg::*;
+        connect!(relm, window, connect_delete_event(_, _) (Some(Quit), Inhibit(false)));
+        connect!(relm, area, connect_motion_notify_event(_, ev) (Some(Motion((ev.get_position(), ev.get_state()))), Inhibit(false)));
+        connect!(relm, save_button, connect_clicked(_), Save);
+        connect!(relm, open_button, connect_clicked(_), Open);
 
         Win {
             hbox: hbox,
