@@ -244,13 +244,10 @@ fn new_state_eval_table() -> [u8; 256] {
     result
 }
 
-
-
-
 #[test]
 #[ignore]
 fn test_with_acorn() {
-    let mut map = acorn();
+    let mut map = Map::acorn();
     let mut i = 0;
     let mut max_population = 0;
     let mut max_generation = 0;
