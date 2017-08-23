@@ -1,10 +1,10 @@
 use ::*;
-use relm::{Relm, RemoteRelm, Widget};
+use relm::{Relm, Widget, Update};
 use gtk::prelude::*;
 use gtk::{Window, WindowType, DrawingArea, Button};
 use gtk::{FileChooserDialog};
-use tokio_core::reactor::Interval;
 use std::time::Duration;
+use futures_glib::Interval;
 
 use map::*;
 
@@ -28,12 +28,12 @@ impl MyModel {
     }
 }
 
-#[derive(SimpleMsg)]
+#[derive(Msg)]
 pub enum MyMsg {
     Motion(((f64, f64), gdk::ModifierType)),
     Save,
     Open,
-    Tick,
+    Tick(()),
     Quit,
 }
 
@@ -45,15 +45,16 @@ pub struct Win {
     save_button: Button,
     area: DrawingArea,
     window: Window,
+    model: MyModel,
 }
 
 impl Win {
-    fn draw(&mut self, cells: Vec<&Pos>, model: &MyModel, top_left: &Pos) {
+    fn draw(&mut self, cells: &[Pos], top_left: &Pos) {
         use gdk::prelude::ContextExt;
         let cr = cairo::Context::create_from_window(&self.area.get_window().unwrap());
         cr.set_source_rgb(1., 1., 1.);
         cr.paint();
-        cr.scale(model.scale as f64, model.scale as f64);
+        cr.scale(self.model.scale as f64, self.model.scale as f64);
         cr.set_source_rgb(0., 0., 0.);
         for pos in cells {
             cr.rectangle((pos.x - top_left.x) as f64, (pos.y - top_left.y) as f64, 1., 1.);
@@ -62,33 +63,28 @@ impl Win {
     }
 }
 
-impl Widget for Win {
-    type Root = Window;
+impl Update for Win {
     type Model = MyModel;
     type ModelParam = ();
     type Msg = MyMsg;
 
-    fn root(&self) -> &Self::Root {
-        &self.window
-    }
-
-    fn model(_: ()) -> MyModel {
+    fn model(_: &Relm<Self>, _: ()) -> MyModel {
         MyModel::new()
     }
 
-    fn subscriptions(relm: &Relm<MyMsg>) {
-        let stream = Interval::new(Duration::from_millis(30), relm.handle()).unwrap();
+    fn subscriptions(&mut self, relm: &Relm<Self>) {
+        let stream = Interval::new(Duration::from_millis(30));
         relm.connect_exec_ignore_err(stream, MyMsg::Tick);
     }
 
-    fn update(&mut self, event: MyMsg, model: &mut MyModel) {
+    fn update(&mut self, event: MyMsg) {
         use self::MyMsg::*;
         match event {
-            Tick => {
-                model.map.next_generation();
-                let top_left = pos(model.center.x - model.size.x / 2, model.center.y - model.size.y / 2);
-                let cells = model.map.get_alive_cells_in(top_left, model.size);
-                self.draw(cells, model, &top_left);
+            Tick(()) => {
+                self.model.map.next_generation();
+                let top_left = pos(self.model.center.x - self.model.size.x / 2, self.model.center.y - self.model.size.y / 2);
+                let cells = self.model.map.get_alive_cells_in(top_left, self.model.size);
+                self.draw(&cells, &top_left);
             },
             Save => {
                 let dialog = FileChooserDialog::new(
@@ -101,7 +97,7 @@ impl Widget for Win {
                 dialog.add_button("Save", accept);
                 if accept == dialog.run() {
                     if let Some(path) = dialog.get_filename() {
-                        model.map.save(path).unwrap();
+                        self.model.map.save(path).unwrap();
                     }
                 }
                 dialog.close();
@@ -117,7 +113,7 @@ impl Widget for Win {
                 dialog.add_button("Open", accept);
                 if accept == dialog.run() {
                     if let Some(path) = dialog.get_filename() {
-                        model.map = Map::open(path).unwrap();
+                        self.model.map = Map::open(path).unwrap();
                     }
                 }
                 dialog.close();
@@ -125,32 +121,41 @@ impl Widget for Win {
             Motion(((x, y), t)) => {
                 let p = pos(x as i32, y as i32);
                 if (t & gdk::BUTTON1_MASK).bits() != 0 {
-                    if model.mouse != None {
-                        let mut old_pos = model.mouse.unwrap();
+                    if self.model.mouse != None {
+                        let mut old_pos = self.model.mouse.unwrap();
                         let new_center = pos(
-                            model.center.x + (old_pos.x - p.x) / model.scale,
-                            model.center.y + (old_pos.y - p.y) / model.scale
+                            self.model.center.x + (old_pos.x - p.x) / self.model.scale,
+                            self.model.center.y + (old_pos.y - p.y) / self.model.scale
                             );
-                        if new_center.x != model.center.x {
+                        if new_center.x != self.model.center.x {
                             old_pos.x = p.x;
                         }
-                        if new_center.y != model.center.y {
+                        if new_center.y != self.model.center.y {
                             old_pos.y = p.y;
                         }
-                        model.center = new_center;
-                        model.mouse = Some(old_pos);
+                        self.model.center = new_center;
+                        self.model.mouse = Some(old_pos);
                     } else {
-                        model.mouse = Some(p);
+                        self.model.mouse = Some(p);
                     }
                 } else {
-                    model.mouse = None;
+                    self.model.mouse = None;
                 }
             },
             Quit => gtk::main_quit(),
         }
     }
 
-    fn view(relm: &RemoteRelm<Self>, model: &MyModel) -> Self {
+}
+
+impl Widget for Win {
+    type Root = Window;
+
+    fn root(&self) -> Self::Root {
+        self.window.clone()
+    }
+
+    fn view(relm: &Relm<Self>, model: MyModel) -> Self {
         let window = Window::new(WindowType::Toplevel);
         let hbox = gtk::Box::new(gtk::Orientation::Horizontal, 0);
         let button_box = gtk::ButtonBox::new(gtk::Orientation::Vertical);
@@ -171,8 +176,8 @@ impl Widget for Win {
         window.show_all();
 
         use self::MyMsg::*;
-        connect!(relm, window, connect_delete_event(_, _) (Some(Quit), Inhibit(false)));
-        connect!(relm, area, connect_motion_notify_event(_, ev) (Some(Motion((ev.get_position(), ev.get_state()))), Inhibit(false)));
+        connect!(relm, window, connect_delete_event(_, _), return (Some(Quit), Inhibit(false)));
+        connect!(relm, area, connect_motion_notify_event(_, ev), return (Some(Motion((ev.get_position(), ev.get_state()))), Inhibit(false)));
         connect!(relm, save_button, connect_clicked(_), Save);
         connect!(relm, open_button, connect_clicked(_), Open);
 
@@ -183,6 +188,7 @@ impl Widget for Win {
             save_button: save_button,
             area: area,
             window: window,
+            model: model,
         }
     }
 }

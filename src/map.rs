@@ -170,12 +170,12 @@ impl Map {
 
     /// Return list of alive cells within the rectangle from `top_left`
     /// to `bottom_right`
-    pub fn get_alive_cells_in(&self, top_left: Pos, size: Pos) -> Vec<&Pos> {
+    pub fn get_alive_cells_in(&self, top_left: Pos, size: Pos) -> Vec<Pos> {
         let bottom_right = pos(top_left.x + size.x, top_left.y + size.y);
         self.alive_cells.iter().filter(|&pos| {
             top_left.x <= pos.x && pos.x <= bottom_right.x &&
             top_left.y <= pos.y && pos.y <= bottom_right.y
-        }).collect()
+        }).cloned().collect()
     }
 
     /// Force a cell to be alive

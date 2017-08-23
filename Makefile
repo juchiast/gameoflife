@@ -1,6 +1,6 @@
 check:
-	rustup run nightly cargo check
+	cargo check
 run:
-	rustup run nightly cargo run
+	cargo run
 release:
-	rustup run nightly cargo run --release
+	cargo run --release

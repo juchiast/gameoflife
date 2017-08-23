@@ -1,5 +1,3 @@
-#![feature(fn_traits, unboxed_closures)]
-
 extern crate gtk;
 extern crate gdk;
 extern crate cairo;
@@ -12,6 +10,7 @@ extern crate serde;
 extern crate serde_json;
 #[macro_use]
 extern crate serde_derive;
+extern crate futures_glib;
 
 mod map;
 mod view;
