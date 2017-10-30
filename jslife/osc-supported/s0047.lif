@@ -1,0 +1,9 @@
+#CBy Nicolay Beluchenko, 2/'09
+x = 64, y = 89, rule = B3/S23
+bo$bbo$3o3$39bo$37bobo$38boo5$12bo$13boo$12boo3$49bobo$50boo$50bo5$25b
+o$23bobo$24boo$$62bo$32booboo26bo$33boboo24b3o$33bo$31bobo$31boo$$46bo
+7bo$31boo13bo7bo$31boo15booboo$48booboo$41boo15boo$40bobbo13bobbo$43bo
+13bo$41b3o13b3o4$41b3o13b3o$43bo13bo$40bobbo13bobbo$41boo15boo$48boob
+oo$31boo15booboo$31boo13bo7bo$46bo7bo$$31boo$31bobo$33bo$33boboo24b3o$
+32booboo26bo$62bo$$24boo$23bobo$25bo5$50bo$50boo$49bobo3$12boo$13boo$
+12bo5$38boo$37bobo$39bo3$3o$bbo$bo!

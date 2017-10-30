@@ -1,0 +1,16 @@
+#CTop: Stephen Silver, Feb '00.
+x = 94, y = 77, rule = B3/S23
+7bo11bo11bo11bo$6bobo9bobo9bobo9bobo$5bobbo8bobbo8bobbo8bobbo13bo3bobo
+bo15bobobobbobobo$6boo10boo10boo10boo35bo$58bo7bo19bobbo3bo$44bo33bo$
+42bo3bo11bo3bobobobbobobo8bobobobbobobo$47bo29bo$40boobobobo10bo3bo6bo
+12bo6bo3bo$40bo35bo$40b3o15bo3bobobobbobobo8bobobobbobobo6$40b3o$40bo$
+40boobobobo$47bo$42bo3bo$44bo$$6boo10boo10boo10boo$5bobbo8bobbo8bobbo
+8bobbo$6bobo9bobo9bobo9bobo$7bo11bo11bo11bo20$bbo11bo11bo11bo$13b3o21b
+3o$ob3o7b3obo7bob3o7b3obo$bboobo7bo3bo8boobo7bo3bo$bboboo8bo3bo7boboo
+8bo3bo15bo3bobobo15bobobobbobobo$3b3obo7bob3o7b3obo7bob3o35bo$16b3o21b
+3o15bo7bo19bobbo3bo$5bo11bo11bo11bo36bo$58bo3bobobobbobobo8bobobobbobo
+bo$77bo$58bo3bo6bo12bo6bo3bo$76bo$58bo3bobobobbobobo8bobobobbobobo$48b
+oo$5boo10boo10boo10boo4bobbo$4bobbo8bobbo8bobbo8bobbobbo4bo$5boo10boo
+10boo10boo4bobbo$48boo6$5bo11bo11bo11bo$16b3o21b3o$3b3obo7bob3o7b3obo
+7bob3o$bboboo8bo3bo7boboo8bo3bo$bboobo7bo3bo8boobo7bo3bo$ob3o7b3obo7bo
+b3o7b3obo$13b3o21b3o$bbo11bo11bo11bo!

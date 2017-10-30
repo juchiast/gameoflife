@@ -1,0 +1,25 @@
+#CGun mechanism by David Bell.
+#CConstruction by Jason Summers.
+#C21 May 2002
+#CThe period can be increased by any multiple
+#Cof 120.
+x = 378, y = 441, rule = B3/S23
+341bo$340b3o$339booboo$338b3ob3o$338b3ob3o$338b3ob3o$338b3ob3o$339boob
+oo$340b3o$341bo4$348b8o$348bob4obo$348b8o18$367boo6boo$366bobbo4bobbo$
+366bobbo4bobbo$366bobbo4bobbo$367boo6boo4$361b3o$360bo3bo$359bo5bo$$
+358bo7bo$358bo7bo$$359bo5bo$360bo3bo$344bo16b3o$344boo$343bobo62$241bo
+bo$241boo$242bo62$151boo6boo6bo$149bo4bobbo4bo4b3o$149bo4bobbo4bo7bo$
+149bo4bobbo4bo6boo$151boo6boo5$145b4o33b8o$144b6o32bob4obo$143b8o31b8o
+$142boo6boo$143b8o$144b6o$145b4o52boo$202boo$201bo$182b6o$181bo6bo$
+141b8o31bo8bo$141bob4obo32bo6bo$141b8o33b6o$202bo$201bobo3$201b3o$201b
+3o$202bo3$202bo$201b3o$201b3o3$201bobo$202bo$207bobboboobobbo$206boobb
+o4bobboo$207bobboboobobbo$$159bobboboobobbo$158boobbo4bobboo$159bobbob
+oobobbo$175bo$174bobo3$174b3o$174b3o$175bo3$175bo$174b3o$174b3o3$174bo
+bo$175bo32bo$190b6o13boo18b8o$189bo6bo11boo19bob4obo$188bo8bo31b8o$
+189bo6bo$190b6o3$229b4o$228b6o$227b8o$226boo6boo$188b8o31b8o$188bob4ob
+o32b6o$188b8o10boo21b4o$205bobo$207bo3$217boo6boo$215bo4bobbo4bo$215bo
+4bobbo4bo$215bo4bobbo4bo$217boo6boo54$104bo$103bo$103b3o72$14b3o$13bo
+3bo$12bo5bo$$11bo7bo$11bo7bo$63b3o$12bo5bo46bo$13bo3bo46bo$14b3o4$boo
+6boo$obbo4bobbo$obbo4bobbo$obbo4bobbo$boo6boo18$22b8o$22bob4obo$22b8o
+4$36bo$35b3o$34booboo$33b3ob3o$33b3ob3o$33b3ob3o$33b3ob3o$34booboo$35b
+3o$36bo!

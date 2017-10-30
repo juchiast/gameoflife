@@ -1,0 +1,12 @@
+#CNicolay Beluchenko, 23 Jan '08
+#C(2c/5 spaceship found by Hartmut Holzwart)
+x = 64, y = 67, rule = B3/S23
+37b3o$37bobo$37bobbo5b4ob3o$37b3obobobooboboobbo5b3o$36boobobobobbobbo
+bo5b4obbo$36boo3bob3o3b3oboob4o3bo$35bo18boo3boboo$35bo20bobobb3o$34bo
+9bo17bo$37bo6bo16bo3$24bo14b3o$22bobo14bobbo$12boo6boo17bo$11bo3bo4boo
+12boo3bo$oo8bo5bo3boo12boo4bobo$oo8bo3boboo4bobo$10bo5bo7bo$11bo3bo$
+12boo$23bo24boo$24boo22boo$23boo4$39b3o6b3o$38bobbo6b3o$30bobo8bo5bo3b
+o$31boo8bo$26boo3bo6bobo5boo3boo$26boo3$45boo$45bobo$45bo$$26bo8bo$25b
+3o7boo8bo$24b5o5bobo$23bobobobo$23boo3boo$$46b3o$28boo15bo3bo$28boo14b
+o5bo$30bo13bo5bo$28b3o16bo$26bo18bo3bo$26b5o15b3o$27boo18bo3$25boo3boo
+15boo$26b5o16boo$26booboo$26booboo$27b3o6$27boo$27boo!

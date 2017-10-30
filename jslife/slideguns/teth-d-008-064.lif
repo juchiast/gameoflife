@@ -1,0 +1,29 @@
+#CAn example of a switch-engine-based tethered rake
+x = 92, y = 134, rule = B3/S23
+32bo$20bo11b3o$18b3o14bo23boo$bbo14bo16boo23bo$bb3o12boo38bobo$5bo47b
+oobboo$4boo16bo30boo$21bobbo$25bo$5boo13bo4bo14b3o$5boo17boo14bo$41bo
+3b4o$21b3o24boo$44bobboboo$44boobobo$45boboo$9boo35boo$8b3o10boo36boo$
+8bobbo9bo19boo16bobo$8booboo10bo16bobo18bo$8booboo9boo16bo20boo$7boob
+oo6boo19boo4boo3bo$8bo9bo24bobbo3bobboobo$9b3o7b3o21boo11bo$10bo10bo
+30b5o$53boo$50bobo$52boobo$bboo50bobo$bobo46boobbobbo$bo52bobbo$oo51bo
+bbo$53bobbo5boo$53b3o6bo$60bobo$60boo$57boo$56bobo$58bo$10boo30bo$19b
+oo21b3o$7bo3bo5bobbo24bo$12bo4boo4boo19boo$boo4booboo11bo16boo$bbo7boo
+9bobo16bo$bbobo16boo19bo$3boo36boo$$6bo41boo15boo$6bo40boobo14bo$47boo
+bbo11bobo$34bo13bo4bo9boo$24b3o7bo3bobo13bo$22boob4o10bo8bo5bo$22bobb
+oo11bo8boo3b3o27bo$22b3o23b4o29bobo$27bobo11boo6boo$9boo39bo29bobbo$5b
+oobboo69boo$4bobo38boo4bobo26bo$4bo23boo16bo7bo$3boo23bo14b3o4bo4bobb
+oo$29b3o11bo6boobobboboo$31bo22boo$69bobo$70boo$70bo$53bo$53b3o$56bo5b
+o$37bo17boo5boo$25bo11b3o21bobo$23b3o14bo$7bo14bo16boo$7b3o12boo42boo$
+10bo54bobbo$9boo57bo$46boobboo16bo$26bo19boobboo13boobo8boo$10boo12bo
+bbo16bo6boo12boo10boobboo$10boo11bobboo15bo7bo29bobo$24bo19boobooboo
+30bo$25bo20bo3boo14boo18bo$66boo11boo$80bo3bob3o$77b3o6boobo$77bo8bob
+oo$26boo36boo21b3obo$26bo19boo16bobo$28bo16bobo18bo22bo$27boo16bo20boo
+$14bo8boo19boo4boo4bo$12booboo6bo24bobbo4boo$12booboo7b3o21boo$13bob3o
+8bo30bobbo$12b3o42bobbo$58b3o$$7boo$6bobo$6bo$5boo$67boo$67bo$65bobo$
+65boo3$15boo$15boo30bo$24boo21b3o8b3o$22bobbo24bo9bo$22boo4boo19boo8bo
+$6boo20bo16boo7bo$7bo18bobo16bo7bobbo$7bobo16boo19bo4bo4bo$8boo4bo31b
+oo4bo5bo$13b3o35booboo$12boobo3b3o32boobo$11boo6boo32boobbo$12b3o26boo
+11b3o$12bobbo24bobboo10bo$12bo22boobo5bo$16bo17bo27boo$13bobbo17bo6boo
+19boo$14b3o17boo5bo3bo$14boo24bo3b3o$14boo16bo3bo3bo3boo17boo$10boobb
+oo14bo7bo24bo$9bobo19bobbo15boo12b3o$9bo24bo16bo14bo$8boo23bo14b3o$34b
+3o11bo$36bo!

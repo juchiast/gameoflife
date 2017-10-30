@@ -1,0 +1,34 @@
+#CReactions where a spaceship causes the release of a
+#Cglider or spaceship as it flies by.
+#Cleft: Brice Due, 1/07
+#Cright: Peter Rott
+x = 290, y = 196, rule = B3/S23
+58boo$56bo4bo$34b6o22bo$33bo5bo16bo5bo$39bo17b6o$33bo4bo$35boo$$82bo$
+83bo3bo$74boobboo8bo$74boobbo5boobbo7b3o$78bobo5boo6b6o8boo$79boo3b3o
+7bobb3o8boo125bo$94boo137bo3bo$79boo3b3o9bo114b5o22bo$78bobo5boo122bo
+4bo17bo4bo$74boobbo5boobbo126bo18b5o$74boobboo8bo121bo3bo$83bo3bo124bo
+$82bo$$288boo$262b3o7boo7b3o4boo$248boo11bo4bo4bobbo6b3o$102bo5bo139b
+oo10bo5bo4bobbo5bo3bo$101b3o3b3o151bo8bo3bo5booboo$100bo3bobo3bo151boo
+8boo6bo3bo$100bo9bo170bobo$101b3o3b3o152boo8boo7bobo$261bo8bo11bo$248b
+oo10bo5bo8boo$248boo11bo4bo9bo$262b3o7bo$103booboo164bobbo$104bobo176b
+ooboo$100booboobooboo171bo5bo$100bobbo3bobbo$100bo9bo170bo7bo$100bobbo
+3bobbo170bobbobobbo$101boo5boo171b3o3b3o9$281boo5boo$281boo5boo31$bboo
+44boo$o4bo40bo4bo$6bo45bo$o5bo39bo5bo$b6o40b6o5$85boo3boo8bo$84bobbobo
+bbo7bobboo134bo$60boo9boo3boo5bo9bo5bo5bo5boo124bo3bo$50boo7bobo8boboo
+boobo3boo9boo5bobobboo4boo102b5o22bo$50boo6boobo8bo7bo4bo9bo6bo3boo
+108bo4bo17bo4bo$59boo9bobooboobo5bobbobobbo9b3o114bo18b5o$60bo10boo3b
+oo7boo3boo122bo3bo$102b3o111bo$60bo39bo3boo170bobo$59boo23boo14bobobb
+oo4boo164bo$50boo6boobo15boo5boo13bo5bo5boo155boo13boo$50boo7bobo15boo
+21bobboo146boo14booboo12bo$60boo38bo150boo15bobbo11bo$268bobbo4boo6b3o
+$269boo15bo$$269boo$268bobbo$251boo15bobbo$251boo14booboo$268boo6boobo
+$276boob3o$282bo$276boob3o$277bobo$277bobo$278bo31$235bobbo$239bo$235b
+o3bo$236b4o$$254bo$253bobbo$257bo$256bo13boo$257bo12bobo7boo$257bobo
+12bo7boo$54bo201bo3bo9b3o$52bo3bo190boo6boo$30b5o22bo189boo5bobobo$29b
+o4bo17bo4bo201bo$34bo18b5o197b4o11b3o$29bo3bo238bo7boo$31bo238bobo7boo
+$270boo$70boo10bo3bo$68b5o7booboboboo12boo$60boo5bo4bo6boboo3boobo11b
+oo$60boo5bobb3o5bobbo5bobbo$67boobbo7boboo3boobo157b3o3b3o$69boo9boobo
+boboo157bobbo3bobbo$82bo3bo163bobo$69boo179bobo$67boobbo178bobo$60boo
+5bobb3o14boo157bobbo3bobbo$60boo5bo4bo14boo158bo7bo$68b5o$70boo3$94boo
+5boo$93bobbo3bobbo$96booboo$95bobobobo$95bobobobo$93bo9bo143boo5boo$
+92bo11bo142boo5boo$$96booboo$94bobbobobbo$94b3o3b3o3$94boo5boo$94boo5b
+oo!

@@ -1,0 +1,137 @@
+#C Population is asymptotic to  C t^(1/3),  where  C = (75/16)^(1/3).
+#C In particular, in gen  720 n3 + 28620 n2 + 60n + 3840
+#C the population is  15n + 4524.
+#C This uses two salvos which are sent toward blocks along the
+#C southeast diagonal.  Usually there are 2 blocks on the diagonal.
+#C At such times, a 3-glider salvo pulls the nearest block 5 units
+#C and sends back a glider.  This is done repeatedly, waiting for the
+#C return glider from each pull before sending the next one.  When the
+#C nearest block is pulled as far back as possible, it is deleted, and
+#C a 5-glider salvo is sent toward the other block; the salvo
+#C duplicates the block, creating a new one 10 units farther away and
+#C another one 10 units closer.
+#C Deleting the eater on the western edge of the pattern gives
+#C population asymptotic to  C2 t^(2/3),  where  C2 = (45/256)^(1/3).
+#C In particular, in gen  720 n3 + 28620 n2 + 60 n + 3840
+#C the population is  45 n2 + 15n + 4522.
+#C Dean Hickerson, 10/10/2006
+x = 493, y = 522, rule = B3/S23
+66boo$67bo$$79bo$77b4o$71boo5boboo14boo$71bo4bobob3o11bobbo$78boboo11b
+o24boo$77b4o12bo12bo11bobo$79bo5bo7bo11boo12b3o12bo$84bo9bobbo11bo10b
+3o8b4o$84b3o9boo11boo8b3o8b4o$64b5o49bobo9bobbo10bo$63bob3obo48boo10b
+4o9boo$64bo3bo62b4o$52boo11b3o66bo$53bo12bo54bo$121boo15boo$139bo$85b
+oo$64bo21bo$52bo11bo21bobo9boo$50booboo8bobo21boo8bo$62booboo29bo9boo
+29b3o$49bo5bo5bo5bo28bo10bo29b3o$64bo31bo39bo3bo$49boo3boo5boo3boo29bo
+$98boo35boo3boo$118boo$78bo28bo6b4o4boo$79bo26bo7b3oboo3bo$77b3obboo
+22b3o10bo32boo$61boo7boo11boo68bo$62bo3boo4b4o6bo$59b3o4bo3boob3o$59bo
+10bo$108boo$109bo$47boo3boo55bobo10bo$47bo5bo56boo9b4o$120boobo5boo$
+48bo3bo66b3obobo4bo4b3o$49b3o68boobo10bo3bo12b3o$121b4o8bo5bo10bo3bo$
+122bo10bo5bo9bo5bo$85boo63bo3bo$74boo8bobo64b3o$75bo8bo7boo57b3o$83boo
+7bo$$74bo84boo$73boobo58bo24bo$76bo58boo12b3o8bobo4bo$76bo71booboo3bo
+4boo3bobo$50boo3boo16bobbo49boo20booboo4boo5boo3bo14boo$74boo50bo21b5o
+3boo6boo3bo13bobo$51bo3bo41b3o47boo3boo10boo3bo12b3o$52b3o44bo66bobo
+12b3o10bo$52b3o43bo68bo14b3o8boo$183bobo$184boo$55bo50bobbo46boo$54b3o
+45bobboo3bo44bobbo$53bo3bo43boo7bo44bo$55bo40boo8b4o45bo$52bo5bo38bo
+53bo3boboo36bo$52bo5bo17bo73boo5bo37b4o$53bo3bo14bo3boob3o114b4o7bo$
+54b3o15boo4b4o92boo9bo10bobbo6bobo$67boo7boo79bo12boobobboboo5boo9b4o
+4boo3bo$68bo27bo17bo41boo13bobbo4bo15b4o5boo3bo10bo$94booboo15b3o58bo
+19bo8boo3bo9boo$90bo26bo58bo29bobo$88b3obbo5bo16boo89bo$87bo109bo$87b
+oo4boo3boo18b3o76boo$118b3o$56bo60bo3bo$55boo42bo16bo5bo$66b3o30boo16b
+o3bo$65bo3bo28bobo17b3o$64bo5bo11boo3boo87boobo3boboo82boo$64bo5bo14bo
+90bo9bo81b3o$82bo5bo26bo61boo5boo72boo5boboo15bo$83booboo26boo58b3obb
+5obb3o69bo6bobbo15bobo$84bobo27bobo57bobbo7bobbo76boboo16bobo$67b3o15b
+o89boo9boo31bo48b3o14bobbo4bo$69bo15bo83boo46b4o48boo14bobo4boo$68bo
+29bo71bo36bobo6boboboo62bobo$97b3o70bobo7bo26bo3bo3bobbob3o9bo51bo$96b
+5o70boo7bobo28bo4boboboo9boo$83bo11boo3boo81boo9boo16bo4b4o$66bo5bo9b
+3o11b5o16bo65boo9bo16bo7bo$66boo3boo8bo3bo10bo3bo15b3o64boo6boo14bo3bo
+$80bob3obo11bo16b5o60bobo7b3o14bobo$68b3o10b5o28bobobobo59bo10boo34bo$
+68b3o43boo3boo73bo31b3o$69bo66bo57boo29b5o54boo$99bo36boo146bobo$98boo
+174bo4boo4b3o7boo$136bo136boboboobbo4b3o7bo$135bobo134bo3bob3o4b3o$
+114boo19bobbo100bo32bo3boboo4bobo$70bo44bo20bobbo98bobo31bo3boo6boo$
+69boo41b3o110b5o33boo8bobo$112bo14boo7bo89b3o9b3o21bobo9bo$82bo45bo7b
+oo89bo34bo$82boo10bo7b4o155boo$94b3o4bo7boo127b3o$97bo3bo3boobbo$96boo
+4bobbo16bo11boo102bobo23boo$120b3o10bobo103bo23bobo$119bo13boboboo123b
+o13bobo$99bo19boo13bobobo114bo8bobbo10bobbo$97booboo22boo3boo5bo116boo
+7bo16boo$124bo5bo3bobbo125bobo11bo3boo5bo$96bo5bo34bo126boo13boo6boo$
+125bo3bo7bo138bobbo$96boo3boo23b3o8bo105b3o30bobo$117bo16bobbo$116b3o
+17bo$102bo12b5o14bobobo$102boo10boo3boo12boboboo$101bobo29bobo16boo$
+134boo16bo$$116bo$115boo$115bobo$125bo$124b3o136boo$101bo21b5o131b4o4b
+oo5b3o$100b3o19boo3boo130b3oboo3bo5bo$99b5o8boo3boo4b5o136bo10bo9bo$
+98boo3boo7boo3boo4bo3bo22boo3boo127bobo$99b5o9b5o7bo20boo102b3o19bobo
+8boboo10boo$99bo3bo10bobo29bo4bo3bo116bobbo6booboo11bo$101bo50b3o108b
+oo10boo6boboo$114b3o35b3o108bo9bo3boo5bobo$275boo8bo$272bobbo$102bo48b
+o120bobo$101boo22boo3boo18b3o$125bobobobo17bo3bo$114bo11b5o20bo$114boo
+11b3o18bo5bo$128bo19bo5bo$149bo3bo$150b3o6$129b3o$128booboo$128booboo$
+128b5o17bo$127boo3boo16boo9$131bo$130boo5$202bo$202boo26$200bo$198b3o$
+197bo$197boo32bo$231boo5$194b3o$193bo3bo$192bo5bo$192booboboo6$194boo$
+193bo$192b3o16boo$191bo3bo14bobbo$190bob3obo16bo$191b5o17bo$210boobo$
+211bo3$211bo$211boo$183boo$184bo$190boo$191bo$188b3o$188bo4$180boobob
+oo$180bo5bo$181bo3bo$182b3o6$213boo7boo54boo$153boo59bo7bo55bo$154bo
+30bo$154bobo7bobo18bo$155boo6bobbo17bobo26b3o26boo$162boo10boo7booboo
+26boo27bo$160boo3bo9bo6bo5bo22boo$162boo21bo25b3o$163bobbo15boo3boo23b
+obo$164bobo46boo$oo276b3o$bo223bo51bo3bo$bobo168bo50b3o50bo5bo$bboo
+166b3o49bo53bo5bo$169bo12boo38boo15boo3boo33bo$169boo12bo93bo3bo$180b
+3o56bo5bo32b3o$180bo98bo$240booboo$242bo$166b3o50b3o58b3o$165booboo48b
+o3bo38boo17b3o$165booboo47bo5bo16bo19bobbo15bo3bo$165b5o47booboboo15bo
+bo18bo$164boo3boo67bo3bo17bo17boo3boo$238b5o17boboo$237boo3boo18bo$
+238b5o$67boo170b3o$68bo171bo21bo$68bobo7bo182boo$69boo5bobo85boo$74boo
+12boo75bo$74boo13bo72b3o$74boo86bo56boo3boo$76bobo143bo$78bo140bo5bo
+57b3o$220booboo57bo3bo$221bobo15bo$222bo16boo40bo5bo$131bo90bo58boo3b
+oo$131b3o$134bo$133boo130boo$265bo$223bo$222boo$236boo26b3o$77boo157bo
+27boo$77bo189boo$133boo3boo13boo111b3o$93boo38boo3boo13bo111bobo$93bo
+40b5o12bobo83bo27boo12boo3boo$78bo12bobo41bobo13boo83b3o$77b3o11boo
+142bo3bo14bo24bo5bo$76bo3bo54b3o96bob3obo13b3o$75bob3obo46boo105b5o17b
+o22booboo179boo$76b5o47bo127boo24bo47bo134bo$328bobo$52boo265bo7bobo$
+53bo264boo6bobbo12bo$135bo171boo8boo4boobbobo11boo$135boo146bo23bo8b3o
+4boo3bobo$128b3o125bo5bo19boo33boo4boo5bo101boo$256boo3boo55boo113bo$
+128bobo188bo113bobo5boo$127b5o120b3o3b3o173boo5b3o$126boo3boo119bo5b3o
+182boobo11bo$126boo3boo120bo5bo71boo110bobbo10boo$331bo111boobo9boo8b
+oo$27bo111boo97b3o55boo34b3o106b3o11b3o9bo$26bobo50b3o57bo97bo3bo55bo
+37bo105boo13boo$25bo3boo8bo38bo3bo153bo5bo91boo121boo$14bo10bo3boo5b4o
+37bo5bo152booboboo38bo176bo$14boo9bo3boo4b4o9boo27booboboo172b3o22b3o$
+26bobo6bobbo10bo103bo102b3o25bo$27bo7b4o112b3o101bo3bo23boo$36b4o110bo
+$39bo110boo102boo3boo$$77boo60b3o146boo178boo$78bo59bo3bo97bo47bobo
+176bobo$75b3o50boo3boobbo5bo95boo47bo4boo3boo147boo17bo13bobo$75bo34b
+oo18b3o4bo5bo151b3o150bo8bo8bobbo10bobbo$111bo17bo3bo160bo3bo158boo7bo
+16boo$111bobo6boo8bobo43boo117bobo169bobo11bo3boo5bo$112boo7bo9bo45bo
+118bo117boo52boo13boo6boo$123boo290bo64bobbo$123b3o7boo121bo36b3o40bob
+o76bobo7boo30boo21bobo$123boo8bo122boo35b3o39bobbo77boo6bobo26boobboo
+bboo$121bo7boo3b3o38b3o147bo8boo87b3o4boo4bo16bobobbo3bo$79boo39boo7bo
+bo4bo38b3o146bobo5boo3bo9bo74b3o4bobboobobo16b3o$80bo50bo42bo3bo145boo
+bo6boo10boo75b3o4b3obo3bo16boo$131boo6bo5bo27bo5bo111boo3boo26booboo6b
+obbo85bobo4boobo3bo$139boo3boo28bo3bo113b5o27boobo8bobo86boo6boo3bo$
+175b3o115b3o18boo8bobo108bobo8boo$141b3o150bo18bobo9bo9bo100bo9bobo$
+141b3o169bo22bo111bo$142bo169boo20b3o111boo3$459boo$50boo239boo80boo
+84bo$50b3o239bo81bo97boo$52boobo11bo73bo36boo109b3o37b3o42bobo8bo85bob
+o$41bo10bobbo10boo73boo35bo110bo41bo43boo8bobo67bo14bo10boo$41boo9boob
+o9boo8boo102b3o148bo55bobo7bo57bobo13bobbo8bo$50b3o11b3o9bo36boo66bo
+204bobbo6boo55boboo13bo$50boo13boo47bo222bo26bo21bobobboo4boo53booboo
+14bobo$66boo46bobo6bo208b3oboo3bo21b3o19bobo3boo4b3o53boboo15boo$67bo
+47boo4bobo208b4o4boo20b5o18bo5boo4boo50boo3bobo$120bobo188boo9boo12boo
+58boo7boo41bobo4bo$119bobbo188bobo7bobo72bo8bobo40bo$96boo22bobo179boo
+10bo8bo5bo55bo21bo39boo$97bo23bobo8boo168bo8bobbo13bobo54boo20boo$123b
+o8bobo179bo13boobo4boo$134bo176bobo14booboo4bo$134boo175boo15boobo30b
+5o$328bobo32b3o$329bo8bobboboobobbo14bo$338b4oboob4o$338bobboboobobbo
+3$69boo312bo$67bobbo90bo217bo3boob3o28boo$66bo13bo79bobo216boo4b4o28bo
+$58bo7bo11b4o78boobo219boo23boo5bobo$58boo6bo12boboo9boo19boo45booboo
+4bo237b3o5boo$67bobbo6bobob3o9bo13boo5bo45boobo4boo181bo4bo35bo11boboo
+28bo$69boo8boboo25bo5bobo6boo24boo9bobo186boob4oboo33boo10bobbo27boo$
+78b4o33boo7bo23bobo10bo189bo4bo26boo8boo9boboo$80bo45boo20bo234bo9b3o
+11b3o9boo$126b3o18boo244boo13boo10boo$126boo264boo25bo$124bo7boo258bo$
+123boo7bobo184boo$134bo185bo$134boo$312boo132bo$79bo23boo207bo132boo$
+79b4o20bo197bobo6bobo$80b4o10boo5bobo11boo184bo3bo4boo$69bo10bobbo9bob
+o5boo13bo174boo12bo$69boo9b4o8b3o196bo14bo$79b4o8b3o211bo$79bo12b3o
+206bo3bo10boo3boo$93bobo205bobo13b5o$94boo221booboo$317booboo$318b3o3$
+89boo$88bo3bo$87bo5bo7bo219boo$77bo9bo3boboo4bobo219bo$77boo8bo5bo3boo
+12boo209b3o$88bo3bo4boo13bo211bo14bo$89boo6boo239bo$99bobo119boo115b3o
+$101bo119bo$389boo$390boo$389bo5$219boo3boo$222bo$219bo5bo$220booboo$
+221bobo$222bo$222bo$$191bo$191bobo150bobo$192bobo4boo18boo123bo3bo$
+192bobbo4bo19bo107bo19bo$192bobo22b3o106b4o19bo5bo$180boo9bobo23bo109b
+oboo17bo5boo$179bobo9bo133bobob3o7bo4bo3bo$179bo147boboo9boobbobo$178b
+oo142boobb4o9boo12bo$321bobo4bo25bo$321bo28bo4bobbo$320boo28boobobbob
+oo$354boo3$359boo$360boo$359bo7$340bobo21boo$340bo3bo19bo$243boo85boo
+12bo10boo5bobo$242bobo85bo14bo7bobbo5boo$241b3o100bo7bo$232bo7b3o97bo
+3bo7bo$232boo7b3o96bobo9bo$242bobo6boo100bobbo$243boo6bobo101boo$253bo
+$253boo32$235boo$235bo$232boo10boo$231b3o11bo$232boo$225boo8bo$224bobo
+8boo$224bo$223boo14$225boo$224bobo$214boo7bo6boo$214bo8bobbobbobbo$
+223bo6b3o$224bobo5b3o$225boo6bobo$235bo$235boo!

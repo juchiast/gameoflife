@@ -1,0 +1,28 @@
+#Cp92(104) Slide gun with displacement of 3 cells/period,
+#Cspeed 3c/104
+#CJason Summers 11 Sep 1999
+x = 161, y = 108, rule = B3/S23
+80boo5boo$79bobo5bobo31bo$78b3o7b3o29bobo$78boob3ob3oboo29bobo$79b5ob
+5o31bo$81bo5bo$82booboo29boo7boo$115bobbo5bobbo$112boobboo7boo$27boo5b
+oo75bobo$27boo5boo45bo5bo25bo7bo$80boo5boo31bobo$79boboo3boobo30bobo$
+79boboo3boobo17boo12bo$80b3o3b3o17bobo$80b3o3b3o19bo$$121boo$122boo$
+121bo5$26b3o5b3o$26b3o5b3o$27boo5boo$29bo3bo53boo$27bobbobobbo31boo18b
+oo$26bo3bobo3bo29bo$27bobbobobbo17boo10bobboo$27b3o3b3o17boo10bobbo5bo
+bo12boo$65bobo11bo8bobo$66boo6bo4bo10bo$25bo5bo43boobbo$24b3o3b3o33boo
+8bobo$23boobbobobboo31bobo7boo3bo3boo$23booboobooboo19boo10bobbo6bo4bo
+bbobo$26booboo22boo10bobboo5boo3bo4bo$24bobo3bobo33bo10boo$23bobbo3bo
+bbo33boo29boo$26bo3bo68boo$23bobo5bobo64bo$24bo7bo8bo$42bo$40b3o$$40bo
+$40boo$39bobo5$22boo17boo$23bo17bo11bo41b3o$20b3o19b3o6bobo41bo$20bo
+23bo7boo42bo$$61boo$60bobo$62bo$$28bo7bo38boo$28boo5boo39boo$28b3o3b3o
+38bo$30booboo$30bo3bo$27boo7boo$27boo7boo$31bobo$27bobbo3bobbo40boobbo
+bo$28b3o3b3o40b3obo3bo12boo$76boo6bo13boo$77bob5o$78b3o$28boo5boo$28b
+oo5boo41b3o$77bob5o34b3o$71boo3boo6bo13boo18bo$71boo4b3obo3bo12boo19bo
+$78boobbobo27boo$38boo73bo$37bobo7boo64bobo$39bo7bo66boo$45bobo$45boo
+$$107bobobboo34bo$92boo12bo3bob3o15boo16bobboo$14bo77boo13bo6boo14bobo
+14bo5bo5boo$13bobbo34boo14boo39b5obo15bo17bobobboo4boo$oo10b5o33boo15b
+oo42b3o6bo3boo22bo3boo$oo9boob3o34b5o62boobob3o24b3o$12boboo10b3o3bo3b
+o15b4o55b3o4bo4b3o$13boo13bobbo5bo70b5obo3bo3bo27b3o$27bo9bo14b4o36boo
+13bo6boo3b3o26bo3boo$13boo17bo3boo13b5o36boo12bo3bob3o33bobobboo4boo$
+12boboo17b3o14boo15boo38bobobboo5b3o25bo5bo5boo$oo9boob3o34boo14boo49b
+o3bo25bobboo$oo10b5o16b3o82bo4b3o22bo$13bobbo15bo3boo80boobob3o$14bo
+22bo76boo4bo3boo$31bo5bo75bobo$32bo3bo8boo66bo$45bobo64boo$47bo$47boo!

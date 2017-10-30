@@ -1,0 +1,12 @@
+#CSpaceship eaters.
+#CEater+tub MWSS eater by Dean Hickerson, 4 May '97.
+#CHWSS eater(2) by Brice Due, 7 Jan '07.
+#CHWSS eater(3) by Dean Hickerson, 24 Apr '99.
+x = 89, y = 49, rule = B3/S23
+15boo30boo$15bo31bo$13bobo29bobo33b3o$13boo30boo33b3o$b4o27b5o29b6o$o
+3bo26bo4bo28bo5bo$4bo31bo34bo$obbo27bo3bo29bo4bo9b3o$33bo33boo12b3o9$
+12boo$12boo$46bo$45bobo34boo$b4o8boo17b5o9bo19b6o9bobbo$o3bo8boo16bo4b
+o28bo5bo9bobbo$4bo31bo34bo10boo$obbo27bo3bo29bo4bo$33bo10boo21boo$44bo
+36boo$45b3o33boo$47bo5$80bo$79bobo$80bo$$78b5o$78bo4bo$80boobo$81bobob
+oobo$80bobboboboo$66b6o9b3o$65bo5bo12bo$71bo11bobo$65bo4bo11bobbo$67b
+oo12bo3boo$82b3o$84bo!

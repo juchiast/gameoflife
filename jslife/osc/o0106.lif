@@ -1,0 +1,14 @@
+#CMinimum period oscillator possible with this stable
+#Creflector (found by calcyman, 3/2009).
+x = 108, y = 86, rule = B3/S23
+99bo$98bobo$99bo$$97b5o$75boo20bo4bo$76bo23bobbo$76bobo21boobobbo$77b
+oo18bo5bobobo$96bobo4bobbo$96bobbobboo$87boobo6boo$66boo17bobo$67bo7bo
+bo6bobbo3bo$67bobo5boboo5b3o4bo$68boo6b3o8bo3bo$88bobo$73bo15bo$boo5b
+oobo6boobo$bbo5boboo6boboo$bo4boo4boobboo$boo3bo5bo3bo$7bo5bo3bo62boo$
+boo3boo4boobboo62boo$bbo3bo5bo5boobo54b6o$bo5bo5bo4boboo57b3o$boo3boo
+4boobboo4boo55boo$6bo5bo3bo5bo$boo4bo5bo3bo5bo$bbo3boo4boobboo4boo59bo
+$bo6boobo6boobo47boo9bo4bo$boo5boboo6boboo46bobo4bobb3o3bo$70bo7b3obo$
+75boo7$50bobo$50boo$51bo10$30bo$29bobo$29bobo$30bo$$42b3o$44bo$43bo7$
+25bo$20booboo$20boobboo$$38boo$38bobo$40bo$40boo$9boo7bobo$4boobbobbo
+6bobo$bobbo4bobo7bo$obobo5bo18boo$bobboboo21bobo$4bobbo23bo$5bo4bo20b
+oo$6b5o$$8bo$7bobo$8bo!

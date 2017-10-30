@@ -1,0 +1,33 @@
+#CDiagonal lightspeed fuses.
+#C
+#CA1. simplest fuse
+#CA2. Harvester (David W. Poyner)
+#CA3. The Baker (Keith McClelland)
+#CA4. (p4 from "reverse fuse")
+#CB1. Beacon Maker (Steve Tower)
+#CB2. Boat Maker
+#C
+x = 210, y = 162, rule = B3/S23
+21boo$21bobo$24bo97boo$25bo47boo47bobo$26bo46bobo49bo47boo$27bo48bo49b
+o46bobo$bbo25bo48bo49bo48bo$29bo48bo49bo48bo$bobo26bo48bo49bo48bo$31bo
+48bo49bo48bo$o3bo27bo48bo49bo48bo$33bo48bo49bo48bo$obobo29bo48bo49bo
+48bo$35bo48bo49bo48bo$o3bo31bo48bo49bo48bo$37bo48bo49bo48bo$38bo48bo
+49bo48bo$39bo48bo49bo48boo$40bo48bo49bo48boo$41bo48bo49bo47b4o$42bo48b
+o49b3o46boo13bo3bo$43bo48bo49bobbo45bo$44bo48bo111bo3bo$45bo48bo48bobb
+o$46bo48b5o44bobo50bobobo3bobobo$47bo48b4o45b3o$48bo47boobo97bo3bo7bo$
+49bo53bo$50bo53bo44boo46bobobo7bo$51bo51boo43bobbo$52bo96bobo45bo$53bo
+15bo80bo$54bo52boo44boo11bo3bo26bo$55bo13bo37boo43bobbo$124bo3bo24bobo
+10bo3bo$61bobobo3bo84bo$111boo11bo3bo29bobobo3bobobo$61bo3bo3bo41boo$
+116bobobo3bobobo29bo3bo7bo$61bobobo3bo$116bo3bo7bo29bobobo7bo$61bo$
+116bobobo7bo29bo$61bo$116bo41bo$$116bo12$71boo$20boo49bobo$20bobo51bo$
+23bo51bo$24bo51bo$25bo51bo$26bo51bo$27bo51bo$28bo51bo$29bo51bo$obo27bo
+51bo$31bo51bo$o3bo27bo51bo$33bo51bo$obo31bo51bo$35bo51bo$o3bo31bo51bo$
+37bo51bo$obo35bo51b5o$39bo50bo5bo$40bo49bo6bo$41b3o46bo7bo$41bo3bo44bo
+4boboo$41bo4bo47bo$47bo43bo9bo$42bo5bo43bobo5bobo$43bo4bo44boo6boo$44b
+o$45boo50bo7bo$96bobo5bobo$97boo6boo$$54boo45bo$55bo44bobo$52bo48boo$
+52boo$119bo3bo$$119bo3bo$$62boo47bobobo3bobobo$63bo$60bo17bobobo28bo3b
+o7bo$60boo$78bo3bo28bobobo7bo$$70bobobo3bobobo28bo$$70bo3bo3bo3bo28bo
+$$70bobobo3bobobo$$70bo$$70bo16$28bo$27bobo$28bobo$29bobo$30bobo$31bob
+o$32bobo$33bobo$34bobo$35bobo$36bobo$37bobo$38bobo$39bobo$40bobo$41bob
+o$42bobo$43bobo$44bobo$45bobo$46bobo$47bobo17bo3bo$48boboo$48booboo14b
+o3bo$49boboo$59bobobo3bobobo$$59bo3bo7bo$$59bobobo7bo$$59bo$$59bo!

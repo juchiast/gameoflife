@@ -1,0 +1,9 @@
+#CBy David Eppstein and Jason Summers, Aug 2000.
+x = 70, y = 26, rule = B3/S23
+bboobo6boobo$bboboo6boboo$6boo8boo$6bo9bo26boo13boo$7bo9bo26bo6b3o3bo
+bbo$6boo8boo26bobo5bo3bo$bboobo6boobo29boo4bo4bobboboo$bboboo6boboo36b
+obbobob3o$oo8boo39b3obobobbo$o9bo39boobobbo4bo4boo$bo9bo44bo3bo5bobo$
+oo8boo40bobbo3b3o6bo$bboobo6boobo32bo4boo13boo$bboboo6boboo33bo$25boo
+7bo5boo5b3o$26bo6b3o3b3o$26bobo6bobboobboo$27boo4boobb5oboo$35b3obobo
+bbo9bo$32bobbobob3o10bobo$32boob5obboo4boo3boo$33boobboobbo6bobo$35b3o
+3b3o6bo$35boo5bo7boo7bo$60bo$58b3o!

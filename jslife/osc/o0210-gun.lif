@@ -1,0 +1,21 @@
+#CThis is a modernized version of a gun built by
+#CDave Buckingham in 1988.
+x = 233, y = 206, rule = B3/S23
+204bo$203b3o$202booboo5bo$201b3ob3o3bobo$201b3ob3o$201b3ob3o$201b3ob3o
+3b3o$202booboo4b3o$203b3o6bo$204bo$$212bo$211b3o$211b3o$72boobo5boo5b
+oobo$72boboo6bo5boboo$76boo3bo4boo4boo117bobo$76bo4boo3bo5bo95bobbo4bo
+bbo12bo$77bo9bo5bo92b3obb6obb3o$76boo3boo3boo4boo94bobbo4bobbo19bo4bo$
+72boobo6bo3bo5bo115boo7boob4oboo$72boboo5bo5bo5bo113boo10bo4bo$70boo9b
+oo3boo4boo115bo$70bo15bo5bo$71bo9boo4bo5bo$70boo10bo3boo4boo$72boobo5b
+o6boobo$72boboo5boo5boboo129bobboboobobbo$221b4oboob4o$221bobboboobobb
+o3$216b3o$$215bo3bo$215bo3bo$$216b3o3$216b3o$$215bo3bo$215bo3bo$$216b
+3o9$175bobo$175boo$176bo$$121bo$119b3o$118bo$118boo6$125boo$125boo$
+173b3o$175bo$174bo$109b3o$109bobbo$109bobbo$110bobbo$106boobbobbo$105b
+obbobobo$106bobobbo$107bo3$109boo$108bobbo$108bo$108bo$108bobo$107bobb
+o$108boo14$118bo$117bobo$116bo3bo$116bo3bo$116bo3bo3bo$117bobobboo$85b
+o32bo4boo$83boo$84boo5$151bo$149bobo$150boo5$129bo$82boo44bobo$81bobo
+45bo$83bo35$14b3o$31bobo$13bo3bo13boo$13bo3bo14bo$$14b3o3$14b3o$$13bo
+3bo$13bo3bo$$14b3o3$obboboobobbo17b3o$4oboob4o19bo$obboboobobbo18bo6$
+8bo4bo$6boob4oboo$8bo4bo19bobbo4bobbo$31b3obb6obb3o$20bo12bobbo4bobbo$
+19bobo3$19b3o$19b3o$20bo$$28bo$20bo6b3o$19b3o4booboo$19b3o3b3ob3o$25b
+3ob3o$25b3ob3o$19bobo3b3ob3o$20bo5booboo$27b3o$28bo!

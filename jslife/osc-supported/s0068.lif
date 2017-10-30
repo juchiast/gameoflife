@@ -1,0 +1,8 @@
+#CEngine by Noam Elkies, 1996.
+x = 111, y = 55, rule = B3/S23
+40boo18boo$40bo20bo$38bobo20bobo$37bobo5boo8boo5bobo$33boo3bo6boo8boo
+6bo3boo$33boo32boo$$58boo$57bobbo$48b3o7bobbo$34b3o11bo13bo$36bo11boo
+10bobo$35bo16boo6bo$52boo3$37boobb4obboobooboo8boo$37bobb6obboboobo10b
+o$38b10o6b10o10boo$35b3o10b6obb6obb3o7bobo$35bobbo8bo6bobb4obbobbo7bo$
+36boo10b6o10boo$$50boo$50boo3$17b3o$19bo$18bo6$91boo$91bobo$91bo7$3o$
+bbo$bo6$108boo$108bobo$108bo!

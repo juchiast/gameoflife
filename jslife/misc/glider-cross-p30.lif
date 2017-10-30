@@ -1,0 +1,40 @@
+#Cby David Bell, 12 Apr 2002
+#C
+#CThis is not necessarily the best way to cross
+#Ctwo p30 glider streams, but it is unusual in that
+#Cit leaves one of the streams completely intact.
+x = 204, y = 236, rule = B3/S23
+180boo$179bo$178bo12boo$168boo8bo7bo4boo$168boo8bo8boo5boo$179bo4boobb
+o5b3o5boo$180boob5o6boo6boo$186bo4boo$191boo$$178bo$177bo$177b3o6$170b
+o$170bobo$170boo5$163bo$162bo$162b3o6$155bo$155bobo$155boo4$114boo23b
+oo$114b3o22bo$116boobo8bo8bobo$116bobbo6bobo8boo$104boo10boobo5bobo$
+103b3o8b3o7bobbo$91bo8boboo10boo9bobo$91bobo6bobbo22bobo$92bobo5boboo
+14bo9bo$79boo11bobbo7b3o10boo$79boo11bobo9boo11boo$91bobo$91bo9bo$102b
+oo$101boo$$110bo$94bo14bobo$93b4o12bobo$76boo14boobobo16boo$76bobbo11b
+3obobbobboo7boobboo$68b5o7bo11boobobo3boo6boo$67bo5bo6bo12b4o12bo$67bo
+3boo7bo7bo5bo$68bo7bobbo9bo$76boo9b3o$$103bo$83boo18bobo$82bo3bo16boo$
+66boo13bo5bo$59b3o4boo13bo3bobbo7bo$58b5o6boo10bo12bobo$57bobo3bo5b3o
+10bo3bo3bo4boo$57boo3bo6boo12boo3boobo12boo$66boo9bobo11bo12boo$66boo
+10boo11boo$78bo$98bo$75bo20boo$75b3o19boo$78bo$77boo6bo$86boo$85boo$
+80bo$78booboo$96boo$77bo5bo12boo$91bo$77booboboo6bo$90b3o4$66boo6boo6b
+o$65bobbo4bobbo4bobo$58bo5b6obb6o3bobbo$58b3o4bobbo4bobbo5bobo$61bo4b
+oo6boo8bo$60boo4$78bo$76boo$77boo3$60boo3boo$62b3o$61bo3bo$62bobo4bobo
+$63bo5boo$48bobbo4bobbo10bo$41bo4b3obb6obb3o$41b3o4bobbo4bobbo$44bo$
+43boo$63bo$45b3o15bobo$45b3o15boo$44bo3bo$43bo5bo$44bo3bo$45b3o$56bo$
+55bo$55b3o4$31bobboboobobbo$24bo5boobbo4bobboo$24b3o4bobboboobobbo6bob
+o$27bo21boo$26boo22bo5$43bo$41boo$28b3o11boo$27bo3bo$26bo5bo$26bo5bo$
+29bo$27bo3bo$26b5o3bobo30bobo$13bobboo4boobboobo4boo30bobbo$12bo3b3obb
+3o3bo7bo20bo8boo$13bobboo4boobbo28bobo5boo3bo14bo$55boobo6boo16bobo$
+43boo10booboo6bobbo14bobo7bo$43boo10boobo8bobo14bobbo6boo$28bo26bobo
+26bobobboo4boo$28bobo25bo9bo16bobo3boo4b3o7boo$28boo37bo15bo5boo4boo8b
+oo$65b3o26boo$94bo$82bo$81bo$21bo59b3o$10bo9bo$5bo4b4o6b3o51bo$5bo5b4o
+57bobbo$oo9bobbo58boo$oo9b4o13boo28boo13b3o$10b4o13b4o11boo13b4o13bo$
+10bo15booboo10booboo10booboo9booboobo$27boo13b4o11boo10boo3boo$43boo
+26bo$81boo$79bo3bo$70bo7bo5bo8boo$24bobobbobo38bobo4boobo3bo8boo$20boo
+bobbobbobboboo23boo12boo3bo5bo$24bobobbobo27boo12boo4bo3bo$73boo6boo$
+70bobo$70bo15$65b3o$65bo$66bo3$88boo$88boo$73boo$73bobo$73bo6$62boo16b
+3o$63bo16bo7b3o$63bobo6bo8bo5bo3bo$64boo6boo12bo5bo$71bobo13bo3bo$88b
+3o$87bobbo$87b3o$77boo7boboo$77bo8bobo$64boo12b3o6bo$65boo13bo$64bo$
+53boo29boo3boo$52bo3bo27bobobobo$51bo5bo7bo19b5o$41boo8bo3boboo4bobo
+20b3o$41boo8bo5bo3boo12boo10bo$52bo3bo4boo12boo$53boo6boo$63bobo$65bo
+3$86boo$86boo!

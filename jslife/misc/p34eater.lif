@@ -1,0 +1,10 @@
+#CTraffic light consumes three gliders spaced 34
+#Cgenerations apart.
+#CFound by Dean Hickerson, 8 Mar 03
+x = 156, y = 160, rule = B3/S23
+obo$boo$bo6$9bo$10boo$9boo7$17bobo$18boo$18bo6$26bo$27boo$26boo7$34bob
+o$35boo$35bo6$43bo$44boo$43boo7$51bobo$52boo$52bo6$60bo$61boo$60boo7$
+68bobo$69boo$69bo6$77bo$78boo$77boo7$85bobo$86boo$86bo6$94bo$95boo$94b
+oo7$102bobo$103boo$103bo6$111bo$112boo$111boo7$119bobo$120boo$120bo6$
+128bo$129boo$128boo7$136bobo$137boo$137bo6$145bo$146boo$145boo7$151b3o
+$$149bo5bo$149bo5bo$149bo5bo$$151b3o!

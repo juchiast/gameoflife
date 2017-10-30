@@ -1,0 +1,9 @@
+#CGrowing spaceship (c/2 p20 master, 10c/23 p23 slave)
+#CNicolay Beluchenko, 4 Aug 03
+x = 41, y = 37, rule = B3/S23
+bbo13bo7bo13bo$b3o11b3o5b3o11b3o$oobo5bo4boobo5boboo4bo5boboo$3o5b3o3b
+3o7b3o3b3o5b3o$boo5boboo3boo7boo3boobo5boo4$11bo17bo$b3o5b3o17b3o5b3o$
+bobbo5bo19bo5bobbo$bo5bobbo19bobbo5bo$bo5b3o21b3o5bo$bbobo31bobo3$17bo
+5bo$16b3o3b3o$16bobooboobo$17b3ob3o$17b3ob3o$17boo3boo4$11boo15boo$11b
+oo15boo3$17bo5bo$16b3o3b3o$15boobo3boboo$16booboboboo$18bo3bo$18bo3bo$
+11boo15boo$11boo15boo!

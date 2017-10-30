@@ -1,0 +1,8 @@
+#CSynthesis of LWSSs pulling 'A'-shaped tagalong.
+#CJason Summers, 26 Sep 07
+x = 69, y = 79, rule = B3/S23
+3bo61bo$4bo59bo$bb3o59b3o4$3bo61bo$4bo59bo$bb3o59b3o3$11bo$9bobo$10boo
+3$bbo63bo$obo63bobo$boo63boo8$46bo$12bo31boo10bo$13bo7boo22boo8bo$11b
+3o8boo31b3o$21bo13boo$35bobo$35bo$51boo$50boo$27boo23bo$26bobo$28bo4$
+27boo$26bobo$28bo26$9bo49bo$9boo47boo$8bobo47bobo5$7b3o49b3o$9bo49bo$
+8bo51bo!

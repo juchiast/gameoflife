@@ -1,0 +1,14 @@
+#Cp72 gun by Noam Elkies, Nov 1997 (includes some
+#C  later improvements)
+#Cp72 oscillator by Robert Wainwright, 1990
+#Cp36 oscillator by Elkies, 1994
+x = 69, y = 36, rule = B3/S23
+oboo6boobo12bo$oobo6boboo11b5obobo$4boo8boo9booboobob3o12bo$5bo8bo12bo
+bo16b3o$4bo10bo18bobo8bo5bo$4boo8boo12b3obobooboo5bob6o$bboo6boobo16bo
+bob5o5bobo$3bo6boboo23bo5boo4b3o12b4o$bbo5boo35b3o3bo7boo7bo$bboo4bo
+24bo11bo4bo8boobboo3bo$oo7bo18b3o3bo11bo16boobbo$bo6boo17b5obo3b3o7bo$
+o9boobo15bo$oo8boboo14boo6boobboo$28boo6b5obo3boo12boo$36boo4bo3bo3bo
+9boo$35bob5o$35boo3bo4bo4bo7bo$36bo7bo11bobo$41bo3bobbo7b3o$37bo3boo5b
+o$36b5obo$35bo4boo$35bob5o$36boobboo$$32boo4b3o$32bobo9boo$33b3o8boo$
+34boo$32bobo$27boobbobo9b3o$27bobobbo10boobobboo$28b4o13boobboo7bo$29b
+oo14boo12bo$57b3o!

@@ -1,0 +1,31 @@
+#C1. Engine by Karel Suhajda, 6/'07
+#C (stabilization by Jason Summers)
+#C2. By Nicolay Beluchenko, 3/'09
+x = 232, y = 166, rule = B3/S23
+11bo40boo66bobobo$52boo$11bo112bo$145bo$11bo108bobobo21bo$53bo90b3o$
+11bo40b3o65bo$51bo3bo$11bo38bob3obo63bobobo77bo$51b5o146bobo$202boo$
+38boo113bo$38boo111bobo$152boo$$39bo12bobboo138bo$38bobo11bobo139bo$
+37bo3bo9boo141b3o$37b5o8boo108bo11bobboo$36boo3boo7boobo107bo8b3o3bo$
+37b5o9b3o105b3o7bo6boboo$38b3o128boo6bobo$39bo$52boo3boo128bo$55bo131b
+obo$52bo5bo128boo$23bobo18bobo6booboo$23bobbo17boo8bobo57bobbo26bobbo
+17b3o$8bo6bo10boo6boo9bo9bo62bo11b4o14bo18bo7bo$7bobo5bo8bo3boo4boo19b
+o58bo3bo10bo3bo10bo3bo16b3o8bo$6boboo6bo9boo87b4o14bo11b4o27bo36bobbo$
+oo3booboo9boobbobbo102bobbo36bo27b4o11bo14b4o$oo4boboo5b3obbobbobo143b
+o8b3o16bo3bo10bo3bo10bo3bo$7bobo7b4o149bo7bo18bo14b4o11bo$8bo9boo35boo
+121b3o17bobbo26bobbo$38bo16boo$37boboo6bo17bo91boo$36bo4bo4bobo15b4o
+88bobo$26bo10bo3bo3bo3bo13boobobo3boo84bo$27boo9b3o4bobbo13b3obobbobb
+oo$26boo17bobbo14boobobo97bobo6boo$46boo16b4o98boobo6bo7b3o$19bo45bo
+103bo3b3o8bo$17b4o16boo130boobbo11bo$16boboboo14bobbo17boo90b3o$11boo
+bbobbob3o13bobbo4b3o9boo93bo$11boo3boboboo13bo3bo3bo3bo10bo91bo$17b4o
+15bobo4bo4bo$19bo17bo6boobo144boo$28boo16bo145bobo$28boo35boo9bo115bo$
+64b4o7bobo64boo$59bobobbobb3o5boobo4boo56bobo$58bobbobboo9booboo3boo
+58bo$57boo9bo6boobo$29bo19boo4boo3bo8bo5bobo$29bo9bo9boo6boo10bo6bo
+122b3o$28bobo8boo17bobbo137bo$27booboo6bobo18bobo138bo$26bo5bo$29bo$
+26boo3boo$45bo$44b3o$31b3o9b5o$31boboo7boo3boo$33boo8b5o$32boo9bo3bo$
+30bobo11bobo$28boobbo12bo3$45boo$45boo$$29b5o$28bob3obo$29bo3bo$30b3o$
+31bo4$31boo$31boo22$9bobobo$$13bo$$9bobobo$$13bo$$9bobobo7$36bo$34bobo
+$24boo6boo$23bo3bo4boo12boo$22bo5bo3boo12boo$12boo8bo3boboo4bobo$12boo
+8bo5bo7bo$23bo3bo$24boo$35bo$36boo$35boo6$42bobo$43boo$43bo$$48boo$46b
+o4bo$46bo4bo$46bo4bo$48boo4$52boo$52bobo$52bo5$71boo$59b3obbo5bo3bo$
+55bo3bo9bo5bo3boo$53bobo4bo8bo3boboobboo$45boo4boo16bo5bo$45boo4boo17b
+o3bo$51boo18boo$53bobo$55bo!

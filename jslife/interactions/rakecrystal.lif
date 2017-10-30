@@ -1,0 +1,17 @@
+#CA crystal growing on HWSSs from a rake
+#CChris Lu, March 2002
+x = 102, y = 68, rule = B3/S23
+35b6o$35bo5bo$35bo$36bo4bo$38boo$33bobo$26boo5bobbo$25boob4o3boo$26b5o
+6bo10bo$27b3o5boo12bo41bo$32booboo10b3o40b3o$11b3o76boboo$10b5o11b4o
+30bo30b3o6boo$9boob3o11bo3bo30bo31bo6boo$bbobbo4boo14bo32b3o26booboo$b
+o25bobbo3boo53b3obboo$bo3bo27boob4o32bo17boobo6bo$b4o29b6o33bo9bo16bo$
+12bo22b4o32b3o8b3o15bo$10boobo68boboo$bb3o10bo67b3o$b5o9bo67b3o$oob4o
+5bobbo67b3o$boo5boobb3o3boo6boo6boo6boo6boo6boo6boo6boo7boo$13boo3boo
+6boo6boo6boo6boo6boo6boo6boo3$9b4o55boo$8b6o55boo$7boob4o54bo10boo$8b
+oo68boo$56boo22bo$19b6o32boo$19bo5bo30bo18boo$13boo4bo54boo$12b4o4bo4b
+o18boo30bo$11booboo6boo21boo$12boo30bo26boo$70boo$20bo11boo38bo$16b6o
+11boo$11b8o3bo9bo34boo$11bo8boo44boo$11bo6b3o47bo$12bo5boo$14boo47boo$
+22b4o36boo$21b6o37bo$20boob4o$21boo36boo$30boo26boo$29boob4o24bo$30b6o
+5boo$31b4o5boob4o8boo$23boo16b6o7boo$21bo5boo13b4o10bo$20bo6b3o$20bo8b
+oo20boo$20b8o3bo9bo8boo$25b6o11boo8bo$29bo11boo$$21boo$20booboo6boo$
+21b4o4bo4bo10b4o$22boo4bo15b6o$28bo5bo8boob4o$28b6o10boo!

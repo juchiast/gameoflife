@@ -1,0 +1,10 @@
+#CNoam Elkies, Mar 1996
+#C
+x = 73, y = 21, rule = B3/S23
+35boo8boo$oo5boobo4boo3boo13boo9bo7bo$bo5boboo4boo3boo24bobo4bobo12boo
+$o4boo4boo34boo5bo13b3o$oo3bo5bo3boo3boo12boobo5boo23boobo$6bo5bobbobo
+bobo13bobo5boo25bobo$oo3boo4boo4bobo16bo18boo4boo6bobbo$bo3bo5bo4boobo
+15boo18bobobbobbo6boo$o5bo5bo7boo13boo14bobbobbo3boo$oo3boo4boo8bo13b
+oo13bo3b3o$5bo5bo8bo28boobbobbo$oo4bo5bo7boo28booboo15boo$bo3boo4boo8b
+o29b4o15boo$o6boobo9bo14boo$oo5boboo9boo12bobbo$34bobo25boo5boobo$35bo
+boo23boo6bobo$36b3o13bo18bo$37boo12bobo6bo9boo$52bo8bo8boo$59b3o8boo!

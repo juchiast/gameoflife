@@ -1,0 +1,13 @@
+#Cp30 glider "fan-out devices"
+#Cleft: by Dietrich Leithner, 1993
+#Cright: by Paul Rendell(?)
+x = 168, y = 71, rule = B3/S23
+24boo$23bobo$22b3o$22boo$22boo$23bobo$24bo3$21boo3boo111boo$21boo3boo
+111bo$132bo4bobo$23b3o105b4ob3o$23b3o88boo14booboboo$o23bo89bobbo11b3o
+bobbo$3o102boo11bo11boobobo$3bo101boo11bo12b4o$bboo114bo7bo5bo$114bobb
+o9bo$6bo10boo95boo9b3o$6bo9bobo6b3o$18bo6b3o$24bo3bo110bobo$bboo3boo
+130bobbo$3b5o11boobboo3boo112boo$4b3o12boo102boo15bo3boo4boo$5bo117b3o
+16boo6boo$9b3o113boobo10bobbo$11bo102boo9bobbo10bobo$10bo103boo9boobo$
+123b3o9boo$123boo10bobo$28boo105bo$28bo$29b3o$6b3o22bo$$6bobo$5b5o16b
+oo$4boo3boo15bobo$4boo3boo15bo3$7bo$8boo$$10bo$$6bobbo$6boo4$157b3o$
+157bo$158bo5$165boo$48b3o114bobo$48bo116bo$49bo5$56boo$56bobo$56bo!

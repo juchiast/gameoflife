@@ -1,0 +1,10 @@
+#C
+x = 66, y = 31, rule = B3/S23
+46bo7bo$45bobo5bobo$46bo7bo4$39bobo17bobo$oo3boo3boo3boo25bo15bo$bo3b
+oo3boo4bo24bo4bo7bo4bo$o14bo21bo7bobbo3bobbo7bo$oo3boo3boo3boo19boboo
+6b3o3b3o6boobo$5bobobobo24bo9b3o3b3o9bo$oo5bobo5boo18boo27boo$bo4boobo
+6bo$o9boo3bo26boo13boo$oo9bo3boo25boo13boo$10bo$oo8boo3boo18boo27boo$b
+o9bo4bo19bo9b3o3b3o9bo$o9bo4bo20boboo6b3o3b3o6boobo$oo8boo3boo20bo7bo
+bbo3bobbo7bo$41bo4bo7bo4bo$32boo8bo15bo$32bo6bobo17bobo$37bo$30b6obo$
+30bo$31booboo3boo5bo7bo$32bobo4bobo3bobo5bobo$32bobo6bo4bo7bo$33bo7boo
+!

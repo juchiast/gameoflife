@@ -1,0 +1,41 @@
+#CThis is an updated version of a sawtooth pattern originally
+#Cbuilt by David Bell on 29 Aug 1992.
+#C
+#CThere are two phases in the sawtooth's operation.
+#C
+#CIn the first phase, a stream of gliders travels to the receding 
+#CCordership and are reflected back.  The density of the returning 
+#Cstream is 1/2 that of the outgoing stream.  The population is at 
+#Cthe new maximum at about the time that the first glider in the 
+#Cstream returns so that the streams are full.
+#C
+#CIn the second phase, each returning glider impacts into an 
+#Coutgoing glider to create an eater, which deletes the following 
+#Coutput glider. This cuts off the output stream, which then 
+#Cempties until there are no more gliders left.  The population is 
+#Cat its minimum (again) at around the time that the last glider in 
+#Cthe stream is used up so that the streams are empty.
+#C
+#CBy David Bell, 25 Apr 2002
+#C[Updated to use smaller Cordership, 6/2004]
+x = 133, y = 100, rule = B3/S23
+101bo$89bo11b3o$87b3o14bo23boo$71bo14bo16boo23bo$71b3o12boo38bobo$74bo
+7boo38boobboo$73boo7bo39boo$89bo20bobbo$83boo5bo19bo3bo$74boo14boo17bo
+4bo$74boo7boo4boobboo14bo4bo$89bo3boo14bo3bo$84bo25bobo5$90boo36boo$
+90bo19boo16bobo$92bo16bobo18bo$91boo16bo13bo6boo$87boo19boo4boo6boo$
+87bo24bobbo5bobbo$88b3o21boo7bobo$77b3o10bo31boo$76bobbo$80bo$76boo$
+71boo3boo3bo$70bobo8bo$70bo8bo$69boo6b3o$77boo52boo$77bo53bo$80bo48bob
+o$76b6o47boo$75b5o$75bo3bo$76b3obo$76bob3o30bo$80bo7boo21b3o$75b3o8bo
+bbo24bo6boo$14boo70boo4boo19boo5bobo$14boo54boo20bo16boo11bo$71bo18bob
+o16bo8bo$71bobo16boo19bo5bo$72boo36boo5bobboo$118b3o$78boo3boo24bo9bo$
+13bobo10b3o48bobobbobo23boboo$6boo5bobo10bo43boo5bo4bo24boo3bo$6boo6b
+4o9bo42boo5bobbobbo19boo3bo$16boo4bobo53b3o23boobbo3bo$16boo4b4o45bo
+29boobo3bo17boo$23boboo43bobo28bo6bo17boo$23bobbo42bobbo21bo6bobo$22bo
+3bo41bobbo23bo6boo4bobo$25bo67b3o13bo17boo$22boo44bobbo55bo$70boo42boo
+12b3o$97boo16bo14bo$97bo14b3o$98b3o11bo$17boo62boo17bo$4bo11bobbo61bo$
+3b3o6bo3bo65b3o$3b3o5bo3b5o64bo$3o7bo6bo$11boo3bo52bo$15boo50boo12boo$
+68boo$26b3o51bo3bo$79bo4bo$24bo3bo5bo43bobobo$24b4o6bo4b3o35bobobo$24b
+o14bo35bo4bo$39bobbo32bo3bo$40bobbo$41bo7boo23bobboo$47b3obo21bobo$36b
+oo5bo3bo3boo20boo$36boo6bobboobo26boo$54bo22bobo$54boo16boo5bo$53bo4b
+oo4boo6boo5boo$55boobbo4boo$57boo$57bo5$56boo$47boo7boo$34bo11bobbo$
+33b3o6bo3bo$33b3o5bo3b5o$30b3o7bo6bo$41boo3bo$45boo!

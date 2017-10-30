@@ -1,0 +1,31 @@
+#Cp112 glider gun - by Jason Summers, 6 Mar '08
+#CUses a glider duplicator by David Bell (27 May '02)
+#CThis is an improved version of an earlier gun (JS 30 May '02)
+x = 142, y = 128, rule = B3/S23
+52boo47boo$52boobo43boboo$56bo8bo23bo8bo$53bo9b3o23b3o9bo$oo4boo5boobo
+37boboo4bo29bo4boobo$bo5bo5boboo39boo4boo27boo4boo$o5bo10boo$oo4boo9bo
+42bo33bo$18bo40bobo31bobo$oo4boo9boo41boobboo23boobboo$bo5bo5boobo47b
+oo23boo$o5bo6boboo$oo4boo3boo$11bo$oo4boo4bo44bobo$bo5bo3boo44boo$o5bo
+6boobo41bo$oo4boo5boboo5$82boo$81bobo$83bo4$109bobo$110boo$110bo6$85b
+oo$85bobo$85bo3$17boo5boo103boo5boo$18bo5boo3bobo97boo5bo$18bobo8boo
+103bobo$19boo9bo103boo$23boo105boo$22bobo27bo49bo27bobo$23bo26b3o49b3o
+26bo$49bo55bo$18b3o28boo53boo28b3o$18b3o33boo78b3o$18b3o32bobo15bo11bo
+50b3o$15b3o37bo10b3oboobboo3boobboob3o48b3o$15b3o48b4o4boo3boo4b4o20b
+oo26b3o$15b3o52boo11boo24bobo25b3o$109bo6bo$91boo12bo9bo$27bo62bobbo
+10bobo8b3o9bo$26boo62bobbo6bobobboo20boo$25boboo10bo12boo36booboo4bobb
+o23boobo$24b3obbo8bobo10bobbo15bo13bo6bobo6bobo22bobb3o$26bobobo7boobb
+obo6bobbo14boo13boo6bo31bobobo$27bobobo10bobbo4booboo13boboo11boobo19b
+o16bobobo$28bobb3o8bobo6bobo13b3obbo9bobb3o8bobo6bobo13b3obbo$29boobo
+19bo16bobobo7bobobo10bobbo4booboo13boboo$30boo6bo31bobobo5bobobo7boobb
+obo6bobbo14boo$30bo6bobo6bobo22bobb3ob3obbo8bobo10bobbo15bo$36booboo4b
+obbo23boobo3boboo10bo12boo$36bobbo6bobobboo20boo5boo$36bobbo10bobo8b3o
+9bo7bo$37boo12bo9bo$55bo6bo$29boo24bobo66boo$25boo4b4o20boo63b4o4boo$
+25boobboob3o74bo10b3oboobboo$29bo77bobo15bo$108boo7$77b3o$79bo$78bo34b
+o$111bobo$112boo$31bo$17boo5boo5bobo95boo5boo$18bo5boo5boo96boo5bo$18b
+obo113bobo$19boo113boo$23boo105boo$22bobo105bobo$23bo107bo$19bo115bo$
+18bobo68b3o42bobo$17bo3bo67bo43bo3bo$16bo3bo6bo62bo43bo3bo$15bo3bo7bob
+o105bo3bo$14bo3bo8boo107bo3bo$15bobo99bobo17bobo$16bo100boo19bo$118bo
+7$15boo32b3o$14bobo34bo$14bo35bo90bo$13boo124bobo$140boo$43boo65boo$
+43boobboo57boobboo$47bobo55bobo$48bo57bo$52bo49bo$45boo61boo$46bo3bob
+3o45b3obo3bo$43b3o6boobo43boboo6b3o$43bo8boboo43boobo8bo$53b3obo39bob
+3o$$55bo43bo!

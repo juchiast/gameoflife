@@ -1,0 +1,8 @@
+#Cp92 Conway-Space "Heisenburp" Duplicator
+#CBrice Due, 3 Jan 07
+x = 51, y = 46, rule = B3/S23
+20b3o3bo$13boo3b5obbobo$13boobboo3boo3bo$18boo3bobbo$19bo3b3o9bo$$19bo
+3b3o13boo$18boo3bobbo$13boobboo3boo3bo$13boo3b5obbobo14boo$20b3o3bo15b
+oo10$24bo$24boo$23bobo$42b3o3b3o$42bobbobobbo$42booboboboo$42boo5boo5$
+44booboo$42bobbobobbo$42bobo3bobo$42b3o3b3o$42boo5boo$42boo5boo$42boo
+5boo6$bo$boo$obo!

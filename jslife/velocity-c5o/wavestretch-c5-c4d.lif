@@ -1,0 +1,16 @@
+#Cc/5 part by Matthias Merzenich, 15 Apr 2011
+#Cc/4 diagonal part by Nicolay Beluchenko, 5 Jan 2006
+x = 103, y = 75, rule = B3/S23
+70bo$68booboo$67b3o$64boo3bo$64bo3bo$$60bo3b3o$59bobo$58bobbo$60boo$
+57bobbo4bo$58b3obbobo$63b3o$58bob4o$57bo$58bo$55bobbobo$55boo$51boo4bo
+$50b3obobo$50bo$52boo$52boo$$49b3o$51bo$48bo3bo$48bo4bo$48bo29boo5boo
+5boo5boo$48b5o23bo3bo3bobbo3bobbo3bo3bo$76bo3bobob3o5b3obobo3bo$76bo5b
+oobb3ob3obboo5bo$46boo21boo5boob3o15b3oboo$40bobo3bobo20bobo4bo25bo$
+31boo6boobboobbo21bobo5bo3bo15bo3bo$30boo10bobo24bo3boo3bobbo15bobbo$
+31bobo9bobo5bo7bob4obo6boo$26bo4b3o9boo4b4o4bob3obobobo6bo$25b5ob3obbo
+boboobb3oboo3b4o12bo$25bobboo6bo4bobbobbo3bobboo5bobo3boboo$35bo3bo4bo
+3b4obo3bo4b7o$27boobbooboobbo10booboo4bo4bo$35bo28bo$21b3o3bo5boo18bo$
+21bo5bobboboo17boo$22bo3boobo$25boo3bobo$13b3o10bo$13bo5b3obboo$14bobb
+oob3oboo$16bo10bo$17boboboo4bo$19boobo$17boo3bobo$16boo$18bo$15boo$14b
+3o$13boobo$12b4obo$17b3o$18boo$10b3oboo$9bo3b3o$12b3o$8bobobo$7b4o$7bo
+$8boo$9bobbo$oo$obo3b3o$o3bo4bo$3boo$3bo5bo!

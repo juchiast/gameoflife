@@ -1,0 +1,3 @@
+#Ca b-heptomino shifts an eater 2 cells
+x = 10, y = 10, rule = B3/S23
+6boo$6bobo$8bo$8boo3$oo$boo$oo$o!

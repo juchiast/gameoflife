@@ -1,0 +1,34 @@
+#Cleft: Nicolay Beluchenko, 18 Jul 03
+#C(slightly modified by Jason Summers)
+x = 335, y = 186, rule = B3/S23
+191boo71bo$191boo70bobo$191boo58boo9bo3boo6boo$73bo118bo58boo9bo3boboo
+4bobo$oobo6boobo6boobo49bo117bobo68bo3bob3o4b3o$oboo6boboo6boboo167bob
+o46boo21boboboobbo4b3o6boo$4boobboo4boobboo4boo47bo118bo47bobbo20bo4b
+oo4b3o7boo$4bo3bo5bo3bo5bo47bobo97boo5bo46bobo15bo29bobo$5bo3bo5bo3bo
+5bo145b3o3bo3bo42bo3bobb3o10bo6boo21boo$4boobboo4boobboo4boo46b3o84bo
+8boboo5bo11boo3boo28bo19bo6boo5boo$oobo4bo5bo3bo5bo134bobo6bobbo4bo5bo
+6bobobobo21boo4bo4bo7boobbobbo13bobbo$oboo5bo5bo3bo5bo134bobo5boboo9b
+oo7b5o22boo5bo7bobobbobboo16boo$4boobboo4boobboo4boo46b3o72boo11bobbo
+7b3o17b3o30bo3bo5b3o16bobo$4bo3bo5bo3bo5bo122boo11bobo9boo18bo33bobo
+24bo$5bo3bo5bo3bo5bo46bobo84bobo91bobbo11boo$4boobboo4boobboo4boo47bo
+85bo9bo85booboo8bo$oobo6boobo6boobo146boo71bo11boo3bo5bobo$oboo6boboo
+6boboo49bo95boo73bo16bo4boo$73bo168b3o13bobo$56boo3bobbo3boo$56b5o4b5o
+119bobo$56boo3bobbo3boo119boo$190bo$177bo$177bo73bo$176bo16b3o48boo3bo
+bo$177bo14bo3bo47boo4boo$177bo3bo9bo5bo$177boboo11bo3bo$177boboo12b3o$
+178bo14b3o$$102bo78b3o$101b3o$100bobobo88boo$100bobobo88boo$101b3o$
+102bo$$54b3o$56bo45bo$55bo45b3o$100bobobo62boo$100bobobo61bobo$22bo78b
+3o62bo$21b3o78bo62boo3$21b3o82bobbo4bobbo$104b3obb6obb3o80bo$21bobo82b
+obbo4bobbo80bobo$21bobo175boo$$21b3o$$205boo$21b3o181bobo$22bo184bo$
+207boo$7boo6boo$6bobbo4bobbo$6bobbo4bobbo270bo$6bobbo4bobbo271bo$7boo
+6boo270b3o5$13b8o$13bob4obo275bo$13b8o57bo215bobo$78bobo214boo$78boo$$
+27bo$26b3o$25booboo273bo$24b3ob3o273bo$24b3ob3o271b3o$24b3ob3o$24b3ob
+3o$25booboo$26b3o$27bo$311bo$309bobo$310boo4$78bo$77bobo238bo$77bobo
+239bo$57boo18bobo237b3o$57bobo$57bo4$326bo$324bobo$325boo4$123bo207boo
+$122b3o206bobo$121booboo207bo$120b3ob3o206boo$120b3ob3o$120b3ob3o$120b
+3ob3o$121booboo$122b3o$123bo4$130b8o$130bob4obo$130b8o5$129bo4boo6boo$
+128boo3bobbo4bobbo$128bobobbobbo4bobbo$133bobbo4bobbo$134boo6boo$$128b
+o$127b3o3$127b3o$$127bobo$33bobbo4bobbo82bobo$31b3obb6obb3o$33bobbo4bo
+bbo82b3o3$48bo78b3o$47b3o78bo$46bobobo$46bobobo$47b3o$48bo$$61boo$48bo
+11boo$47b3o12bo$46bobobo$46bobobo$47b3o$48bo11$81boo3bobbo3boo$81b5o4b
+5o$81boo3bobbo3boo$77bo$77bo$$77bo$76bobo$$76b3o3$76b3o$$76bobo$77bo$$
+77bo$77bo!

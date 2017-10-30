@@ -1,0 +1,36 @@
+#C A slide gun and a backward Corder-rake can stretch a tub
+#C at c/124.
+#C Jason Summers, 6 Apr 1999
+x = 152, y = 159
+124b3o$124b3o$$123boobo$122bo3bo$122b3o$108boo$108boo3$125bo$124bobo$
+125bo$125boo$100boo23boo$100boo23bo$124boobo$107bobo11boboobo$106boo
+13bo4bo10bo$105bo15bobo13boo$106boboo25b5o$108bobo29bo$92boo14bo11boo
+12bo5boo$92boo14boobo8boo15boob3o$110boo20boobboobobo$133boobbobbo$
+137boo$107boo24boboo10b3o$107boo24bo13bobbo$146bo4bo$84boo60b3obbo$84b
+oo40boo17bo5bo$125bobbo15b7o$87boo37boo16bo$86b3o4boo3bo45bo$85bo6bobb
+oobo46boo$85b4obb5obbo$86b3o3b3o$93b3o$94boo35boo14bo$95bo35boo13bobo$
+112bo33boboo$111bobo21boo11boo$19boo89booboo19bobbo8b3o$19boo92boo19bo
+bo10bo$44boo61boo26bo7bobbo$44boo63bobb3o27bo6bo$20bo81boo3boobo31bo6b
+o$19b3o23bo55bobbo4bobbo29b3o4bo$18bo3bo21bobo55boo5bo$20bo23bobo63boo
+$17bo5bo21bo$17bo5bo87bo$18bo3bo86booboo$19b3o20booboboo61bo$8boo32bo
+5bo45boo17bo29boo$8boo33bo3bo45bobbo14bo31boo$44b3o47boo$$22bo55boo$
+78boo35b3o$114bo3bo$22bo91boo3bo$20bobo95bo16boo$21boo20bo70b4o17boo$
+42bo69boobo$7b3o32b3o67bobbo$6bo3bo102boo$5bo5bo3boo3boo$6bo3bo18bo$7b
+3o6bo3bo9bo32b3o$7b3o7b3o8b3o14b5o15bo61boo$17b3o15bo8bob3obo13bo5boo
+55boo$37bo7bo3bo19bobo$33bobbo9b3o22bo$47bo$5b3o25boo$4booboo3bo5boo6b
+oo$4booboo4boo3boo5bobbo$4b5o3boo14bo17boo$3boo3boo18bo17boo$25boobo$
+19bo5boo$18boo$18bobo23bo40bo$19bo6boo17bo10bo27bobo$16booboo5boo8bo6b
+3o10boo27bo$16bo3bo10b3oboobboo14bobo$18boo11b4o4boo$35boo$$19bo$bb3o
+6b3o5b3o$bo3bo7bo8bo$o5bo5bo8boo$ooboboo49boo$56boo$24bo$6bo15booboo$
+5boo$21bo5bo5b3o$4boboo27bo$3bobboo13booboboo6bo$3b4o$$43b3o$bboo3boo
+36bo6bo$5bo38bo6bobo$bbo5bo41bo3boo$3booboo42bo3boo3boo$4bobo14boo27bo
+3boo3boo$5bo16bo17boo9bobo$5bo13b3o17bobo10bo$19bo19bo$38boo$bboo8b4o
+10bo$3bo7bo7boo5boo19bobo$3o8bo3boobboo4bobo18bo$o5boo4bobboo24boobbo
+4bo$6boo33boobobboboo$29bo15boo7boo$6bo20b3o24boo$5bobo18bo5bo$5bobo
+18boo4b3o$6bo28bo$34boo20boo$$3booboboo14bo12bo$3bo5bo12booboo9b3o$4bo
+3bo26bo3bo$5b3o3bo9bo5bo9bo14boo3boo$11boo21bo5bo7boo3b5o$10bobo8boobo
+boo6bo5bo6boo4booboo$35bo3bo9bo3booboo$36b3o15b3o$20boo$20bobo18boo$
+21bo20boo$8bo12boo18bo$8bo11b3o29b3o$7bobo10boo30b3o$6booboo12bo27bo3b
+o$5bo5bo38bo5bo$8bo42bo3bo$5boo3boo27bo12b3o$22bo15b3o$21b3o14b3o$9bo
+10b5o$9bo9boo3boo10boo3boo$10bo9b5o11boo3boo$20bo3bo$21bobo$7boo13bo
+16bo$7boo29bobo$37boo14boo$21boo14boo14boo$21boo14b3o$38bobo$39boo!

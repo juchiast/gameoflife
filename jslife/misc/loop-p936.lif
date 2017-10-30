@@ -1,0 +1,15 @@
+#CNoam Elkies, 5 Feb 2000
+#C(Based on a reaction by Paul Callahan, 12 Jul 94)
+x = 120, y = 134, rule = B3/S23
+29b3o$32bo55boo$28bo3bo55boobo$18bo8bobobbo59bo8bo$18b3o4bobbobo58bo9b
+3o$21bo3bo3bo60boboo4bo$20boo3bo66boo4boo$26b3o$23bo72bo$22bobo70bobo$
+18boobboo72boobboo$18boo80boo$$bbo114bo$b3o$3obo110b3obo$bo3bo108boboo
+$bbo3bo107boobo$3bob3o104bob3o$4b3o$5bo108bo$9bo100bo$8bobo98bobo$9boo
+98boo$5boo106boo$4bobo106bobo$4bo5boo96boo5bo$3boo5boo96boo5boo36$36b
+oo5boo30boo5boo$36boo5boo30boo5boo$$44bo$43boo$43bobo$36boo44boo$36boo
+44boo35$36bo$3boo5boo24boo70boo5boo$4bo5boo23bobo70boo5bo$4bobo106bobo
+$5boo106boo$9boo98boo$8bobo98bobo$9bo100bo$5bo108bo$4b3o$3bob3o104bob
+3o$bbo3bo107boobo$bo3bo108boboo$3obo110b3obo$b3o$bbo114bo$$18boo80boo$
+18boobboo72boobboo$22bobo70bobo$23bo72bo$26b3o$20boo3bo66boo4boo$21bo
+3bo3bo60boboo4bo$18b3o4bobbobo58bo9b3o$18bo8bobobbo59bo8bo$28bo3bo55b
+oobo$32bo55boo$29b3o!

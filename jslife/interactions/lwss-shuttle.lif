@@ -1,0 +1,41 @@
+#CReceding LWSS shuttle.
+#CThe speed can be increased by moving two
+#Cgroups of guns farther apart diagonally.
+#CDavid Bell, 1/'04.
+#CLWSS turning reaction by Paul Tooke.
+x = 160, y = 176, rule = B3/S23
+61boo$61boo3$62bo$61bobo$60bo3bo$60b5o$59boo3boo$60b5o$61b3o$62bo4$58b
+oo$57boo$59bo$$64boo$64bo$65b3o$67bo$47boo$47bo$40bo4bobo$39b4ob3o36b
+oo$22boo14booboboo38boo$22bobbo11b3obobbo23bo$14b5o7bo11boobobo23boo$
+13bo5bo6bo12b4o24bobo$13bo3boo7bo7bo5bo5boo$14bo7bobbo9bo9bobo4boo$22b
+oo9b3o11bo4boo$52boo29b3o$52bo13b3o13bo3bo$51bobo12bo$bb4o45boboo12bo
+13bo5bo$bbo3bo33boo39boo3boo$bbo13boo22boo$3bobbo10bo34boo$17bobo9bo
+22boo30bo$boo15boo8bobo52bo$oo26boobo8bobo40bo$bbo25booboo6bobbo4bo$
+28boobo6boo5boo39boo$28bobo5boo3bo8boo34bo$29bo8boo10boo19boo14b3o$39b
+obbo28bo17bo$40bobo17bo8bobo$58bobo8boo$15bo4b3o26bo7bobo35bo10bo$14b
+oo4bo27boo6bobbo30b3oboobboo4b3o$14bobo4bo25boo4boobbobo30b4o4boo3bo$
+37boo7b3o4boo3bobo17bo15boo7boo$37boo8boo4boo5bo17b3o$48boo31bo19bo$
+49bo30boo18b3o$61bo37bo3bo$62bo10boo23bob3obo$60b3obb3o5boo24b5o$67bo$
+66bo15b3o$40boo30b3o6bo3bo$41bo30boo$41bobo5bobo23boo3bo5bo9b3o$42boo
+3bo3bo5b3o14b3o3boo3boo9bo$47bo7bobobbobboo8bobo21bo$46bo4bo7boobbobbo
+6boo$47bo19bo17boo$47bo3bobb3o10bo17bobo$49bobo15bo19bo$31boo30bobbo5b
+oo12boo$30boo31boo7bobo8bo$32bo41bo8bobbo11b3o$74boo7bo13bo3bo$96bo5bo
+$96booboboo$82booboboo$$82bo5bo$45bo4b3o$44boo4bo32booboo17bo$44bobo4b
+o33bo10boo5b3o$97bo4bo$94b3o5boo5bo$94bo14b3o$112bo$85boo24boo$85boo3$
+114bo$113b3o$98b5o10b3o$97bob3obo$98bo3bo8boo3boo$99b3o9boo3boo$100bo
+$$114boo$113bobo$61boo35bo13boobbo$60boo36bo14boo$62bo34bobo5bo7boo$
+96booboobbobo7bo$95bo5bobboo18boo$98bo14bo5bo4boo$95boo3boo11bo5bo$
+107bo6bo3bo14bo$107bobo5b3o15b3o$75bo4b3o24boo27bo$74boo4bo43bo10boo$
+74bobo4bo40booboo$95boo$96bo24bo5bo$93b3o$93bo27booboboo$135booboboo$
+104boo10boo17bo5bo$103b3o10boo4bo13bo3bo$102bobobbobboo10bobbo11b3o$
+102boobboobboo10bo$106boo17boo$92bo33bo$92bobo29bobo$92boo30boo$$79bob
+o54bo$79bobbo36boo3boo9bo$70boo10boo35bo5bo9b3o$70boo8bo3boo$75boo5boo
+36bo3bo$74bo4bobbo6boo30b3o$79bobo7bobo$91bo46b5o$91boo44bob3obo$138bo
+3bo$119boo18b3o$120bo19bo$117b3o$105bo4b3o4bo15boo7boo$104boo4bo18b4o
+4boo3bo$104bobo4bo17b3oboobboo4b3o$134bo10bo3$124boo$125bo$125bobo4bo$
+104bo21boo3bobo$103bobo24boboo15boo$96boo4boboo23booboo14bobo$96boo3b
+ooboo24boboo13bo6boo$102boboo25bobo13bobbobbobboboo$103bobo9boo15bo5bo
+8bo6boobboo$104bo10bobo20bobo7bobo$117bo20boo9boo$117boo$122boo$122bob
+o$123b3o$124boo5boo$121boo8boo$121b3o$145bo$143bobo$122boo6boo9boo12b
+oo$122boo6boo9boo12boo$133boo6boo$133b3o7bobo$133boo10bo$123boo5boo$
+122bobo5boo$122bo$121boo!

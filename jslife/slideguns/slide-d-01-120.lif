@@ -1,0 +1,24 @@
+#Cp120(124) sliding gun; moves 1 cell per period
+#CBy Dietrich Leithner and Dean Hickerson
+x = 63, y = 116, rule = B3/S23
+19boo$19boo$44boo$44boo3$20bo$20bo$19bobo23bo$18booboo20booboo$17bo5bo
+$20bo21bo5bo$8boo7boo3boo$7bobo32booboboo$6b3o$6boo10b4o$6boo10bobboo
+24bo$7bobo9boboo21bobbo$8bo38bo$20boo21boo$21bo21bo$5boo3boo31bobo$5b
+oo3boo32boo$15booboboo$7b3o5bo5bo5bo$7b3o6bo3bo7bo15boo3boo$8bo8b3o6b
+3o15bo5bo$37bo$37bobo5bo3bo$37boo7b3o3$10bo22boo$11boo20boo26boo$10boo
+6boo6boo33boo$18boo6boo$5b3o38boo$4bo3bo37boo$3bo5bo17boo$3bo5bo15bob
+oo$6bo10bobo5bo$3bo4bo9boo5bo$7bo9bo7bobbo$6bo10boo7boo7boo$bbo13bobo
+12boo4b4o5b3o$bbobo13bo12boobboob3o7bo$3bo31bo11bo5boo$25bo26bobo$19bo
+6boo26bo$19b3o3boo$ooboboo15bo$9b3o9boo$o5bo4bo44boo$10bo45boo$booboo$
+3bo$$24bo29bo$5bo17b3o26bobo$4bobo15b5o12bo13boo$3bo3bo13boo3boo11boo$
+3b5o30bobo$bboo3boo$3b5o40boo$4b3o16b3o22boo$5bo17b3o18bo6boo$44bo6b3o
+5boo$21boo28boo6boo$22bo17boo6boo$19b3o17bobo6boo$19bo19bo$38boo$bboo
+11boobbo$3bo7boobboo3bo$3o8boo7bo24boo$o5boo8b4o15boo4boobobboboo$6boo
+26boo5bo4bobboo$29bo6bo8bo8boo$27b3o12bobo9boo$26bo5bo$26boo4b3o$6bo
+28bo19bo$4booboo25boo18b3o$53bo3bo$3bo5bo45bo$52bo5bo$3booboboo3boo22b
+o14bo5bo$24bo12bo15bo3bo$16bo6b3o10bobo15b3o$9boo11b5o8booboo$8bobo10b
+oo3boo6bo5bo9boo$9bo27bo11boo$8boo24boo3boo10bo$8b3o10boo$9boo9bo$7bo
+15bo15b3o$20bobbo15boboo$20booboo16boo$22boo16boo11bo$8bo29bobo11b3o$
+7b3o26boobbo11b3o$6b5o8boo3boo$5boo3boo7boo3boo24boo3boo$6b5o9b5o25boo
+3boo$6bo3bo10bobo$7bobo$8bo12b3o13b5o11bo$36bob3obo9bobo$37bo3bo9boo$
+7boo29b3o10boo$7boo30bo11b3o$52bobo$21boo30boo$21boo$39boo$39boo!

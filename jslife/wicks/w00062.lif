@@ -1,0 +1,27 @@
+#C(2) glider generating wick found by Jason Summers, 2001
+#C(3) fencepost by Dean Hickerson, 19 Oct 1996
+x = 223, y = 115, rule = B3/S23
+bboobo6boobo14boobo$bboboo6boboo8boo4boboo15bo5bo$oo14boo7bo8boo12bobo
+3bobo41b3o$o15bo7bo9bo56bo6bobbo$bo15bo6boo9bo12b3o3b3o31bobbo6bobbo$
+oo14boo4boo10boo52bobbo$bboobo6boobo7bo6boobo55boo10boo$bboboo6boboo6b
+o7boboo66bobbo88bo$oo4boobboo10boo4boo18bobo3bobo33bobbo6bobbo86b3o$o
+5bo3bo9boo6bo20bo5bo34bobbo6bo88bo$bo5bo3bo9bo7bo19bo5bo35b3o95boo$oo
+4boobboo8bo7boo19bo5bo$bboobo6boobo4boo8boobo15bo5bo$bboboo6boboo14bob
+oo14bobo3bobo$$189boo$183b3o3boo$48b3o3b3o125bo3bo$182bo3bo$48bobo3bob
+o125bo3bo$49bo5bo127b3o7$185boo$96b3o71boo7b3o3boo19bo$49bo5bo33bo6bo
+bbo70boo6bo3bo22boo$48bobo3bobo29bobbo6bobbo78bo3bo22bobo$86bobbo88bo
+3bo$48b3o3b3o30boo10boo66b3o9b3o$98bobbo64bo3bo$88bobbo6bobbo64bo3bo$
+88bobbo6bo67bo3bo$48bobo3bobo32b3o75b3o$49bo5bo$49bo5bo$49bo5bo$49bo5b
+o$48bobo3bobo$$169boo$154boo7b3o3boo50boo$48b3o3b3o97boo6bo3bo53boo$
+162bo3bo55bo$48bobo3bobo105bo3bo$49bo5bo95b3o9b3o$150bo3bo$150bo3bo$
+150bo3bo$151b3o$$94b3o$87bo6bobbo$84bobbo6bobbo$49bo5bo28bobbo$48bobo
+3bobo28boo10boo$96bobbo53boo$48b3o3b3o29bobbo6bobbo47b3o3boo$86bobbo6b
+o49bo3bo$87b3o56bo3bo$146bo3bo$48bobo3bobo90b3o$49bo5bo$49bo5bo$49bo5b
+o$49bo5bo$48bobo3bobo$$149boo$143b3o3boo$48b3o3b3o85bo3bo$142bo3bo$48b
+obo3bobo53bo31bo3bo$49bo5bo52bobo32b3o$109boo3$92b3o$85bo6bobbo$82bobb
+o6bobbo$82bobbo59boo$83boo10boo42b3o3boo$49bo5bo38bobbo40bo3bo$48bobo
+3bobo27bobbo6bobbo40bo3bo$84bobbo6bo43bo3bo$48b3o3b3o28b3o51b3o$$125bo
+$126bo$48bobo3bobo67b3o$49bo5bo$49bo5bo$49bo5bo85boo$49bo5bo79b3o3boo$
+48bobo3bobo77bo3bo$134bo3bo$134bo3bo$135b3o$48b3o3b3o$$48bobo3bobo76b
+oo$49bo5bo78bo$131b3o$90b3o38bo$83bo6bobbo$80bobbo6bobbo$80bobbo$81boo
+10boo$92bobbo$82bobbo6bobbo$82bobbo6bo$83b3o!

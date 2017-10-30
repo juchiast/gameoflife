@@ -1,0 +1,28 @@
+#Cp30 LWSS/MWSS/HWSS to glider converters
+#C(1) By David I. Bell, 22 Apr 1998
+#C(2) By Stephen Silver (improvement of a pattern
+#Cby Dietrich Leithner), 23 Jun 1998
+#C
+#Cp6 LWSS to glider converter
+#C(3) by Noam Elkies, 28 Sep 1998
+x = 137, y = 251, rule = B3/S23
+41boo$41boo10$41b3o$40bo3bo$39bo5bo$40bo3bo$41b3o$41b3o$$47boo$47bobo$
+42boo6bo7boo$bboo37bobbobbobbo7boo$o4bo26bobbo6boo6bo$6bo10b5o14bo10bo
+bo$o5bo9bo4bo10bo3bo10boo$b6o14bo11b4o$16bo3bo$18bo34$49boo$47bo4bo$
+46bo6bo$bboo41bo8bo$o4bo26bobbo9bo8bo$6bo10b5o14bo8bo8bo$o5bo9bo4bo10b
+o3bo9bo6bo$b6o14bo11b4o10bo4bo$16bo3bo28boo$18bo21bo$38bobo$39bobo$39b
+o26$42bo$43bo$40boob3o$14bobbo14bobbo6bo3bo$18bo17bo6b3obo$14bo3bo13bo
+3bo5boobbo$15b4o14b4o7boo$41boobo$42bobo$42boboboo$42bobbobo$42b3o$39b
+o$39b4o$42bo$41bo$41boo27$117boo$117boo$42bobboboobobbo$4bobbo33boobbo
+4bobboo$8bo11b4o18bobboboobobbo$4bo3bo10bo3bo94bo$5b4o14bo93bobo$19bo
+bbo93bo3bo$117b3o$115boo3boo3$35b3o$35bobo$35b3o$35b3o$35b3o$35b3o$35b
+obo88bo$35b3o88bobo$127bobo$127bobbo3boo$127bobo4boo$90bo35bobo$88bo3b
+o33bo$93bo10b5o$88bo4bo9bo4bo$89b5o14bo$103bo3bo$105bo5$45bo$44b3o3$
+44b3o$$44bobo$44bobo68boo$115boo$44b3o3$44b3o$45bo$116bo$10bobbo101b3o
+$14bo11b4o85b3o$10bo3bo10bo3bo$11b4o14bo83boo3boo$25bobbo84boo3boo3$
+116bo$115bobo$41b3o70boo$41bobo42bo27boo8bo$41b3o40bo3bo25b3o7bobo$41b
+3o45bo10b5o9b3o8bobo$41b3o40bo4bo9bo4bo10bobbo6bobbo3boo$41b3o41b5o14b
+o11boo7bobo4boo$41bobo55bo3bo20bobo$41b3o57bo22bo14$118boo$118boo6$
+119bo$118b3o$118b3o$$116boo3boo$116boo3boo3$119bo$118bobo$117boo$117b
+oo8bo$117b3o7bobo$117b3o8bobo$118bobbo6bobbo3boo$119boo7bobo4boo$127bo
+bo$127bo$73b5o25b5o$72bo4bo24bo4bo$77bo29bo$72bo3bo25bo3bo$74bo29bo!

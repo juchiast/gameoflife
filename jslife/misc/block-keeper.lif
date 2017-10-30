@@ -1,0 +1,25 @@
+#C Left: p120 block keeper
+#C The device places a block in the position below the two copies of
+#C Kok's galaxy if the position is empty, but does nothing if the
+#C position is already occupied by a block. The device uses a p60
+#C glider gun found by David Bell (Feb 1995) and a p30 glider-to-
+#C Herschel converter discovered by Paul Callahan (Feb 1997).
+#C Dieter Leithner, 17 Mar 1997
+#C
+#C Right: p46 block keeper
+#C Brice Due, 1/2007
+x = 159, y = 51, rule = B3/S23
+12bo38bobbo$12boo41bo$7boo4boo41boo$3boobboo4b3o34boboo6bo$3boobboo4b
+oo35bobbo3bo$12boo10bo24bo3bob3o$12bo10b3o22bo11bo65boo$23b3o25b3obo3b
+o7bobobbo43boo7bobo15boo$35boo14bo3bobbo8b3oboboo41boo6boobo15boo$21b
+oo3boo8bo11bo6boobo7bo6bo51boo$3boo16boo3boo7bo15boo14bo5boo51bo$4bo
+30boo16bo$4bobo7boo38bobbo8boo5bo52bo10boo3boo$5boo7boo8bo42bo6bo50boo
+9bobooboobo$11boo6bo5bo40boobob3o42boo6boobo8bo7bo$10b3o5bo3boobo42bo
+bbobo42boo7bobo8bobooboobo$bbo8boo6b6o101boo9boo3boo$bb3o9boo4b4o14boo
+109bo5bo$5bo8boo22boo108b3o3b3o$4boo141bobbooboobbo$147bo3bobo3bo$149b
+obobobo$$146booboo3booboo$148bo7bo$$7bo26bo$6b3o5bo15b4obo$5b5o4boo14b
+3obobo$4boo3boobbobo19bobo$5b5o26bo$5bo3bo25boo$6bobo11boo13boo$7bo8b
+3obbo13boo$19boo$7b3o5bo$boo4bo7bo$obbo4bo10boo$obo13b3obbo126boo5boo$
+boboo15boo126boo5boo$bb3o$3boo$15boo9boo$15bobo7bobo$9bo5bo8bo6boobboo
+$8bobo13bobbobbobboboo$boo4boboo13bo6boo$boo3booboo14bobo$7boboo15boo$
+8bobo$9bo!

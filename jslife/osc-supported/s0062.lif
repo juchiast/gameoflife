@@ -1,0 +1,27 @@
+#C
+#C
+x = 352, y = 279, rule = B3/S23
+329bo$329bobo$329boo8$329bo$329bobo$79bo249boo$77b3o$76bo$76boo236bo$
+313bo$313b3o3$76boo$70b3o3boo$69bo3bo$69bo3bo$69bo3bo$70b3o241bo$313bo
+$313b3o4$298bo$72boo224bobo$57boo7b3o3boo19bo204boo$57boo6bo3bo22boo$
+65bo3bo22bobo$bo63bo3bo$bbo51b3o9b3o$3o50bo3bo$53bo3bo$53bo3bo$54b3o
+241bo$281boo15bobo$258bo22bo16boo$259boo18bobo$257boo20boo$259bo$$56b
+oo$50b3o3boo50boo$49bo3bo53boo$49bo3bo55bo159bo$17bo31bo3bo215b3o$15bo
+bo32b3o216b3o$16boo253bo5$281bo$52boo206boo20boo$46b3o3boo205bobo18boo
+$45bo3bo191boo16bo22bo$45bo3bo190bobo15boo$45bo3bo74bo117bo$46b3o74boo
+$123bobo$32bo$33bo$31b3o3$48boo191boo$42b3o3boo190bobo$41bo3bo196bo$
+41bo3bo$41bo3bo$42b3o$225b3o$227bo$40boo184bo$41bo$38b3o$38bo5$225b3o$
+227bo$226bo3$210boo$209bobo$211bo8$210boo$209bobo$211bo46$69bo$70boo$
+69boo$279bo$279bobo$279boo11$84bobo$85boo$85bo178bo$263bo$263b3o11$
+100bo$101boo$100boo$248bo$248bobo$248boo11$115bobo$116boo$116bo116bo$
+141boo89bo$141bo90b3o$138boobo$138bobo$152boo$151bo$148boobo26boo$147b
+o4b3o22bo$147bo26boobo26boo$147b3o23bo4b3o22bo$127bo45bo26boobo$125bo
+bbo44b3o23bo4b3o48bobbo58bobbo$3bobbo58bobbo55bo4bo69bo27bo26bo30b4o
+27bo30b4o$7bo27b4o30bo27b4o23bo4bo69b3o23b3obo24bo3bo26bo3bo26bo3bo26b
+o3bo$3bo3bo26bo3bo26bo3bo26bo3bo24bob3o23b3o69bo4bo23b4o27bo30b4o27bo$
+4b4o30bo27b4o30bo26bo27bo69bo4bo55bobbo58bobbo$34bobbo58bobbo48b3o4bo
+23b3o44bobbo$151boboo26bo45bo$151bo22b3o4bo23b3o$149boo26boboo26bo$
+177bo22b3o4bo$175boo26boboo$203bo$201boo$214bobo$213boboo$120b3o90bo$
+122bo89boo$121bo116bo$237boo$237bobo11$105boo$104bobo$106bo$253boo$
+252boo$254bo11$89b3o$91bo$90bo178bo$268boo$268bobo11$74boo$73bobo$75bo
+$284boo$283boo$285bo!

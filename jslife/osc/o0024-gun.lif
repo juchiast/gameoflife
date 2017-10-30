@@ -1,0 +1,18 @@
+#CNoam Elkies, Jun 1997
+#C
+#CShown with improved sparkers found by Karel Suhajda,
+#CJason Summers, and David Eppstein.
+x = 72, y = 32, rule = B3/S23
+52bobbo$bboobo4boo3boo33b6o$bboboo4boo3boo29boobo8bo$6boo34boobobobob
+8obbo$6bo3boo3boo23b3oboo3bobo7b3o$7bobbobobobo22bo4b3obbo3bo3boo$6boo
+4bobo25b3o3boob4obo3boboo$bboobo5boobo26bobo3bo5bo4bobbo4boobo$bboboo
+9boo22bo8boboobboobboo5boboobo$oo14bo22b5ob4obo4b3o7bo4bo$o14bo28boo4b
+o4bob3obboobobooboo$bo13boo24b5ob3o4booboo3bobobobobo$oo14bo23bo5boo4b
+ooboboo5bo5bo$bboobo9bo25b5o6boobo3bo3bobobooboo$bboboo9boo12booboo9b
+oobbo5bobo4bobb3obobo$30boboboboboo3b3obo6bobbobo4b3obbo$29bobbo7bo6b
+oo3b3o8boboboo$29b3obbo4boo11bo10bo$34b4obo17boo4boo$31boobo6bo14bo3bo
+bboo$30bo4bo3bo16bo6boo$30b3obo4bo16bo3bobbo$40bobbo3bo9boo4boboboo$
+30b3obo4bo8boo3bo10b3obbo$30bo4bo3bo7bo6bo8b3obobo$31boobo6bo10b3o8bob
+obooboo$34b4obo24bo5bo$29b3obbo4boo21bobobobobo$29bobbo7bo9boo10boobob
+ooboo$30boboboboboo10bo8bo5bo4bo$29booboo17b3o6bo4boboobo$53bo4b3o5boo
+bo!

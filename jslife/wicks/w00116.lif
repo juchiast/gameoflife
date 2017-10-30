@@ -1,0 +1,31 @@
+#C116/2-1 found by Karel Suhajda
+x = 148, y = 126, rule = B3/S23
+112bo$112b3o$55bo59bo27boo$54bobo4bo52boo27bo$53bobbo3bobo81b3o$oo4boo
+5boobo14boobo18bobbo3bobo83bo$bo5bo5boboo8boo4boboo19bobo4bo$o5bo4boo
+13bo8boo18bo$oo4boo3bo13bo9bo74boobo19bo10boobo$12bo12boo9bo73boboo18b
+oo10boboo$oo4boo3boo10boo10boo29bo65bobo$bo5bo5boobo7bo6boobo25bo4bobo
+65bo$o5bo6boboo6bo7boboo24bobo3bobbo42bo$oo4boo3boo4boo4boo4boo28bobo
+3bobbo42b3o$11bo5bo3boo6bo30bo4bobo46bo27boo$oo4boo4bo5bo3bo7bo35bo46b
+oo27bo$bo5bo3boo4boobbo7boo112b3o$o5bo6boobo4boo8boobo110bo$oo4boo5bob
+oo14boboo20bo$54bobo4bo$53bobbo3bobo46boobo19bo10boobo$53bobbo3bobo46b
+oboo18boo10boboo$54bobo4bo69bobo$55bo76bo$110bo$110b3o$66bo46bo27boo$
+60bo4bobo44boo27bo$59bobo3bobbo73b3o$59bobo3bobbo75bo$60bo4bobo$66bo$
+108boobo19bo10boobo$108boboo18boo10boboo$55bo74bobo$54bobo4bo69bo$53bo
+bbo3bobo46bo$53bobbo3bobo46b3o$54bobo4bo50bo27boo$55bo55boo27bo$141b3o
+$143bo$66bo$60bo4bobo$59bobo3bobbo38boobo19bo10boobo$59bobo3bobbo38bob
+oo18boo10boboo$60bo4bobo61bobo$66bo63bo$108bo$108b3o$55bo55bo27boo$54b
+obo4bo48boo27bo$53bobbo3bobo77b3o$53bobbo3bobo79bo$54bobo4bo$55bo$106b
+oobo19bo10boobo$106boboo18boo10boboo$66bo61bobo$60bo4bobo61bo$59bobo3b
+obbo38bo$59bobo3bobbo38b3o$60bo4bobo42bo27boo$66bo42boo27bo$139b3o$
+141bo$55bo$54bobo4bo$53bobbo3bobo42boobo19bo10boobo$53bobbo3bobo42bob
+oo18boo10boboo$54bobo4bo65bobo$55bo72bo$106bo$106b3o$66bo42bo27boo$60b
+o4bobo40boo27bo$59bobo3bobbo69b3o$59bobo3bobbo71bo$60bo4bobo$66bo$104b
+oobo19bo10boobo$104boboo18boo10boboo$55bo70bobo$54bobo4bo65bo$53bobbo
+3bobo42bo$53bobbo3bobo42b3o$54bobo4bo46bo27boo$55bo51boo27bo$137b3o$
+139bo$66bo$60bo4bobo$59bobo3bobbo34boobo19bo10boobo$59bobo3bobbo34bob
+oo18boo10boboo$60bo4bobo57bobo$66bo59bo$104bo$104b3o$55bo51bo27boo$54b
+obo4bo44boo27bo$53bobbo3bobo73b3o$53bobbo3bobo75bo$54bobo4bo$55bo$102b
+oobo19bo10boobo$102boboo18boo10boboo$66bo57bobo$60bo4bobo57bo$59bobo3b
+obbo34bo$59bobo3bobbo34b3o$60bo4bobo38bo27boo$66bo38boo27bo$135b3o$
+137bo3$101boobo19bo10boobo$101boboo18boo10boboo$123bobo$124bo$102bo$
+102b3o$105bo27boo$104boo27bo$134b3o$136bo!

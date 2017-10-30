@@ -1,0 +1,23 @@
+#Cp44 HWSS into LWSS converter
+#C(Minimum following distance is 88.)
+#CThe converter uses two copies of a variation of David Buckingham's
+#Cp44 oscillator. Peter Rott, Aug 1998 [SLV88]
+x = 150, y = 96, rule = B3/S23
+123boo6boo$123boo6boo5$124bo6bo$123b3o4b3o$107boo13boobbobbobboo4boo4b
+oo$106bobo13bo3bobbo3bo4boo3bobo$106boboboo8b3o3bobbo3b3o7boboboo$107b
+obobo10bo3bobbo3bo10bobobo$109bo17boo17bo$107bobbo11bo10bo11bobbo$110b
+o8bobbo10bobbo8bo$106bo3bo6boo4boo6boo4boo6bo3bo$106bo3bo8bobbo10bobbo
+8bo3bo$110bo11bo10bo11bo$107bobbo16boo16bobbo$109bo12bo3bobbo3bo12bo$
+107bobobo8b3o3bobbo3b3o8bobobo$106boboboo10bo3bobbo3bo9boboboo$106bobo
+13boobbobbobboo9bobo$107boo14b3o4b3o11boo$124bo6bo3$133boo$133bo$134b
+3o$114boo20bo$113bobo14boo$113bo12boobboo$112boo11boo$125bo$112boo4boo
+bb3o$113bo7boboo$113bobo5boo$114boo7$bboo64boo42boo$o4bo60bo4bo38bo4bo
+$6bo65bo43bo$o5bo59bo5bo37bo5bo$b6o60b6o38b6o8$112boo5bo$111bobo4b3o$
+111bo5bobobo$110boo5bo3bo$116bo5boo$110boo12bo$111bo8boobboobboo$111bo
+boo5boobo4boo$112boo20bo$114bo17b3o$131bo$131boo4$105boo35boo$104bobo
+15bo6bo11bobo$104boboboo11b3o4b3o10boboboo$105bobobo10boobbobbobboo10b
+obobo$107bo16bobbo16bo$105bobbo10bo3boboobo3bo10bobbo$108bo14b6o14bo$
+104bo3bo8bo4boo4boo4bo8bo3bo$104bo3bo6b3o3boo6boo3b3o6bo3bo$108bo8bo4b
+oo4boo4bo8bo$105bobbo14b6o14bobbo$107bo11bo3boboobo3bo11bo$105bobobo
+14bobbo14bobobo$104boboboo10boobbobbobboo9boboboo$104bobo14b3o4b3o5boo
+3bobo$105boo15bo6bo6boo4boo7$121boo6boo$121boo6boo!

@@ -1,0 +1,33 @@
+#Cp450 edge-shooting gun
+#CScot Ellison, 1996
+#C
+#C[This pattern is inefficient, but interesting.]
+x = 154, y = 169, rule = B3/S23
+94boo$93boo18boo$95bo17boo$$89boo$88bobo$90bo22bo$102bo9bobo$102bo8bo
+3bo$101bo10b3o$110boo3boo$103bo$88bo13bo$87bo14b3o$87b3o$109boo$108boo
+$110bo$$88boo$87bobo$89bo3$111bo$84bo25b3o$83boo24b5o$83bobo22boo3boo
+4$110b3o$110b3o$$87boo$86bobo22boo$88bo22boo4$99bo$98boo$98bobo3$89boo
+$89boo$$106boo$105boo$107bo4$89bo$49bo38b3o23bo$49b3o35b5o21boo$52bo
+33boo3boo20bobo$51boo3$88b3o$88b3o$121boo$91bo28boo$90bobo29bo$89bo3bo
+$90b3o$83bo4boo3boo$62b3o18bobo$62bo20boo44bo$63bo64boo$49b3o76bobo$
+51bo$30bo19bo99boo$30b3o43bo71bobbo$33bo36boo3bo$32boo36bobobb3o69bo$
+70bo65boo$90boo43boo11boo$39b3o48boo45bo12bo$38bo3bo47boo$38bo52bo$38b
+o51bobo54boo3boo$39bo37b3o10bobo54boo3boo$38booboo34bo13bo52bo3b5o$38b
+obbo36bo64boo4bobo$34b3obboo102bobo$36bo51boo3boo54b3o$35bo52bobobobo$
+89b5o$43boo40boo3b3o$43bobo39bobo3bo$43bo41bo62bo$27boo118bobo$26bobo
+117bo3bo$28bo118b3o$145boo3boo$$50b3o86boo$50bo12bo24b3o48boo$8boo41bo
+8b4o4bo18booboo$6bo3bo5bobb3o25boo10b4o5bo18booboo$5bo5bo9bo3bo21bobo
+9bobbo9boo13b5o$oobboobo3bo8bo4bobo14boo4b3o8b4o9boo12boo3boo$oo3bo5bo
+16boo4boobb4obbo4b3o8b4o$6bo3bo17boo4boobb3oboo4b3o12bo$8boo18boo17bob
+o$25bobo19boo98boo$25bo61boo10bo39bo7boo$99b3o36b3o$102bo34b5o$101boo
+8boo23boo3boo$89boo46b5o$89boo17bo28bo3bo$108bo29bobo$108bo30bo$$112b
+oo$113bo27bo$139booboo$110b3o21bo$133bo4bo5bo$113boo18b3o$113bobo22boo
+boboo$113bo3$80bo$80b3o5bo6bo32boo$83bo5boo4bo32boo$82boobboo7boo$91bo
+3boo$86boo3bobb3o44boo$93bo47boo$88b3obbobbo$92bo3bo$93bo46b3o$128boo
+10b3o$128bobo$128bo$84boo4boo$83bobo3boobo45boo3boo$85bo4bobboo44b5o$
+91b3o46b3o$92bo48bo$135b3o$135bo$136bo$76b3o$78bo$77bo$$101boo$101bobo
+9boo5bo17b3o$58bo8bobbo30bo10b3o3bo3bo$57bobo10bo26bo11boboo5bo19bobo$
+55boo3bo5boo3bobbo22boo10bobbo4bo5bo13b5o$50boo3boo3bo4boboboo3b4o14b
+oo4boo9boboo9boo12boo3boo$50boo3boo3bo14b4o5boobboobboo4b3o11b3o21boo
+3boo$57bobo5boo8bobbo5boobboobboo4boo13boo$58bo16b4o18boo$74b4o19bo41b
+o$74bo62boo$$136bo$$137bobbo$139boo!

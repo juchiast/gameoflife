@@ -1,0 +1,18 @@
+#CExample of Pi-ship using c/3 p27 puffer engines
+#CNicolay Beluchenko, 9/2003
+x = 84, y = 48, rule = B3/S23
+8b3o17b3o$3booboobo19bobooboo$3boo4boboo13boobo4boo$bbobbo3bobobo11bob
+obo3bobbo$9boboboboo5boobobobo$7bo3boboboo5boobobo3bo$8bobobob3o5b3obo
+bobo23boo17boo$49bobooboo17booboobo$12b3o9b3o21b3obo3boo13boo3bob3o$
+12b3obobobobob3o20bo3boobobobo11boboboboo3bo$13b5obob5o22bo3b3obob3o7b
+3obob3o3bo$18bobo31bo3boboboo5boobobo3bo$18b3o32boobo5bo3bo5boboo$15bo
+bo3bobo35bo9bo$$13boob3ob3oboo30b3obo3bo3bob3o$13bo11bo32bobbooboboobb
+o$12bobbo7bobbo34bobbobbo$12bo4bo3bo4bo33boo5boo$17bo3bo38b4ob4o$11b6o
+5b6o$10boo7bo7boo29b3obooboob3o$18bobo36bo4booboo4bo$18b3o39b3o3b3o$
+57b4obo3bob4o$7bo49b5o5b5o$5b4o46boo5bo3bo5boo$booboo3bo3bo$boobbo5b4o
+3b3o34bo5bobbobbo5bo$obbo7bo3bo3bo39bo3bobo3bo$9bobbobo3bobo15b3o24bob
+o$10bo8bo15bo3boobo21bo$19bo10b3obb3o3b3o31b3o$29bobob3o4bo3bo29bo3boo
+bo$29bobo3bo7bo25b3obb3o3b3o$33boo28b3obbobob3o4bo3bo$69bo4bo7bo$44b3o
+25boo$30bo9boboo3bo$31bo7b3o3b3obb3o$23boo3b3o7bo3bo4b3obobo5bo$29boo
+8bo7bo4bo4b3o$48boo6bob3o4boo$55boo3bo3b3o$56b3o8bo$40b3o14boo$40bobo$
+40bobo!

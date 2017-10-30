@@ -1,0 +1,18 @@
+#CA selection of p46 glider reflectors.
+#CMost are well-known.
+#C
+#CSlow reflector at lower-left by David Bell, 13 Sep 96.
+x = 204, y = 143, rule = B3/S23
+boo5boo52boo50boo5boo47boo5boo$boo5boo52boo50boo5boo47boo5boo8$b3o3b3o
+52b3o3b3o99b3o3b3o$obbo3bobbo50bobbo3bobbo97bobbo3bobbo$oobo3boboo50b
+oobo3boboo97boobo3boboo6$81boo30boobo3boboo$81bobo29bobbo3bobbo$81bo
+32b3o3b3o$177bo$175booboo$175booboo$$174bobobobo$$175booboo$boo5boo52b
+oo5boo43boo54boo4b3o$boo5boo12boo38boo5boo43boo54boo5bo$22bobo67b3o$
+22bo69bo$93bo6$133boo$133bobo$133bo$33b3o$33bo$34bo154b3o$189bo$190bo
+5$144b3o$144bo$45boo98bo$45bobo$45bo155boo$201bobo$201bo15$104boo5boo$
+boo5boo94boo5boo$boo5boo8$105bo5bo$104b3o3b3o$104bobooboobo$106booboo$
+106booboo$106booboo3$oobo3boboo$obbo3bobbo$b3o3b3o$104b3o$104b3o$$103b
+ooboo$103bo3bo$104b3o$105bo5boo$boo108boo$boo91boo$77boo15bobo$77boo
+17bo$94b3o4$18boo74b3o$18bobo56boo17bo$18bo58boo15bobo$94boo8$15boo96b
+o$15bo96boo$16b3o93bobo$18bo9$41boo81boo$41bobo79boo$41bo83bo9$136bo$
+135boo$135bobo!

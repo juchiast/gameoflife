@@ -1,0 +1,23 @@
+#Cleft: p4 reflector that works for p52+4N.
+#Cright: p52N version.
+#CBy Matthias Merzenich and Karel Suhajda,
+#CSep. 2012
+x = 97, y = 59, rule = B3/S23
+9bo61bo$8bobo59bobo$9bo61bo$$7b5o57b5o$6bo4bo56bo4bo$5bobbo58bobbo$bbo
+bboboo55bobboboo$bobobo5bo51bobobo5bo$bbobbo4bobo51bobbo4bobo$5boobbo
+bbo54boobbobbo$10boo60boo4$27boo60boo$6boo19bo40boo19bo$4bobbo17bobo
+38bobbo17bobo$3boboo18boo38boboo18boo$3bo16boo43bo16boo$bboo12booboo
+43boo12booboo$16boo3bo56boo3bo$$68boo$68boo3$bboo4boo63bo$bobbo5bo11b
+oo46b3oboboo$bobobbo4b5o3boboobo37boo6boo4bo4b5o$oob3o4b3obo3bobo41boo
+8bo3bo3bo3bobo$bo5boo5boo3bobob3o41boo4bobo10b3o$bob4o6bobobobo3b3o7b
+oo32boo10bo5bo3bo5boo$bbo3bo3boo4boobo5boo5boo33bobo8bobooboobbobo4boo
+$4b3oboobo3boboboboobo9bo31bo3bo5b3o6b4o7bo$12boboobobob4obb3o37bo7bo
+3bobo$3bo3boobobooboboboboob3o43bo5bobbo3booboobo$3bo4b3obbobobobobo
+45b3o7bobobooboboboo$4booboobb3obobobbo3bo5bo36bo10bobob3obo$oobbo4bo
+4bobbo5bo5bobo48bobobobo$obobboo6bo3boo4bobboboobo48bo3boo$bboboboob3o
+bb3o6bo4bobboo44boobo$bob3oboo3boo3boo3bo3b3obobbo44bobob4o$boo4bobboo
+bbobbo4boo4bobobo43bo3bo5bo$4bo6bobobobo5bobooboboboo42b4o3bobbo$5b6o
+bbobbo6b3o4bo49b3oboboo$10boboboo3bo3bo3boobo47bobboboo$7b3obbo3b4o4b
+oobboboo46boobbobo$7bo4boobo8bobobobo51boo$16b4o6bobobo$20bo8bo$18boo
+bbob5o$19boboobo$19bobbobboo$20bobobobbo$19boobo3boo$22bo$22bobo$23boo
+!

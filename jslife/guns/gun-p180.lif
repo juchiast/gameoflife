@@ -1,0 +1,27 @@
+#CGun mechanism by David Bell.
+#CThis version by Jason Summers.
+#C19 May 2002
+#CSimilar guns can be built for larger multiples of 30.
+x = 208, y = 185, rule = B3/S23
+76bo$76bo$$76bo$75bobo19b3o$97bobo$75b3o19b3o$97b3o$97b3o$75b3o19b3o$
+97bobo$75bobo19b3o$76bo$$76bo$76bo$59boo3bobbo3boo11bobobbobo$59b5o4b
+5o7boobobbobbobboboo$59boo3bobbo3boo11bobobbobo8$83bobo$84boo$84bo$$
+70bobboo4boobbo$69bo3b3obb3o3bo$70bobboo4boobbo4$87bo46bo$87bo45b3o$
+86bobo$87bo$87bo45b3o$87bo33bo$87bo34boo9bobo$86bobo32boo10bobo$87bo$
+87bo45b3o$$56b3o$57bo75b3o$57bo76bo$56b3o$42b3o$44bo11b3o78bobboo4boo
+bbo$43bo12b3o77bo3b3obb3o3bo$137bobboo4boobbo$56b3o$57bo$57bo$56b3o$$
+42boo6boo$40bo4bobbo4bo$40bo4bobbo4bo$40bo4bobbo4bo$42boo6boo48b3o$
+100bobo$100b3o$100b3o$100b3o$100b3o$63bobo34bobo$64boo34b3o$64bo$32boo
+$30bo4bo$bboo6boo17bo6bo$o4bobbo4bo14bo8bo49bobobbobo$o4bobbo4bo14bo8b
+o45boobobbobbobboboo$o4bobbo4bo14bo8bo49bobobbobo$bboo6boo17bo6bo$30bo
+4bo$32boo$15b3o64bo19bo$14bo3bo23bo39b3o16bo$14bo3bo22bobo41bo15b3o$
+15b3o22bo3bo39boo$40bo3bo$40bo3bo$40bo3bo$40bo3bo$15b3o22bo3bo69bo$14b
+o3bo22bobo59boo7bobo$14bo3bo14boo7bo58bo4bo6boo$15b3o14boo26boo38bo6bo
+$34bo24boo8bobboo4boobbo3bo12bo8bo$61bo6bo3b3obb3o3bobbo12bo8bo$69bobb
+oo4boobbo3bo12bo8bo$100bo6bo$101bo4bo$103boo4$109bo$108b3o$107booboo$
+106b3ob3o$106b3ob3o$106b3ob3o$106b3ob3o$107booboo$108b3o$109bo$$74bo$
+74bobo$74boo39bo6bo$114boo6boo$113b3o6b3o$114boo6boo$115bo6bo3$101bo$
+101bobo$72b8o21boo$72bob4obo$72b8o$$104b6o$103bo6bo$65bo36bo8bo$64b3o
+36bo6bo$63booboo36b6o$62b3ob3o$62b3ob3o$62b3ob3o26b3o$62b3ob3o25bo3bo$
+63booboo25bo5bo$64b3o$65bo26bo7bo$92bo7bo$$93bo5bo$94bo3bo$95b3o36$
+204boo$204bobo$206bo$206boo!

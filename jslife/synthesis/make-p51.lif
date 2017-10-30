@@ -1,0 +1,22 @@
+#CSynthesis by Jason Summers and Matthias Merzenich,
+#CApr 2010
+x = 187, y = 187, rule = B3/S23
+179bobo$179boo$180bo3$o$boo$oo14bo25bo$14bobo26boo128bo$15boo25boo128b
+o$172b3o$$10bo26bo$8bobo27boo128bo$9boo26boo128bo10bo$167b3o7bo$177b3o
+$15bo$13bobo28bo$14boo29boo$44boo3$129bo$129bobo$129boo3$130bo$128boo$
+129boo$40bo$41boo$40boo$52bo$53bo$51b3o17bobo$72boo98bobo$72bo99boo$
+54bo118bo$55bo69bo$53b3o68bo$124b3o50bobo$177boo$166bobo9bo$166boo$
+122bobo42bo$122boo$123bo3$120bobo$71bobo46boo$72boo47bo$72bo58bo$130bo
+$130b3o$$72bo63bo$66bo3bobo61boo$61bo5boobboo62boo$62bo3boo$60b3o$$
+108bo$108bobo3bo$108boobboo$113boo$$107bobo$107boo$108bo$$83bo$84bobbo
+$44bobbobo32b3o3boo34bobo$42bobo3boo37boo35boo$43boo3bo76bo$$66bo26bo
+18bo$67bo25bobo15bo$65b3o25boo16b3o3$77bobo34bo$78boo32boo$78bo34boo$
+133bo$77bo55bobo$78bobbo51boo$76b3o3boo$81boo3$99bo$98bo$98b3o7$69boo$
+70boo$69bo3$120b3o$120bo$121bo16boo$137boo$73boo64bo$72bobo$74bo$81boo
+$33bo48boo33bo10boo$33boo46bo34boo9boo$32bobo81bobo10bo$$109boo$52b3o
+54bobo$54bo54bo$53bo$$51bo106boo$51boo105bobo$50bobo105bo5$98bo$97boo$
+97bobo26boo$126bobo$126bo$75boo$74bobo$76bo$19bo$19boo$8bo9bobo54boo$
+8boo66boo$7bobo65bo3$13bo$13boo$12bobo17$141boo$140boo29boo$142bo28bob
+o$171bo$7b3o$9bo7b3o$8bo10bo128boo26boo$18bo128boo27bobo$149bo26bo$$
+12b3o$14bo128boo25boo$13bo128boo26bobo$144bo25bo14boo$184boo$186bo3$6b
+o$6boo$5bobo!

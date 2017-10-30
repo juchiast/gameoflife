@@ -1,0 +1,13 @@
+#Cp432 glider gun based on p144 oscillators
+#CDavid Bell, Aug 94
+x = 113, y = 78, rule = B3/S23
+75boo8boo24boo$74b4o7boo24boo$73bobobbo24boo$73boobbobo22bobbo$78bobo
+18boobboo$80boo16b3o$51boo15boo9b3o16bobbo$51boo15boo8bobo16boobo$78b
+oo17b5o$96bo4bo$66bo29b5o$65boo30boboo$64boobo28bobbo$97b3o$93boobboo$
+61b3o28bobbo$60bobbo29boo$60bo24boo24boo$61bo23boo24boo3$59bo$60bo$57b
+obbo$57b3o3$53boboo$54boo$54bo$61bo$60bo$51boo7b3o5boo$51boo15boo41bo$
+109bobo$110boo6$o$3o$3bo$bboo39boo15boo$43boo15boo3$46bo$46boo$45boboo
+3$49b3o$49bobbo$52bo$51bo3$oo24boo25bo$oo24boo24bo$8boo42bobbo$7bobbo
+42b3o$8boobboo$12b3o$11bobbo41boobo$12boboo41boo$11b5o42bo$11bo4bo$12b
+5o16boo$12boobo16bobo8boo15boo$13bobbo14b3o9boo15boo$13b3o15boo$14boo
+bboo12bobo$17bobbo12bobobboo$18boo14bobbobo$oo24boo7b4o$oo24boo8boo!

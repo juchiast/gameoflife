@@ -1,0 +1,9 @@
+#CMaybe the only known polyominos that oscillate,
+#Cother than extended versions of the p3 cross.
+x = 95, y = 13, rule = B3/S23
+41b4ob4o$41bobbobobbo13bo27bo$27b4o8b3obb3obb3o10b3o12b3o10b3o$27bobbo
+8bo11bo8b3ob3o10bobo9booboo$17bo7b3obb3o6bo11bo8bo5bo10b3o8b3ob3o$oo6b
+o7boo7bo6bo6b3o7b3o7boo5boo9b3o8b3ob3o$oo6bo7boo7bo6bo8bo7bo8boo7boo8b
+3o8b3ob3o$8bo7bo8b3obb3o6b3o7b3o7boo5boo9b3o8b3ob3o$27bobbo8bo11bo8bo
+5bo10bobo9booboo$27b4o8bo11bo8b3ob3o10b3o10b3o$39b3obb3obb3o10b3o26bo$
+41bobbobobbo13bo$41b4ob4o!

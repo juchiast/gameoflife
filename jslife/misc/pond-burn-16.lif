@@ -1,0 +1,11 @@
+#CZig zag pond reburner
+#Cby David Bell and D.Q.Dauthier
+#C29 Jan 2000
+x = 58, y = 34, rule = B3/S23
+16boo$12b4oboo$5boo5b6o$b4oboo5b4o$b6o16boo$bb4o20bo$14boo3boo6bo$16bo
+bbo7bo$13boob12o$13b3oboobboo$15bobo$16bo$25boo$boo6boo12booboo$obbo4b
+obbo4boo5b4o$obbo4bobbo5boo5boo$boo6boo5bo29boo$42b4oboo$20boo13boo5b
+6o$21boo8b4oboo5b4o$20bo10b6o16boo$32b4o20bo$24boo18boo3boo6bo$5b3o17b
+oo19bobbo7bo$7bo16bo18boob12o$6bo25bo10b3oboobboo$31boo12bobo$32boo12b
+o$55boo$45boo6booboo$29b4o10bo4bo4b4o$28b6o15bo4boo$28b4oboo8bo5bo$32b
+oo10b6o!

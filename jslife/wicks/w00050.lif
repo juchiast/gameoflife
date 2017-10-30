@@ -1,0 +1,23 @@
+#Cright: fencepost by Noam Elkies, 14 Oct 1994
+x = 170, y = 132, rule = B3/S23
+152boo4boo$bboboo7boobo52boboo7boobo14boobo50bobobbobo$bboobo7boboo52b
+oobo7boboo8boo4boboo19bo32bobbo$oo9boo4boo14bobo31boo9boo4boo7bo8boo
+16b3o30bo4bo$bo9bo5bo15bobo32bo9bo5bo7bo9bo17bo32bo4bo$o11bo5bo14bobo
+31bo11bo5bo6boo9bo41bobbo4bo4bo$oo9boo4boo14boo32boo9boo4boo4boo10boo
+15bo24boboobo5boo$bboboo5bo5bo51boboo5bo5bo6bo6boobo15b3o25bobbo$bboob
+o6bo5bo50boobo6bo5bo4bo7boboo16bo26bobbo$6boo3boo4boo54boo3boo4boo4boo
+4boo46boboobo$7bo3bo5bo56bo3bo5bo3boo6bo48bobbo4b3o$6bo5bo5bo54bo5bo5b
+o3bo7bo$6boo3boo4boo54boo3boo4boobbo7boo53bo5bo$bboboo7boobo52boboo7b
+oobo4boo8boobo49bo5bo$bboobo7boboo22boo28boobo7boboo14boboo49bo5bo$38b
+obo80bo$38bobo79b3o30b3o$38bobo79bo$$119bo$117b3o35bo$118bo36bo$29bobo
+122bobo$29bobo123bo$29bobo123bo$29boo3$121bo$120b3o$120bo$$119bo$35boo
+80b3o$34bobo81bo$34bobo117bo$34bobo117bo$153bobo$154bo$154bo$$25bobo
+93bo$25bobo92b3o$25bobo92bo$25boo128bo$119bo35bo$117b3o34bobo$118bo36b
+o$155bo4$31boo$30bobo$30bobo88bo$30bobo87b3o$120bo$$119bo$117b3o34bo$
+21bobo94bo35bo$21bobo129bobo$21bobo130bo$21boo131bo4$121bo$120b3o32bo$
+120bo34bo$154bobo$27boo90bo35bo$26bobo88b3o35bo$26bobo89bo$26bobo5$17b
+obo$17bobo101bo$17bobo100b3o$17boo101bo$156bo$119bo36bo$117b3o35bobo$
+118bo37bo$156bo3$23boo$22bobo$22bobo132bo$22bobo132bo$156bobo$157bo$
+157bo11$158bo$158bo$157bobo$158bo$158bo4$158b3o$$156bo5bo$156bo5bo$
+156bo5bo$$158b3o4bobbo$164boboobo$165bobbo$165bobbo$157boo5boboobo$
+155bo4bo4bobbo$155bo4bo$155bo4bo$156bobbo$154bobobbobo$154boo4boo!

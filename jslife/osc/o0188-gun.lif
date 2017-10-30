@@ -1,0 +1,17 @@
+#CP4 stabilizers found by by Paul Callahan.
+#CP188 combination by Dean Hickerson.
+#CJul 1994
+#C(see p94 gun)
+x = 101, y = 29, rule = B3/S23
+oo4boobo6boobo$bo4boboo6boboo$o3boo4boobboo4boo42bo$oobbo5bo3bo5bo30bo
+7boo3b3o$5bo5bo3bo5bo29b3o5boo6bo4boo7bo$oobboo4boobboo4boo23bo8bo11b
+oo4boo5b3o$bo4boobo6boobo25b3o5boo23bo8bo$o5boboo6boboo28bo29boo5b3o$
+oobboo4boobboo4boo25boo7bo27bo$4bo5bo3bo5bo34b3o15bo10boo$oo3bo5bo3bo
+5bo13boo17booboo13boo$bobboo4boobboo4boo12bobbo15b3ob3o11bob6obo15boo$
+o5boobo6boobo13bobobbo15booboo11b3obboboobboo12bobbo$oo4boboo6boboo13b
+obo3bo15b3o13bo4bo4bo12bobbobo$32boobob6o13bo15boo5boo13boobobo$35bobb
+obo33bo3bo11boo5boboo$35b3obobbo31bobobo12bo3bobo$33boo3bobobo32b3o13b
+o4boo$32bobboboobo35bo14boobo3boo$33boo3boboo50boboobobbo$35boo4bo48bo
+bobo3boo$35bobo3bo48bobbob3o$32boobo5boo49bobobbo$33boboboo51b6oboboo$
+33bobobbo16boo36bo3bobo$34bobbo17bo20boo16bobbobo$35boo12boo5b3o8bo9bo
+17bobbo$49boo7bo9bo5b3o5boo12boo$66b3o5bo7boo!

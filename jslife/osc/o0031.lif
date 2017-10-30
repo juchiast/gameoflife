@@ -1,0 +1,24 @@
+#C1. By Matthias Merzenich, 11/2010
+#C2. By Matthias Merzenich, 2/2012
+x = 127, y = 161, rule = B3/S23
+99boobobboboo$92boo4bobbo4bobbo4boo$92boo5bobo4bobo5boo$100bo6bo6$100b
+o6bo$92boo5bobo4bobo5boo$92boo4bobbo4bobbo4boo$99boobobboboo$o17boobo
+bboboo$11boo4bobbo4bobbo4boo$o10boo5bobo4bobo5boo$19bo6bo$o59boo7boo
+27bo$60boo7boo28bo$o96b3o$$o57bo13bo16boo$19bo6bo29boo15boo15boo$11boo
+5bobo4bobo5boo22boo4booboo4boo15bo$11boo4bobbo4bobbo4boo22b3obboo3boo
+bb3o38boo7boo$18boobobboboo32b4o3b4o34bo6boo7boo$57bob5o3b5obo32boo$
+58bo13bo32boo$110bo13bo$81b3o24boo15boo$58bo13bo10bo25boo4booboo4boo$
+57bob5o3b5obo8bo26b3obboo3boobb3o$60b4o3b4o41b4o3b4o$57b3obboo3boobb3o
+26bo8bob5o3b5obo$57boo4booboo4boo25bo10bo13bo$56boo15boo24b3o$58bo13bo
+$76boo32bo13bo$75boo32bob5o3b5obo$60boo7boo6bo34b4o3b4o$60boo7boo38b3o
+bboo3boobb3o$93bo15boo4booboo4boo$91boo15boo15boo$92boo16bo13bo$$83b3o
+$83bo28boo7boo$84bo27boo7boo5$74boobobboboo$67boo4bobbo4bobbo4boo$67b
+oo5bobo4bobo5boo$75bo6bo6$75bo6bo$67boo5bobo4bobo5boo$67boo4bobbo4bobb
+o4boo$74boobobboboo25$65boo$65boo$58bo$57bobo$56bo3bo$56bo3bo$56bo3bo$
+45bo11bobo3boo$45boo11bo4bobo$44bobo18bo$65boo4$61bobo$37boo23boo$36bo
+bo23bo$38bo$$bobobo$15boo8bo$5bo9boo6b3o44bo$22bo48bo$bobobo16boo5boo
+38b3o$30boo$bo27bo$19b3o$bobobo12bo3bo$17bo5bo$18bo3bo54bo$19b3o56boo$
+77boo9$23boo$22boo56b3o$24bo54bo3bo$78bo5bo$79bo3bo$80b3o$72bo$70boo$
+30b3o38boo5boo$30bo48bo$31bo44b3o6boo$76bo8boo3$63bo$39bo23bobo$38boo
+23boo$38bobo4$35boo$36bo18bobo$36bobo4bo11boo$37boo3bobo11bo$41bo3bo$
+41bo3bo$41bo3bo$42bobo$43bo$35boo$35boo!

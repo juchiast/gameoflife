@@ -1,0 +1,11 @@
+#CBy Bill Gosper, 22 Jul 1994
+#Cp144 oscillator by Achim Flammenkamp
+#Cp72 oscillator by Robert Wainwright
+x = 82, y = 28, rule = B3/S23
+oo3boo3boobboo3boo$bo3boo3boobboo3boo$o$oo3boo3boobboo3boo33boo24boo$
+5bobobobobbobobobo33boo24boo$oo5bobo6bobo$bo4boobo5boobo41boo$o9boo7b
+oo38boboo$oo9bo8bo38bo3bo7b3o$10bo8bo40b5o6booboo$oo8boo7boo29bo10bob
+3o8boo$bo9bo8bo29bo13boo8boo$o9bo8bo29bobo$oo8boo7boo25bo13boo8boo$45b
+3obboo8boo8b3obo$45bo4b3o7booboo6b5o$45boboobo11b3o7bo3bo$46b3o24boobo
+$38boo34boo$38boo$80boo$80boo$$35boo18bo$31boo4b4o10boobboob3o$31boobb
+oob3o10boo4b4o7bo$35bo19boo12bo$67b3o!

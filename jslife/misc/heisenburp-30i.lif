@@ -1,0 +1,33 @@
+#C"impure" p30 heisenburp device
+#CGliders are duplicated, and moved back to where
+#Cthey would have been had the device not been there.
+#CDietrich Leithner, 27 Sep 1996
+x = 210, y = 153, rule = B3/S23
+200boo$200boo$200boo$201bo$200bobo$195b3obobo$195b4obo$199bo$188boo$
+181b3o4boo$180b5o6boo$179bobo3bo5b3o$179boo3bo6boo$188boo$188boo7$197b
+3o$198bo$148boo48bo$148boo47b3o$$197b3o$197b3o$148bo$147b3o47b3o$146bo
+3bo47bo$145bob3obo46bo$146b5o38b4o4b3o$188bo4bo$164b6o17bobo3bo$163bo
+6bo15bobo3bo$162bo8bo14bo$163bo6bo15bo$145boobbo14b6o16bobbo$132boo13b
+obo32bo4boo$132boo15boo30b3o$150boo10bo17bo3bo$148boboo10b3o14bob3obo$
+148b3o14bo14b5o$164boo$$131b3o9boo3boo$146bo$131bobo9bo5bo$130b5o9boob
+oo6bobo5boo$129boo3boo9bobo8boo5boo$129boo3boo10bo9bo$146bo26boo9boo$
+173bobo8bo$131boo40bo11b3o$130booboo8boo42bo$131bobbo9bo18bo$131bo9b3o
+20boo$134bo6bo4boo15boo$132boo13bo$119boo26bobo16boo12b3o9boo$119boo
+27boo11boo3bo13bo9bobbo7bo$119boo6boo3boo17boo8boo4b3o5bo5bo7bo7boo3bo
+$23bo63bo31bo8b5o5bo12bobo15bo3b4o12bo6bo5bo$23boo62boo29bobo8b3o7boo
+10bo20boboboo11bo7b5o$22bobo61bobo29bobo9bo7boo7boo22bobbob3o11bobbo$
+119bo27boo22booboboo14boo$169b3ob4o$168bobo4bo$116boo3boo45bo$116bobob
+obo35b3o6boo$117b5o5boo16bobo10bo$118b3o7bo3boo12boo11bo$119bo5b3o5bo
+12bo$125bo7bobo$134boo$150boo$145boo3bo15boo$8bo63bo72boo4b3o12bobo9b
+oo$8boo62boo59boo18bo12bo10b3o$7bobo61bobo46bobo10boo5b3o19bo11boboo9b
+oo$121boo17bo21boo10bobbo4bo5bo$121bo19bo11boobboo4boo9boboo5bo$153boo
+bboo4b3o11b3o3bo3bo$157boo4boo13boo5bo$116b3o43boo$oo62boo49bo3bo42bo$
+boo62boo47bo5bo7bo19boo43bo$o63bo50bo3bo9boo17bobo40b3o$116b3o9boo18bo
+41bo$116b3o71boo$$114boo$115bo$112b3o13boo6bo$112bo15boo6bo18b3o$135bo
+bo3boo12bo$135boo4bobo12bo$129bo5bo6b3o63boo$126b4o3bobo7b3o6boo31boo
+3boo16bo$125b4o3boo8b3o7boo17bobo13b3o8bobo5bobo$125bobbo3booboboobbob
+o19b3o5bo3bo10bo3bo6bobbo5boo$125b4o4boboboobboo15boobbobbobo7bo5boo4b
+obo6boo$120boo4b4o3boboo19bobbobboo7bo4bo4boo5bo5boo3bo$119bobo7bo17b
+oo6bo19bo20boo$119bo27boo6bo10b3obbo3bo21bobbo$118boo35bo15bobo24bobo$
+156bobbo$158boo19$23bo63bo$23boo62boo$22bobo61bobo13$8bo63bo$8boo62boo
+$7bobo61bobo6$oo62boo$boo62boo$o63bo!

@@ -1,0 +1,14 @@
+#C Growing spaceship
+#C p20 c/2 front end, p50 c/5 back end
+#CStephen Silver, 26 Jan 2000
+x = 79, y = 36, rule = B3/S23
+27b3o19b3o$26bobbo19bobbo$22bo6bo5bo7bo5bo6bo$21b3o5bo4b3o5b3o4bo5b3o$
+20boobo5bo3boobo5boboo3bo5boboo$20b3o6bo3b3o7b3o3bo6b3o$20b3o6bo3b3o7b
+3o3bo6b3o$20b3o6bo3b3o7b3o3bo6b3o$21boo6bo4boo7boo4bo6boo$26bobbo19bo
+bbo$28boo19boo$35bo7bo$34b3o5b3o$34boboo3boobo$35b3o3b3o$35b3o3b3o$35b
+oo5boo3$30bo17bo$29bobo15bobo$29bobo15bobo$30bo4b3o3b3o4bo$33bo11bo$
+32bo4bo3bo4bo$31bo6bobo6bo$32bo5bobo5bo$33bo3bo3bo3bo$bboo5boo5boo5boo
+11bo5bo11boo5boo5boo5boo$o3bo3bobbo3bobbo3bo3bo25bo3bo3bobbo3bobbo3bo
+3bo$o3bobob3o5b3obobo3bo25bo3bobob3o5b3obobo3bo$o5boobb3ob3obboo5bobbo
+bo15bobobbo5boobb3ob3obboo5bo$oob3o15b3oboo3bo17bo3boob3o15b3oboo$o25b
+o25bo25bo$bo3bo15bo3bo27bo3bo15bo3bo$bbobbo15bobbo29bobbo15bobbo!

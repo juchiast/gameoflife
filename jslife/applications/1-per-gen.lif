@@ -1,0 +1,7 @@
+#C44-cell pattern which grows by 1 cell per
+#Cgeneration (exactly).
+#CBy Nicolay Beluchenko; improved by 1 cell by
+#CDavid Bell. (Sep '05)
+x = 17, y = 15, rule = B3/S23
+8boo$7boo$9bo$11boo$10bo$$9bobboo$boo5boo4bo$oo5bo5bo$bbo4bobo3boo$4bo
+bbo4boobo$4boo7boo$8bo4boboo$7bobobboboo$8bo!

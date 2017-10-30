@@ -1,0 +1,47 @@
+#Cp160 gun, based on a honey farm + eater + spark =
+#Choney farm + 2 gliders reaction.
+#C
+#CThe reaction has been known for some time,
+#Cbut is difficult to turn into a gun because the two
+#Cgliders released are on almost the same path.
+#C
+#CDavid Bell, 5/'04
+x = 216, y = 188, rule = B3/S23
+oo5boobo6boobo17bo$bo5boboo6boboo$o4boo8boo4boo13bob3o$oo3bo9bo5bo16b
+oobo8bo$6bo9bo5bo15boboo6b3o$oo3boo8boo4boo16b3obo3bo$bo5boobo4bo5bo
+25boo$o6boboo5bo5bo18bo$oo3boo4boobboo4boo22bo$5bo5bo3bo5bo22bobo$oo4b
+o5bo3bo5bo22boobboo$bo3boo4boobboo4boo26boo139boo$o6boobo6boobo$oo5bob
+oo6boboo10boo5boo148bo3bo$32bo5boo148bo4bo$32bobo147b3o5bobobo8bo$33b
+oo34bo112b3o6bobobo5b3o$37boo29bobo100bo10b3o7bo4bobbo$36bobo28bo3bo
+99b3o5b3o11bo3bobboo$37bo28bo3bo103bo4b3o$32b3o30bo3bo103boo4b3o12boo
+bbo$35bo19bo8bo3bo128bobo13b3o$31bo3bo18boo9bobo108bo21boobboo9b3o$30b
+obobbo18bobo9bo108bobo24boo9b3o$28bobbobo28bo108boobboo33b3o$28bo3bo
+28bobo107boo37b3o$28bo32boo147b3o$29b3o33boo$65bobo139bo$60boo5bo138bo
+bo$60boo5boo137boo$32bo177boo$210bobo$30bob3o170boo5bo$32boobo169boo5b
+oo$32boboo$33b3obo$194bo$35bo158boo$39bo153bobo$38bobo$39boo127bo$35b
+oo29bo99b3o$34bobo30boo96bo$34bo5boo24boo96bobo19boo$33boo5boo123bo20b
+oobboo$190bobo$154boo35bo$57boo96boo6boo29b3o$58bo95bo8boo23boo3bo$58b
+obo84boo26bo15bo3bo3bo$59bobo83bo13boo10boo13b3o4bobbobo$60bo3boo77bob
+o13bo12boo12bo8bobobbo$64boo18boo56bobo12bobo36bo3bo$84boo52boo3bo13b
+oo41bo$93bo44boo57b3o$67bo79bo$67b3o16bo4bob3o51bo$70bo14bobo5boobo8bo
+41bo$69boo15bo6boboo6b3o$87b3o4b3obo3bo17boo$64boo23bo12boo16boobo21bo
+$63boo31bo27bo26boo$65bo34bo20bo25b3o$79bobo17bobo20boboo22boobo$75bo
+bb3obo17boobboo18boo22boobbo$77bo4bo21boo44boo$73bo5b3o46bo$72bo3bo50b
+obo32boo$73b3obbo49boo13boo13bo3boo$66bo7b3obo45boo16bobo12bobo$66b3o
+7boo45bobo16bo13bobo$69bo6bo8boo6bo29bo5boo10boo13bo$68bobo14bo5bobo
+28boo5boo24boo$69bo16b3o3boo14bo$88bo18boo$107bobo32bo$70boo70bobo$70b
+oo70boo8$88boo$84boobboo$83bobo24bo$80boobbo26boo$110boo$79bo3bobboo
+66b3o$78bo4bobbo67bo$77bobobo5b3o65bo$76bobobo8bo37bo$74bo4bo45boo$74b
+o3bo47boo$$76boo7$190bo$106bobo17bobo61boo$106boo19boo31bo28boobo$107b
+o19bo31bobo26bobb3o$158bo3bo24bobobo$157bo3bo24bobobo$88boo5boo59bo3bo
+23b3obbo$89bo5boo58bo3bo25boboo$89bobo64bobo27boo$90boo56bo8bo25bo3bo$
+94boo51boo4boo27bobo$93bobo18b7o26bobobbobbo26boo$94bo17b3ob3ob3o29boo
+32boo$111bo4b3o4bo33bo28bobo$89b3o20b4obob3obo7b4o20boobo22boo5bo$89b
+3o30bo3boo7bo15boo5bo22boo5boo$89b3o19boboobobobo5boobboo3bo15boo5boo$
+86b3o22booboboboboo8boobbo$86b3o26bobbobo$86b3o27boobbo18boo$120boo17b
+oobboo$143bobo$144bo$$141boo4b3o$142bo4b3o13bo$139b3o5b3o13boo$75boo5b
+oo55bo10b3o9bobo$76bo5boo66b3o$76bobo8bo62b3o$77boo6boo$81boo3boo$80bo
+bo$81bo$77bo$$75b3obo$74boboo$74boobo$72bob3o$129bo$74bo55bo$128b3o23$
+123bo$123boo$122bobo3$117boo$117boobboo$121bobo$122bo$125b3o$119boo3bo
+$120bo3bo3bo$117b3o4bobbobo$117bo8bobobbo$127bo3bo$131bo37bo$128b3o39b
+o$168b3o!

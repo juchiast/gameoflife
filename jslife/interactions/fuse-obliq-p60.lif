@@ -1,0 +1,24 @@
+#CA (12,6)/60 fuse found by Nicolay Beluchenko.
+#CFuse-building rake construction by Jason Summers.
+#C(Jan '04)
+#C
+x = 98, y = 100, rule = B3/S23
+20b3o$20bobbo$13b3o4bo25bo$7bo4bobbo4bo24b3o$6b3o3bo3bo4bobo21boboo4bo
+$5boobobboobbobo28b3o3b3o$5b3o3bobo32boo3boobbo3b3o$5b3o6boobo33bo3bo
+3bobbo$6boo6b3o4bo29boboo4bo$14b3o3b3o28boo6bo3bo$20boboo35bo$21b3o21b
+3o12bobo$21boo21bobbo$47bo6boo$11bobo33bo5bobbo$11bobo30bobo5bo4bo$50b
+o$11bo6bo30b3obb3o$17bo31boob3o$17bo5bo27b3o$14b3o5b3o27bo$8b3o11boboo
+$8bobbo11b3o3b3o3b3o5b3o$8bo14b3obbobbo3bobbo3bobbo12bo$8bo14boo6bo3bo
+9bo11b3o$9bobo6bo12bo3bo5bo3bo3bo7boboo$19bo8bobo5bobo6bo5boo5b3o$17b
+3o22bobo4b3o6boo$32b3o15boo$32b3o16b3o$32bobo17boo$27bo5bo5bo12bo$26b
+3o4bo4b3o$26boboo7boobo$21bo5b3o7b3o$22bo4boo9boo6bobo$20b3o23boo$47bo
+$$33bo$33bo$33bo$$24bo$25bo17bobo$23b3o7bo9boo$33bo10bo$33bo4$33bo$27b
+o5bo$28bo4bo6bobo$26b3o11boo$41bo$$33bo$33bo$33bo$20boo$21boo7bo$20bo
+10bo5bobo$29booboo3boo$33bo4bo$33bo3$37bobbo$41bo$26bo10bo3bo$25bobo
+10b4o29bobbo$10boo12booboo46bo$10boo59bo3bo$51bo9boo9b4o$14boo17boo15b
+3o7boo5b3o$obo11boo17boo14boobo3b3o6booboo$o3bo24boo18b3o8boo5b3o$4bo
+3b3o16bo21b3o9boo9b4o$bo6bobo5b4o8bo21boo19bo3bo$bobo4bo6bo3boo28bo25b
+o7boo$bobo5boobo8bo27b3o19bobbo4b4oboo$10b3o3booboo30bo27b6o$19boo44b
+oo13b4o9bobbo$7b3o54boo31bo$6boobboo42boo10bo26bo3bo$6bo3bob3o36b3oboo
+37b4o$8bob3obbo35b5o29boobb3o$13boo37b3o22boobboobboobb3o$83boboobb3o$
+81boo11b4o$93bo3bo$97bo$93bobbo$$80b6o$79bo5bo$85bo$79bo4bo$81boo!

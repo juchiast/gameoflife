@@ -1,0 +1,23 @@
+#CSynthesis of 2c/5 spaceship, from 63 gliders
+#C[3/2003; portions date from 5/2000]
+#CMostly by Noam Elkies, with help from Mark Niemiec and
+#CJason Summers. This is the first orthogonal spaceship
+#Cslower than c/2 to be constructed from gliders.
+#CThe spaceship itself was found by Tim Coe in 1996.
+x = 179, y = 173, rule = B3/S23
+22bo$23boo$22boo143bo$167bobo3bo$167boo3bo$13bobo156b3o$14boo6bobo$14b
+o8boo$23bo$160bobo12bo$160boo11boo$161bo12boo3$9bo$7bobo150bo$8boo148b
+oo$159boo11bo$47bo123bo$48bo122b3o$41bobobb3o$42boo$42bo$$49bo$50boo$
+49boo3$146bo$146bobo$146boo3$51bo92bobo$52bo91boo$50b3o92bo4$135bo$
+134bo$134b3o12$105bobo$105boo$106bo$$81bo$55bo23bobo$56boo22boo$55boo
+3$74bo27bobo$75boo25boo$74boo27bo$$64bo$62bobo$63boo$73bo5bo6bo16bobo$
+74bo5boo5bo15boo$72b3o4boo4b3o16bo3$67bobo$68boo$68bo20bo$87bobo$88boo
+$92bo$90boo$91boo5$77bo$77boo12boo$76bobo11boo$92bo$88boo$87bobo$89bo$
+71boo$72boo$71bo3$90bo$89boo$89bobo8$52bo$52boo$51bobo18bo$65b3o4boo
+43boo$67bo3bobo43bobo$56b3o7bo50bo$58bo$57bo$137boo$137bobo$137bo$$58b
+oo59bo$59boo57boo$58bo59bobo4$64boo$56boo5bobo71boo$55bobo7bo71bobo$
+57bo79bo$$140b3o$140bo$141bo$50b3o92bo$52bo91boo$51bo92bobo14bo$160boo
+$160bobo$146boo$146bobo$146bo7$bo40bo$boo39boo$obo38bobobb3o$9boo37bo
+128bo$8bobo36bo128boo$10bo148boo15bobo$158boo$160bo4$161bo$160boo$160b
+obo$23bo$14bo8boo$14boo6bobo$13bobo156b3o$167boo3bo$167bobo3bo$22boo
+143bo$23boo$22bo!

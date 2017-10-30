@@ -1,0 +1,60 @@
+#CUnit cell for Wolfram's "Rule 110".
+#CPlace multiple copies of this pattern in a horizontal
+#Crow, overlapping the decorative still-lifes at the corners.
+#CThe state of the cell is determined by the presence (OFF)
+#Cor absence (ON) of a glider between the tubs at generation
+#C1200N. Note the negative logic. For generation 0, the
+#Cstate of the cell is forced ON by the block in front of the
+#Cglider. Delete the block to set the state to OFF.
+#C1200 Life generations equals one Rule 110 generation.
+#C256 Life cells equals one Rule 110 cell (by horizontal
+#Cdistance).
+#CJason Summers, 19 Dec '05
+x = 263, y = 236, rule = B3/S23
+3bo199boo54bo$b3o200bo52b3o$o3boo198bobo8boo39bo3boo$obobobo198boo6bo
+bbo39bobobobo$boobobo205bo7b5o32boobobo$5bo195boo9bo6bo5bo35bo$201bo
+10bo7boo3bo$192bo6bobo11bobbo7bo$192bobo4boo14boo$175boo18boo$173bo3bo
+17boo$167boo3bo5bo16boo$167boobboobo3bo8bo4bobo$172bo5bo9bo3bo$173bo3b
+o5bobb3o$175boo5$195bo$193bobo$194boo$214bo$191boo21b3o$191boo24bo$
+216boo$202bo$203bo39boo$201b3o38bobo$241b3o4boob3o$240b3o4bobb4o$218b
+3o11bo8b3o4boo$217bo3bo10bo9bobo$216bo5bo8bobo9boo$210bo5booboboo7boob
+oo$208bobo18bo5bo$209boo21bo$219bo9boo3boo$218bobo$218bobo$219boo12bo$
+221bo11bo$220b3o11bo$219bo3bo$218bob3obo$219b5o7boo$231boo10$221boo$
+221boo11$217boo$217boo$160boo$160bo$149bobo6bobo$149bo3bo4boo$139boo
+12bo$139boo8bo4bo$153bo$149bo3bo63bo$149bobo64b3o$193boo20b5o$193boo
+19boo3boo4$216b3o$216b3o$212boo44boo$162bo30b3o16boo44bo$159b4o29bo3bo
+12boo6boo37bobo$151boo5b4o5boo32boo5b3o5bobbo36boo$3bo147boo5bobbo4bo
+bbo6bobo12bo5bo3boo6boo6boo$158b4o5boo5bo3bo12boo3boo14boo$159b4o11bo
+12boo23boo$147boo13bo10bo4bo8boo$147bobo17bo6bo19bo$149bo17boo5bo3bo
+14boboo$149boo15bobo7bobo14bo48boo$193bo3bo44boo$194bobbo$153boo39b5o$
+152b3o3boobo32b5o$149boboo5bo3bobbo27boo3boo$142boo5bobbo4bo4bobboo27b
+5o$120bo21boo5boboo4b4o5boo19bobo5b3o$120b3o29b3o3bo7b3o18boo7bo$123bo
+29boo11boo20bo53b3o$122boo41boo7boo65bo3bo$165bo8bobo63bo5bo$149bo26bo
+63booboboo$125bo22bobo25boo$124b3o9boo9bo3boo6boo20bo$123bo3bo8boo9bo
+3boboo4bobo17boo62bo$122bob3obo18bo3bob3o4b3o17boo60bobo$75boo46b5o20b
+oboboobbo4b3o6boo24boo44bobo$75boo72bo4boo4b3o7boo24boo45b3o$159bobo
+83boo$159boo84bo$246b3o$75bo41boo27bo25bobo73bo$74bobo40boo27bobo23boo
+$73bo3bo68boo25bo$74b3o56boo$72boo3boo39bo15bo$117b3o14bobo$116bo3bo4b
+oo8boo$118bo6boo12bo26bo$115bo5bo16bo25boo$115bo5bo16b3o24boo$116bo3bo
+$63boo52b3o$63boo63bo$127bobo$72boo54bo$73bo57bo25bobo$70b3o47bo10bobo
+23boo$70bo60boo25bo$135bo$120bo7boo4bobo95bo$118bobo7boo5bo96bo$119boo
+110bobo$61boo3boo94boo68bo$162bobbo66bo$62bo3bo63boo20bo3b3o7bo6boo57b
+o$63b3o47boo3boo10boo19b5o3bo6bo6boo57bo$63b3o60bo23booboo3bo7bo64bobo
+$114bo3bo5boo13boo8b3oboo3bo3bobbo66bo$115b3o7boo12boo9boob4o5boo68bo$
+67bo47b3o33b4o$65b4o83bo$64boboboo$63bobbob3o8boo32boo$64boboboo9boo
+33bo$65b4o42b3o3bobo$67bo43bo5boo140bo$5boo111bo$4bobo100boo$4bo102boo
+$3boo223b3o$229bo$107boboo118bo$106boo3bo116b3o$105boobboo$228b3o$228b
+3o$$99bo21bo106b3o$98bo15boobo3b4o104bo$98b3o7boobboobobo4b4o103bo$
+107bobobbooboboo3bobbo5boo95b3o$106b3o8boo3b4o5boo$105b3o8boo3b4o$106b
+3o12bo$99boo6bobo54bo$91bo6bobo7boo52b3o$91bobo4bo62bo$91boo4boo40bo
+21boo$137bobo$127boo6boo12boo$126bo3bo4boo12boo$125bo5bo3boo$84bo30boo
+8bo3boboo4bobo$14boo67bo31boo8bo5bo7bo$14boo67b3o40bo3bo$127boo27boo3b
+oo$138bo18b5o$139boo16booboo$138boo17booboo$158b3o$76bo$76bobo$13b3o
+60boo$12bo3bo139boo$11bo5bo127bobo9bo$11booboboo128boo6b3o$146bo7bo$
+69bo$14bo53bo$13bobo52b3o$13bobo141bo$12b3o143bo$11boo134bo9bo$12bo
+133bobo$9b3o122boo10boobo8bobo$9bo51bo72boo10booboo6bobbo4bo$61bobo82b
+oobo6boo5boo$61boo83bobo5boo3bo8boo$147bo8boo10boo$157bobbo$158bobo$$
+54bo$53bo$53b3o6$46bo$46bobo$46boo6$52bo$52boo$41bo5boo4boo8boo$5bo35b
+obo3boo4b3o7boo196bo$boobobo35bobobboo4boo202boobobo$obobobo22boo11bo
+bbo6boo202bobobobo$o3boo23boo11bobo7bo203bo3boo$b3o37bobo213b3o$3bo37b
+o217bo!

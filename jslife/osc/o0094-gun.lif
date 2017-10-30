@@ -1,0 +1,39 @@
+#CTrue p94 gun.
+#CThis version by Adam P. Goucher, 2010.
+#CBased on a similar pattern by David Bell and Jason
+#C  Summers, 2004.
+#CBased on a gun by Dean Hickerson, 1990.
+#CBased on "AK47" reaction, discovered independently 
+#Cby Dave Buckingham and Rich Schroeppel.
+x = 164, y = 143, rule = B3/S23
+71boo7bo35boo7bo$71boo5b3o15bo7boo10boo5b3o$77bo8bo9b3o5boo16bo8bo$51b
+o7boo16boo5b3o3bo8bo22boo5b3o6boo7bo$51b3o5boo22bo6b3o5boo28bo9boo5b3o
+$45bo8bo14bo13boo8bo34boo14bo8bo$45b3o5boo12bobbo21boo50boo5b3o$48bo
+17bobobbo78bo$47boo18boo72b3o6boo$bboobo4boo3boo50bo4bo67bo3bo$bboboo
+4boo3boo54boo66bo5bo$oo4boo51boo78bo5bo$o5bo3boo3boo42bo4bo74bo5bo$bo
+5bobbobobobo46boo12b3o42b3o15bo3bo$oo4boo4bobo45bobbobo10bo3bo16b3o21b
+o3bo15b3o$bboobo5boobo46bobbo10bo5bo14bo3bo19bo5bo$bboboo9boo35b3o7bo
+12bo5bo13bo5bo18bo5bo$6boo8bo34bo3bo19bo5bo13bo5bo18bo5bo$6bo8bo34bo5b
+o19bo3bo14bo5bo19bo3bo$7bo7boo24boo7bo5bo12boo6b3o16bo3bo13boo6b3o31b
+oo$6boo8bo24boo7bo5bo13bo26b3o6boo7bo40boo$bboobo9bo35bo3bo11b3o5boo
+29bo5b3o5boo$bboboo9boo35b3o12bo8bo23boo5b3obbo8bo$41boo30b3o5boo17bo
+8bo8b3o5boo28boo$40bobo12boo16bo7boo11boo5b3o14bo7boo14boo12bobo$37bo
+bbo14bo38boo7bo39bo14bobbo$36bobobo8boo5b3o81b3o5boo8bobobo$36boboboo
+7boo7bo71bobo7bo7boo7boobobo$35boobo91boo28boboo$38bo92bo28bo$38bobo
+117bobo$39boo7boo108boo$48bobo$48bo5$79bo$80bo$78b3o3$137boo$138boo$
+137bo5$108bo$106boo$107boo3$71b3o$71bo$72bo5$103bo$101bobo$102boo$$
+114bo$114boo$113bobo6$83bobo$83boo$84bo$$95boo$95bobo$95bo5$126bo$127b
+o$125b3o3$90boo$91boo$90bo5$61bo$59boo$60boo3$118b3o$118bo$119bo5$150b
+o$148bobo$39boo108boo7boo$38bobo117bobo$38bo28bo92bo$35boobo28boo91bob
+oo$36boboboo7boo7bo7bobo71bo7boo7boobobo$36bobobo8boo5b3o81b3o5boo8bob
+obo$37bobbo14bo39bo7boo38bo14bobbo$40bobo12boo14boo7bo14b3o5boo11boo7b
+o16boo12bobo$41boo28boo5b3o8bo8bo17boo5b3o30boo$77bo8bobb3o5boo23bo8bo
+12b3o$77boo5b3o5bo29boo5b3o11bo3bo$41boo40bo7boo6b3o26bo13bo5bo7boo$
+41boo31b3o6boo13bo3bo16b3o6boo12bo5bo7boo$73bo3bo19bo5bo14bo3bo19bo5bo
+$72bo5bo18bo5bo13bo5bo19bo3bo$72bo5bo18bo5bo13bo5bo12bo7b3o$72bo5bo19b
+o3bo14bo5bo10bobbo$55b3o15bo3bo21b3o16bo3bo10bobobbo$54bo3bo15b3o42b3o
+12boo$53bo5bo74bo4bo$53bo5bo78boo$53bo5bo66boo$54bo3bo67bo4bo$47boo6b
+3o72boo$48bo78bobbobo$45b3o5boo50boo21bobbo12boo$45bo8bo14boo34bo8boo
+13bo14bo$51b3o5boo9bo28boo5b3o6bo22boo5b3o$51bo7boo6b3o5boo22bo8bo3b3o
+5boo16boo7bo7bobo$67bo8bo16boo5b3o9bo8bo34boo$73b3o5boo10boo7bo15b3o5b
+oo28bo$73bo7boo35bo7boo!

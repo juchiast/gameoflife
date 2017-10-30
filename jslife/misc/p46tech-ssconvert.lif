@@ -1,0 +1,26 @@
+#CReactions that change one type of spaceship into
+#Canother.
+#CTop row: well-known.
+#COthers: Brice Due, 1/07.
+x = 210, y = 171, rule = B3/S23
+3bo90bo$4boo89boo$3boo89boo10$14bobo88bobo$15boo89boo$15bo90bo10$18boo
+102boo$boo15bobo100bobo15boo$boo17bo100bo17boo$18b3o100b3o4$18b3o100b
+3o$boo17bo7boo82boo7bo17boo$boo15bobo7boo82boo7bobo15boo$18boo102boo
+28$139boo$137bo4bo$115b6o22bo$114bo5bo16bo5bo$73boo45bo17b6o$56boo15bo
+bo7boo29bo4bo$56boo17bo7boo31boo$73b3o$$163boo30b4o5b6o$32bobbo21boo
+106bo29boboo7b4o$10b4o22bo20boo14b3o74boo10boobbo28bo7boboo$9bo3bo18bo
+3bo38bo7boo65boo11bobbo29boo5boo$13bo19b4o16bo19bobo7boo79bobo$9bobbo
+39b3o18boo89boo30boo5boo$54bo140bo7boboo$50bobbo110boo15boo12boboo7b4o
+$50bobo111bobo14boo12b4o5b6o$150boo11bobbo10boo$150boo10boobbo10boo$
+53bo111bo$51boo110boo8$52bo7bo$51b4o3b4o$51bo3bobo3bo$52bobbobobbo$52b
+3o3b3o7$52boo5boo$52boo5boo16$142boo$140bo4bo$118b6o22bo$117bo5bo16bo
+5bo$123bo17b6o$117bo4bo$119boo$192bobbo$192b3o3boo$66boo108b3o14bo4boo
+$49boo15bobo7boo75boo8b3o8booboboo11boo$49boo17bo7boo75boo8bo3bo5bo5b
+oo9b6o$66b3o94bo4bo5booboboo9boo3bo$164bo3bo7b3o15bo$25boo$23bo4bo21b
+oo112bo3bo$b6o22bo20boo14b3o94bo4bo5bo3bo6b3o3b3o$o5bo16bo5bo38bo7boo
+75boo8bo3bo5bo3bo7bobbobobbo$6bo17b6o16bo19bobo7boo75boo8b3o12boo4bo3b
+obo3bo$o4bo39b3o18boo106boobboo4b4o3b4o$bboo43bo137bo7bo$43bobbo$43bob
+o$169boo$169boo$46bo$44boo8$45bo7bo$44b4o3b4o130boo5boo$44bo3bobo3bo
+115bo5bo8boo5boo$45bobbobobbo115b3o3b3o$45b3o3b3o114bo3bobo3bo$168bo9b
+o$169b3o3b3o5$45boo5boo117booboo$45boo5boo118bobo$168booboobooboo$168b
+obbo3bobbo$168bo9bo$168bobbo3bobbo$169boo5boo!

@@ -1,0 +1,30 @@
+#CStable HWSS->glider converter
+#Ccalcyman, 4 Sep '08
+#Cbottom: Alternate version by Dave Greene
+x = 129, y = 224, rule = B3/S23
+31boo76boo$32bo76boo5boo$3bo27bo84boo$3b3o25boo47boo$6bo74bo$5boo73bo
+14boo17boo$80boo14bo17boo$96bobo21boo$97boo21boo$bboo30boo$o4bo28boo$
+6bo48boo$o5bo48boo26boo$b6o76boo4$12boo$11bobo$11boo$93boo$94bo$78boo
+11b3o$78boo11bo$$37boo$37boo25boo$65bo$62b3o$62bo$74boo51boo$74bo52bo$
+75b3o47bobo$77bo47boo$37boo25bo36boo$36bobbo23bobo35boo$37boo24bobo$
+44boo16booboo$19boo23boo$19bo42booboo$20b3o3boo34boobo$22bobbobo39bo
+35boo$25bo40boo36bo$24boo75b3o$101bo$58boo42boo$58boo4boo37bo$bboo31b
+oo27bobo36bobo$3bo30bobo29bo37boo$3o31bo31boo52bo$o21boo9boo23boo58b3o
+$21bobo34boo57bo$21bo95boo$20boo$47bo5bo$11boo32b3o4bobo$11boo31bo8bo$
+20boo22boo40bo9bo$18bobbo64b3o5b3o$18boo4boo48boo13bo3bo$bboo20bo49bo
+13boo3boo$3bo18bobo50bo$3bobo16boo50boo$4boo118boo$124boo4$71boo46boo$
+71boo46boo$123boo$123boo3$10boo105boo$6boobboo90boo13boo$5bobo74bo6boo
+11bobo$5bo23boo49b3o6boo13bo$4boo23bo5boo42bo24boo$30b3obobo42boo$32bo
+bo7boo$33boo7boo61$31boo76boo$32bo76boo5boo$3bo27bo84boo$3b3o25boo47b
+oo$6bo74bo$5boo73bo14boo17boo$80boo14bo17boo$96bobo21boo$97boo21boo$bb
+oo30boo$o4bo28boo$6bo48boo$o5bo48boo26boo$b6o76boo4$12boo$11bobo$11boo
+$93boo$94bo$78boo11b3o$78boo11bo$$37boo$37boo25boo$65bo$62b3o$62bo$74b
+oo51boo$74bo52bo$75b3o47bobo$77bo47boo$37boo62boo$36bobbo61boo$37boo$
+44boo$19boo23boo$19bo$20b3o3boo$22bobbobo75boo$25bo78bo$24boo75b3o$56b
+oo43bo$56boo44boo$103bo$bboo31boo66bobo$3bo30bobo67boo$3o31bo19boobo
+62bo$o32boo19boob3o58b3o$60bo56bo$54boob3o57boo$55bobo$47bo7bobo$11boo
+32b3o8bo$11boo31bo$20boo22boo40bo9bo$18bobbo64b3o5b3o$18boo4boo48boo
+13bo3bo$bboo20bo49bo13boo3boo$3bo18bobo50bo$3bobo16boo50boo$4boo118boo
+$124boo4$71boo46boo$71boo46boo$123boo$123boo3$10boo105boo$6boobboo90b
+oo13boo$5bobo74bo6boo11bobo$5bo23boo49b3o6boo13bo$4boo23bo5boo42bo24b
+oo$30b3obobo42boo$32bobo7boo$33boo7boo!

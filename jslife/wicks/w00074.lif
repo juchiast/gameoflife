@@ -1,0 +1,22 @@
+#C(74/2) found by Achim Flammenkamp, Jul 1994
+x = 191, y = 118, rule = B3/S23
+123boboo4boo3boo12boobo33bo$123boobo4boo3boo6boo4boboo32boo$80b3o44boo
+16bo8boo29boobbo$bboboo4boo3boo62bobbo45bobboo3boo6bo9bo31booboo$bboob
+o4boo3boo62b3o45bo3bobobobo6boo9bo19booboo$6boo119boo4bobo6boo10boo20b
+obboo$7bobboo3boo45boo61boo5boobo7bo6boobo24boo$6bo3bobobobo44bobo19b
+oo41bo9boo4bo7boboo24bo$6boo4bobo46bo39boo22bo11bo4boo4boo$4boo5boobo
+45boo39bo23boo9bo3boo6bo$5bo9boo61boo19bobo21boo11boo3bo7bo$4bo11bo82b
+oo23bo12bobbo7boo$4boo9bo107bo12bo3boo8boobo$bboo11boo64b3o39boo11boo
+12boboo$3bo12bo63bobbo$bbo12bo64b3o$bboo11boo3$68b3o$67bobbo$67b3o$
+187bo$50boo134boo$49bobo19boo112boobbo$49bo39boo95booboo$48boo39bo85b
+ooboo$66boo19bobo86bobboo$87boo89boo$178bo$69b3o$68bobbo$68b3o4$56b3o$
+55bobbo$55b3o$$38boo$37bobo19boo$37bo39boo$36boo39bo$54boo19bobo109bo$
+75boo109boo$185boobbo$57b3o126booboo$56bobbo115booboo$56b3o117bobboo$
+178boo$178bo$$44b3o$43bobbo$43b3o$$26boo$25bobo19boo$25bo39boo$24boo
+39bo$42boo19bobo$63boo$$45b3o$44bobbo$44b3o140bo$186boo$185boobbo$186b
+ooboo$32b3o140booboo$31bobbo141bobboo$31b3o144boo$178bo$14boo$13bobo
+19boo$13bo39boo$12boo39bo$30boo19bobo$51boo$$33b3o$32bobbo$32b3o4$20b
+3o$19bobbo164bo$19b3o164boo$185boobbo$bboo182booboo$bobo19boo150booboo
+$bo39boo133bobboo$oo39bo136boo$18boo19bobo136bo$39boo$$21b3o$20bobbo$
+20b3o10$187bo$186boo$185boobbo$186booboo$175booboo$176bobboo$178boo$
+178bo!

@@ -1,0 +1,12 @@
+#CJS, MM
+#CApr 2010
+x = 89, y = 109, rule = B3/S23
+10bo67bo$bobo7boo63boo7bobo$bboo6boo65boo6boo$bbo83bo3$12bobo59bobo$
+13boo59boo$13bo61bo5$67bo$65boo$66boo3$7bo$8bo$6b3o5$71bo$26bo44bobo$
+24bobo44boo$25boo10bo$35bobo48bobo$36boo48boo$70bo5bo10bo$70bobobbo$
+70boo3b3o$82bobo$82boo$83bo6$75bo$65bo8bo$64bo9b3o$64b3o3$46bo$46bobo
+11boo$46boo11boo$61bo6$27bo$28boo$27boo4$22b3o$12b3o9bo$14bo8bo$13bo4$
+22b3o$24bo44b3o$5bo17bo45bo$5boo63bo$4bobo$11b3o$13bo$bo10bo$boo48boo$
+obo48bobo$51bo10boo$62bobo$62bo6$80b3o$80bo$81bo3$21boo$22boo$21bo5$
+13bo61bo$13boo59boo$12bobo59bobo3$bbo83bo$bboo6boo65boo6boo$bobo7boo
+63boo7bobo$10bo67bo!

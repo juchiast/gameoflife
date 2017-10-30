@@ -1,0 +1,15 @@
+#CA pattern whose population grows logarithmically.
+#CThis is an updated version of Dean Hickerson's
+#C"caber tosser" pattern.
+#CJason Summers, 17 Jan 2010
+x = 118, y = 125, rule = B3/S23
+84boo$76bo4bobbo$75bobobbob3obbo$76b4o4bobbo$84bobbo$77bo6bo$82boboo$
+64boo11bo$64boo12boo7$56boo$56boo$68bo$66bobo$66b3o12bobbo$66bo10b3ob
+3o$78boboboo$79b3o$79boo10boo$83bo4boo$82bo3b4oboo$83b4o4b5o$83bo6b3o$
+91bo$90b3o$85bo28boo$85bo20bo4bobbo$105bobobbob3obbo$106b4o4bobbo$114b
+obbo$107bo6bo$103bo8boboo$102bo4bo$102b3o3boo11$114boo$114boo7$106boo$
+106boo38$23bobo$23bobbo$8bo6bo10boo$7bobo5bo8bo3boo4boo$6boboo6bo9boo
+6boo$oo3booboo9boobbobbo$oo4boboo5b3obbobbobo$7bobo7b4o$8bo9boo4$26bo$
+27boo$26boo5$32boo$31bo6bobo$33bo4bobbo$23bo7b3o7boo$22bobo8boo4bo3boo
+4boo$15boo4boboo7boobo5boo6boo$15boo3booboo7booboobobbo$21boboo6bobobo
+bbobo$22bobo7b4o$23bo9boo!

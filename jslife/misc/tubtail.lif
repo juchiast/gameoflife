@@ -1,0 +1,14 @@
+#CThe tub w/tail+block eater can function as an AND gate
+#C(row 1 and 2): If two gliders arrive, a reflected glider will
+#Cbe created. If either glider arrives alone, it will be eaten.
+#CRow 3 shows another reflection, but it does not survive
+#Cif the southeastward glider arrives alone.
+#CDavid Bell, 14 Aug 1999
+x = 56, y = 91, rule = B3/S23
+5bo39bo$6bo39bo$4b3o8bo19bo8b3o8bo$13b3o17b3o17b3o$12bo19bo19bo$11bobo
+17bobo17bobo$12bo19bo19bo3$10boo18boo18boo$boo7boo9boo7boo18boo$obo17b
+obo$bbo19bo25$bbo39bo$obo37bobo$boo38boo3$15bo19bo19bo$13b3o17b3o17b3o
+$12bo19bo19bo$11bobo17bobo17bobo$12bo19bo19bo$4b3o17b3o$6bo19bo$5bo4b
+oo13bo4boo18boo$10boo18boo18boo26$bbo$3bo$b3o4$15bo19bo$13b3o17b3o$12b
+o19bo$11bobo17bobo$12bo19bo$4b3o17b3o$6bo19bo$5bo4boo13bo4boo$10boo18b
+oo!

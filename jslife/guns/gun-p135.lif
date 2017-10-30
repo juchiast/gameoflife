@@ -1,0 +1,41 @@
+#CGun based on an old 4-glider-to-5-glider reaction.
+#CGun by Jason Summers, 7/2002
+#CThis reaction works for periods 130 and higher.
+#CSee also p133 version. 
+x = 427, y = 388, rule = B3/S23
+17bo$16bobo3$16b3o$16b3o$17bo3$17bo$16b3o$16b3o3$16bobo$17bo$22bobbob
+oobobbo$21boobbo4bobboo$16bo5bobboboobobbo$bboo5boo5bobo$3bo5boo5boo$
+3bobo$4boo$8boo$7bobo$8bo3$3o$bo6boo$bo5boobo$3o3bo3bo$6b4o$3o4boo$3o
+4boo$6b4o$3o3bo3bo$bo5boobo$bo6boo$3o8$46boo$46bobo$46bo$$41bo$42bo$
+40b3o11$199b3o$199bobo$199b3o$199b3o$199b3o$199b3o$199bobo$199b3o5$
+186bobobbobo$182boobobbobbobboboo$186bobobbobo3$80boo$79boo$81bo$$74bo
+$75boo147b3o$74boo149bo$225bo$224b3o$213bo$167bo43bobo10b3o$167bo44boo
+10b3o$160bo5b3o$160bo5b3o55b3o$159bobo4b3o13boo41bo$160bo6bo13bobo41bo
+$160bo22bo40b3o$160bo$160bo6bo$159bobo4b3o$160bo5b3o19boo6boo30boo3bo
+bbo3boo$160bo5b3o18bobbo4bobbo29b5o4b5o$167bo19bobbo4bobbo29boo3bobbo
+3boo$167bo19bobbo4bobbo8bo$188boo6boo7b3o$167bo36bo$166bobo35boo$167b
+oo22bobbo$163boo24b3obb3o5bo$162bobo23bo8bo3bobo$162bo5boo19boo4boo5b
+oobboo$161boo5boo20bo4bo10boo$$171bo$113b3o55bo$113bo$114bo56bo$170bob
+o$109bo$107bobo60b3o31bo$108boo94bobo$204boo$170b3o$$170bobo$171bo17bo
+$189bobo$171bo17boo$171bo12boo$154boo3bobbo3boo16boo$154b5o4b5o21boo$
+154boo3bobbo3boo21bobo$189bo$222b3o$222bo$223bo10$156boo$157boo27bo$
+148bo7bo30boo$147boo37boo$147bobo3$141bobo$142boo26bobo$142bo27boo$
+171bo4$171bobo$172boo$164bo7bo$162boo$163boo$223boo$222boo$224bo32bo$
+256boo$169bobo84bobo$170boo$170bo9$126b3o$128bo92bo$127bo91bobo$220boo
+10$206bo$207bo$205b3o$129bo$129bobo$129boo$256b3o$256bo$257bo32boo$
+204bo85bobo$205bo84bo$203b3o9$93bo$93boo$92bobo158bobo$254boo$254bo10$
+239bo$240boo$239boo$95bobo$95boo$96bo194bo$290boo$290bobo$324boo$237bo
+85boo$238boo85bo$237boo3$49boo6boo$48bobbo4bobbo$48bobbo4bobbo6bo$48bo
+bbo4bobbo5boo240bobboo4boobbo$49boo6boo6bobo238bo3b3obb3o3bo$307bobboo
+4boobbo$$288bo$62b3o224bo14bo$61bo3bo221b3o13b3o$60bo5bo$282boo$59bo7b
+o10boo3bobbo3boo188bo4bo17b3o$59bo7bo10b5o4b5o187bo6bo$78boo3bobbo3boo
+186bo8bo15bobo$60bo5bo7bo203bo8bo15bobo$61bo3bo8bo203bo8bo$62b3o214bo
+6bo16b3o$74bo205bo4bo$73bobo206boo8b3o$274bo16bo3bo7b3o$73b3o196bobo
+16bo3bo8bo$273boo17b3o$$73b3o$$73bobo$74bo217b3o$291bo3bo61b3o$74bo
+197bo18bo3bo61bo$74bo195bobo19b3o63bo$271boo30$392bo$391boo$304bobo84b
+obo$305boo$305bo$$425bo$424bobo$418bo$417b3o$416bobobo3b3o$417bobo4b3o
+$425bo3$425bo$417bobo4b3o$416bobobo3b3o$417b3o$418bo$424bobo$425bo$
+418bo$417bobo$417boo$421boo$421bobo$416boo5bo$416boo5boo6$402boo$339bo
+63boo$340bo61bo$338b3o30$356bo6bo$355boo6boo3b3o$354b3o6b3o4bo$355boo
+6boo4bo$356bo6bo$370bo$369b3o$368bobobo$368bobobo$369b3o$370bo3$370bo$
+369b3o$368bobobo$368bobobo$369b3o$370bo!

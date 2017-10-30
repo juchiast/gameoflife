@@ -1,0 +1,10 @@
+#CLengthening a 2xN array of blocks is a difficult problem.
+#CHere's one way to do it.
+#CJason Summers, 4/05
+x = 59, y = 57, rule = B3/S23
+bo45bobo$bbo3bo40boo$3o4bo32bobo5bo$5b3o5bo26boo$14bo26bo5bo$12b3o31bo
+$42bo3b3o$41bo$41b3o$56bo$56bobo$23bo32boo$24boo21bobo$23boo22boo$48bo
+3$40bo$40bobo$40boo3$39bobo$39boo$40bo$$16booboobooboo$16booboobooboo
+$$16booboobooboo$16booboobooboo5$30boo$29bobo$31bo5$48bo$23boo22boo4b
+oo$24boo21bobobboo$23bo30bo3$41b3o$41bo$42bo3b3o$12b3o31bo$14bo26bo5bo
+$5b3o5bo26boo$3o4bo32bobo5bo$bbo3bo40boo$bo45bobo!

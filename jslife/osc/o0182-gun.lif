@@ -1,0 +1,59 @@
+#Cp182 gun based on a p182 object found by Nicolay
+#CBeluchenko, and a glider-producing interaction found by
+#CJason Summers. (Also uses 180-degree stable
+#Creflectors, to make it easier.)
+#CCalcyman 31 Mar '09,
+#Cwith optimizations by Jason Summers
+x = 407, y = 344, rule = B3/S23
+112boo$111bobbo$111bobo3bo$112bob6o$114bo5bo$8boo4boobo6boobo84bobbob
+oobo$9bo4boboo6boboo84boobo3bo$8bo3boo4boo8boo85bobo$8boobbo5bo9bo83b
+oo3boo$13bo5bo9bo83boboobbo$8boobboo4boo8boo71bo9bobbo3bobbo$9bo4boobo
+6boobo73b3o7boobo3boboo$8bo5boboo6boboo76bo8boboobobo$8boobboo4boobboo
+79boo8bobb3obo$12bo5bo3bo89boobo3bo$8boo3bo5bo3bo82bo5bobb4o$9bobboo4b
+oobboo81bobo6bo$8bo5boobo6boobo73boobboo5bobb4o$8boo4boboo6boboo73boo
+9boobobbo$113bo$113bobo$114boo20$83boo$82bobo43bo$84bo44boo$87bo40boo$
+86bobo$87bo$$85b5o$84bo4bo20boo$83bobbo23bo$80bobboboo13bo7bobo$79bobo
+bo5bo10bo7boo$80bobbo4bobo8bobo$83boobbobbo8bo$88boo3bo3booboo$92bo3bo
+3bo18boo$91bo4bo22bo$91bo3b4o18bobo$99boo16boo$91bo3bo3b3o$91bo4bobobb
+o11bo$93bo6boo12bo$94boo4bo11b3o$96booboo$98bo9$109bo42boo$108bobo40bo
+bbo$108bobo37bo3bobo$109bo36b6obo$145bo5bo$145bob4obbo$146boboboboo$
+148bobo$147booboboo$146bo5bo$144bobbobobobbo9bo$144booboboboboo7b3o$
+145bobo4bo8bo$37b3o104bobboobobo8boo16boo5boo$39bo104bobo3boboo19bobo
+3boo5bo$38bo92boo12bob4o8bo14boo8bobo$10boo118boo15bo3boobboobobo13bo
+9boo$4boo5b3o118bo14boboo8boobboo15boo$3bobbobbo4bo133boboboo9boo15bob
+o$3bobobbob4oboboo131bobo28bo$bbooboboo4bobobo132bobo$3bo5bobboobobo
+133bo$3bob3obobboboobooboo$boboo5boo4bo4bo164boo7boo$obo3boboobb3o3b3o
+158booboobbobboboobobbo$obboboobobbobbooboo158b3o3b3obboobo3bobo$boo7b
+oo164bo4bo4boo5boobo$176boobooboobobbob3obo$180boboboobbo5bo$180bobobo
+4booboboo$16bo144boo16boobob4obobbobo$15bobo143boo20bo4bobbobbo$16boo
+166b3o5boo$12boo145bo26boo$11bobo143bobo$11bo5boo139boo$10boo5boo4$
+139bo$137boo$138boo$198boobo$198boboo$$119boo5boo51b3o17b5o$120bo5boo
+51bo14boobbo4bo20boo$120bobo57bo13bobbobbo23bo$121boo72boboboo21bobo$
+125boo67boobo5bo18boo$124bobo70bo4bobo$125bo71boobbobbo$202boo$233boo$
+233bo$110boo7boo110bobo$109bobboboobobbobb5o103boo$47boo60bobo3boboobb
+3obob3o$46boo62boboobo3boo4bo4bo82boo$48bo63bobooboobb4obooboo46bo35b
+oo$112bobo4boobobobo11bo37boo$111boob4obobbobobo10bo38bobo$112bobobbob
+4oboboo9b3o$112bobbobbo4bo$113boo5b3o99b3o$119boo101bo$223bo5$223bo$
+222bobo$222bobo$223bo3$204bo$205bo$203b3o$$248bobo$249boo$249bo$165bo$
+166bo$164b3o4$225boo$225bobo$225bo10$93bo$92boo$85boo5bobo$85bobo134b
+oo$87bo133boo$82bobboboo9boo123bo$82b4o4bo3boobboo$86b3obobbobo172boo$
+82b3o5bo3bo173bobo$81bo3boboo179bo$80boboobobo8boo$80boboboobo8bo$79b
+ooboboboboo7b3o$79bobbobobobbo9bo$81bobboobo$82booboboo$83bobo$81bobob
+oboo$80boboboobbo$80bo5bo$81b6obo$83bo3bobo160bo$86bobbo158bobo$87boo
+160boo$294bo$295boo$294boo$$211bo$209bobo$210boo4$270b3o$270bo$271bo
+28bo$298booboo4bo$298bo4bobbobo$302boobbo$298boboo5b3o$294b3obo8bo$
+293b4obo4bobo$292bo3bobo3boobboo$293b3o11bo$293b3o5boobobo$294boo5bob
+oo$301bo$268bo$267boo39boo$267bobo$307bobbo$307booboo$264boobo3bo35bo
+3boo$265bo5bo38bobo$266bo4bo36b4o$270bo37b3o$309bo$$273b4o$272bo4bo$
+281boo$270bo5bo3b3o$269boo5bo3bo3boo$269bo3bobobboo4boo$272bo3boo3bobo
+$269bobboboboboboo$269boboobo3bo$270boobbo$$275bo3bo$277bo$$256bo$257b
+o$255b3o4$282bo$281boo$281bobo3$327b3o$327bo$328bo11$309bo$310bo$308b
+3o$$353bobo$354boo$354bo12$377bo$376bobo$376bobo$377bo$302bo$300bobo$
+301boo4$327boo$326boo$328bo59bo$387bobo$373boo11bobbo$373bobo10bobbobb
+oo$373bo11booboboobbo$386boobo4bo$368boo18boo4bo$354bo12bobo19boobbo$
+353bobo11bo22boobbo$353bobo10boo18b3o4bo$354bo31b3o4bo3boo$396bobbobb
+oo$386bo9bobo4bo$377boo7bo10bo5boboo$376bobo7bo13boobobo$376bo23bobbo
+bbo$355bo19boo20bo4bobboo$353bobo41b5o$354boo$399boobo$399boboo$$363b
+oo$363boo$$345boo$344bobo$344bo$343boo$374boo$373bobbobboo$373bobo4bo$
+354boo18bo5boboo$353bobo21boobobo$353bo23bobbobbo$352boo20bo4bobboo$
+374b5o$347bo$348bo27boobo$346b3o27boboo!

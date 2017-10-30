@@ -1,0 +1,18 @@
+#Cp150+15N gun
+#CDavid Bell, 6/04
+x = 114, y = 105, rule = B3/S23
+27bo$26bobo3$26b3o$26b3o$27bo3$27bo$26b3o$26b3o3$26bobo$27bo$11bobbob
+oobobbo$10boobbo4bobboo3boo$11bobboboobobbo3bobo$28bo7$92boo$91bobo$o
+bboboobobbo81bo$4oboob4o$obboboobobbo3$14b3o$$13bo3bo$13bo3bo$$14b3o
+42bobobbobo$55boobobbobbobboboo$59bobobbobo$14b3o$$13bo3bo74bobboo$13b
+o3bo73bobobbo$33bo57bobobo$14b3o15bobo55booboboo$31booboo53bobboo3bo$
+35bo52b3o3boobbo$20boo13bobo50b3obboobobo$19bobbo13boboo48b3o3boobo$
+14bobbobbobo8boobo3bobo48bobboo$14b5oboboo6boo5b4o19bobo27boobob5o$20b
+oobbo8bo27boo28bobobbobbo$16boboo3b3o6bo3bo24bo29bobbo$15boboboobb3o6b
+o59boo$15bobboo3b3o6bo3bo24boo$16bo3boobbo8bo27boo$17booboboo6boo5b4o
+56b3o$18bobobo8boobo3bobo$17bobbobo13boboo56bo3bo$17boobbo13bobo58bo3b
+o$35bo$31booboo61b3o$32bobo12bobobbobo$33bo9boobobbobbobboboo$47bobobb
+obo42b3o$$96bo3bo$70boo24bo3bo$70bobo20bo$70bo20bobo3b3o$92boo$$102bo
+bboboobobbo$102b4oboob4o$102bobboboobobbo10$91bobboboobobbo$90boobbo4b
+obboo$91bobboboobobbo$86bo$85bobo3$85b3o$85b3o$86bo3$86bo$85b3o$85b3o
+3$85bobo$86bo!

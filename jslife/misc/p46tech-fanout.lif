@@ -1,0 +1,10 @@
+#Cleft: Paul Callahan, 27 Jun 94.
+#Cright: Brice Due, 1/07.
+x = 181, y = 48, rule = B3/S23
+bbo125bo$obo123bobo$boo124boo9$13bo125bo$14bo125bo$12b3o123b3o10$25bo
+125bo$23bobo123bobo$24boo124boo4$37boo$36bobo15boo$36bo17boo$36b3o3$
+138bo28boo7b4o$36b3o82boo15boo26bobbo6bo3bo$23boo11bo17boo65boo16boo
+24boobbo10bo$6boo15bobo10bobo15boo78boobboo26bobbo4boboobo$6boo17bo11b
+oo128bo6b3o$23b3o$167bo6b3o$134boobboo26bobbo4boboobo$121boo16boo7boo
+bboo11boobbo10bo$23b3o95boo15boo8boobboo12bobbo6bo3bo$6boo17bo112bo28b
+oo7b4o$6boo15bobo$23boo!

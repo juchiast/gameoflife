@@ -1,0 +1,33 @@
+#Cby Eugene Langvagen, Jan '04
+x = 114, y = 147, rule = B3/S23
+68boo$67boboo$66boo$68bo$67boo$oo5boobo6boobo14boobo29bo$bo5boboo6bob
+oo8boo4boboo$o4boo4boobboo4boo7bo8boo30b3o$oo3bo5bo3bo5bo7bo9bo31bobbo
+$6bo5bo3bo5bo6boo9bo31boboo$oo3boo4boobboo4boo4boo10boo30bob4o$bo5boob
+o4bo5bo6bo6boobo30boo4boo$o6boboo5bo5bo4bo7boboo29b3o$oo3boo4boobboo4b
+oo4boo4boo34boo$5bo5bo3bo5bo3boo6bo35b3o14b3o$oo4bo5bo3bo5bo3bo7bo30b
+oo3boo13bo3bo$bo3boo4boobboo4boobbo7boo29boboo16bo5bo$o6boobo6boobo4b
+oo8boobo24boo19bo5bo$oo5boboo6boboo14boboo26bo18b3ob3o$64boo37boobb3o
+bboo$65bo27bo9boo7boo$92bo14bobbo$68b3o35bobbo$68bobbo35bobboo$69boboo
+34boo3bo$68bob4o38bo$66boo4boo35b3o$65b3o$66boo$66b3o14b3o$62boo3boo
+13bo3bo$61boboo16bo5bo$60boo19bo5bo$62bo18b3ob3o$61boo37boobb3obboo$
+62bo27bo9boo7boo$89bo14bobbo$65b3o35bobbo$65bobbo35bobboo$66boboo34boo
+3bo$65bob4o38bo$63boo4boo35b3o$62b3o$63boo$63b3o14b3o$59boo3boo13bo3bo
+$58boboo16bo5bo$57boo19bo5bo$59bo18b3ob3o$58boo37boobb3obboo$59bo27bo
+9boo7boo$86bo14bobbo$62b3o35bobbo$62bobbo35bobboo$63boboo34boo3bo$62bo
+b4o38bo$60boo4boo35b3o$59b3o$60boo$60b3o14b3o$56boo3boo13bo3bo$55boboo
+16bo5bo$54boo19bo5bo$56bo18b3ob3o$55boo37boobb3obboo$56bo27bo9boo7boo$
+83bo14bobbo$59b3o35bobbo$59bobbo35bobboo$60boboo34boo3bo$59bob4o38bo$
+57boo4boo35b3o$56b3o$57boo$57b3o14b3o$53boo3boo13bo3bo$52boboo16bo5bo$
+51boo19bo5bo$53bo18b3ob3o$52boo37boobb3obboo$53bo27bo9boo7boo$80bo14bo
+bbo$56b3o35bobbo$56bobbo35bobboo$57boboo34boo3bo$56bob4o38bo$54boo4boo
+35b3o$53b3o$54boo$54b3o14b3o$50boo3boo13bo3bo$49boboo16bo5bo$48boo19bo
+5bo$50bo18b3ob3o$49boo37boobb3obboo$50bo27bo9boo7boo$77bo14bobbo$53b3o
+35bobbo$53bobbo35bobboo$54boboo34boo3bo$53bob4o38bo$51boo4boo35b3o$50b
+3o$51boo$51b3o14b3o$47boo3boo13bo3bo$46boboo16bo5bo$45boo19bo5bo$47bo
+18b3ob3o$46boo37boobb3obboo$47bo27bo9boo7boo$74bo14bobbo$50b3o35bobbo$
+50bobbo35bobboo$51boboo34boo3bo$50bob4o38bo$48boo4boo35b3o$47b3o$48boo
+$48b3o14b3o$44boo3boo13bo3bo$43boboo16bo5bo$42boo19bo5bo$44bo18b3ob3o$
+43boo37boobb3obboo$44bo27bo9boo7boo$71bo14bobbo$47b3o35bobbo$47bobbo
+35bobboo$48boboo34boo3bo$47bob4o38bo$45boo4boo35b3o$44b3o$45boo$45b3o
+14b3o$46boo13bo3bo$60bo5bo$60bo5bo$60b3ob3o$79boobb3obboo$69bo9boo7boo
+$68bo14bobbo$82bobbo$83bobboo$83boo3bo$88bo$85b3o!

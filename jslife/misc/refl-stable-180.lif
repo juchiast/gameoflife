@@ -1,0 +1,6 @@
+#C180-degree stable reflector.
+#CCalcyman, 27 Mar '09
+x = 63, y = 56, rule = B3/S23
+obo$boo$bo20$32bo$31bobo$31bobo$32bo$27bo$28boo$27boo9$41boo$41boo$$
+23boo$22bobo$22bo$21boo$52boo$51bobbobboo$51bobo4bobbo$32boo18bo5bobob
+o$31bobo21boobobbo$31bo23bobbo$30boo20bo4bo$52b5o$$54bo$53bobo$54bo!
