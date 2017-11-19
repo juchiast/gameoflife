@@ -6,7 +6,6 @@ authors = ["Do Duy <doduycm@gmail.com>"]
 [dependencies]
 relm = "0.10.1"
 relm-derive = "0.10.0"
-tokio-core = "0.1.9"
 cairo-rs = "0.2.0"
 gdk = "0.6.0"
 serde = "1.0.11"

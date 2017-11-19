@@ -103,6 +103,7 @@ impl Map {
         self.alive_cells.len()
     }
 
+    #[cfg(test)]
     pub fn check(&self) {
         for (pos, state) in &self.neighbors_state {
             let mut new = 0;
@@ -189,7 +190,7 @@ impl Map {
                 let state = self.neighbors_state.entry(nei).or_insert(0);
                 *state |= 1<<(7^i);
             }
-            let mut state = self.neighbors_state.entry(*pos).or_insert(0);
+            let state = self.neighbors_state.entry(*pos).or_insert(0);
             *state = new_state;
         }
     }
@@ -199,7 +200,7 @@ impl Map {
         if self.alive_cells.remove(pos) {
             for (nei, i) in neighbors(pos) {
                 let mut rm = false;
-                if let Some(mut state) = self.neighbors_state.get_mut(&nei) {
+                if let Some(state) = self.neighbors_state.get_mut(&nei) {
                     *state &= !(1<<(7^i));
                     if *state == 0 {
                         rm = true;
@@ -244,23 +245,26 @@ fn new_state_eval_table() -> [u8; 256] {
     result
 }
 
-#[test]
-#[ignore]
-fn test_with_acorn() {
-    let mut map = Map::acorn();
-    let mut i = 0;
-    let mut max_population = 0;
-    let mut max_generation = 0;
-    while i<=6000 {
-        assert!(i<5206 || map.count_alive_cells()==633);
-        if map.count_alive_cells() > max_population {
-            max_population = map.count_alive_cells();
-            max_generation = i;
+#[cfg(test)]
+mod test {
+    #[test]
+    #[ignore]
+    fn test_with_acorn() {
+        let mut map = super::Map::acorn();
+        let mut i = 0;
+        let mut max_population = 0;
+        let mut max_generation = 0;
+        while i<=6000 {
+            assert!(i<5206 || map.count_alive_cells()==633);
+            if map.count_alive_cells() > max_population {
+                max_population = map.count_alive_cells();
+                max_generation = i;
+            }
+            i+=1;
+            map.next_generation();
+            map.check();
         }
-        i+=1;
-        map.next_generation();
-        map.check();
+        assert_eq!(max_population, 1057);
+        assert_eq!(max_generation, 4408);
     }
-    assert_eq!(max_population, 1057);
-    assert_eq!(max_generation, 4408);
 }
