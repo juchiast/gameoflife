@@ -51,9 +51,7 @@ fn parse(line: &str, mut x: usize, mut y: usize) -> Result<Parse, Error> {
     let mut stop = false;
     let mut cnt = 0;
 
-    let mut debug = String::new();
     for ch in line.chars() {
-        debug.push(ch);
         if ch == '!' {
             stop = true;
             break;
@@ -62,19 +60,16 @@ fn parse(line: &str, mut x: usize, mut y: usize) -> Result<Parse, Error> {
                 cnt = 1;
             }
             y += cnt;
+            x = 0;
             cnt = 0;
         } else if ch == 'b' || ch == 'o' {
             if cnt == 0 {
                 cnt = 1;
             }
-            for _ in 0..cnt {
-                // rust may be able to remove this if statement,
-                // if it cannot, the code must be rewrited.
-                if ch == 'b' {
-                    vec.push((x, y));
-                }
-                x += 1;
+            if ch == 'o' {
+                vec.extend((x..x+cnt).map(|x| (x, y)));
             }
+            x += cnt;
             cnt = 0;
         } else if let Some(d) = ch.to_digit(10) {
             cnt = cnt * 10 + d as usize;
