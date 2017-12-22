@@ -20,7 +20,7 @@ impl MyModel {
     fn new() -> Self {
         MyModel {
             map: Map::acorn(),
-            size: pos(250, 250),
+            size: pos(500, 250),
             center: pos(0, 0),
             scale: 2,
             mouse: None,
@@ -123,7 +123,8 @@ impl Update for Win {
                 dialog.add_button("Open", accept);
                 if accept == dialog.run() {
                     if let Some(path) = dialog.get_filename() {
-                        self.model.map = Map::open(path).unwrap();
+                        //self.model.map = Map::open(path).unwrap();
+                        self.model.map = life_reader::rle::read_file(path).unwrap();
                     }
                 }
                 dialog.close();
