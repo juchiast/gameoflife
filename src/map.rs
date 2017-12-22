@@ -23,9 +23,9 @@ pub struct Neighbors {
     i: usize,
 }
 
-pub fn neighbors(origin: &Pos) -> Neighbors {
+pub fn neighbors(origin: Pos) -> Neighbors {
     Neighbors {
-        origin: *origin,
+        origin: origin,
         i: 0,
     }
 }
@@ -52,7 +52,7 @@ pub struct Map {
 impl Map {
     /// Acorn methuselah
     pub fn acorn() -> Map {
-        let list = [
+        let list = vec![
             pos(3, 2),
             pos(5, 3),
             pos(2, 4),
@@ -61,12 +61,12 @@ impl Map {
             pos(7, 4),
             pos(8, 4),
         ];
-        Map::new_from_alive_list(&list)
+        Map::from_alives_list(list)
     }
 
     /// Blom methuselah
     pub fn blom() -> Map {
-        let list = [
+        let list = vec![
             pos(1, 1),
             pos(12, 1),
             pos(2, 2),
@@ -81,7 +81,7 @@ impl Map {
             pos(11, 5),
             pos(9, 5),
         ];
-        Map::new_from_alive_list(&list)
+        Map::from_alives_list(list)
     }
     pub fn save<P: AsRef<Path>>(&self, path: P) -> std::io::Result<()> {
         use std::fs;
@@ -106,17 +106,10 @@ impl Map {
         let mut map = Map::new();
         for line in contents.lines() {
             if let Ok(pos) = serde_json::from_str::<Pos>(line) {
-                map.set_cell_alive(&pos);
+                map.set_cell_alive(pos);
             }
         }
         Ok(map)
-    }
-    pub fn is_empty(&self) -> bool {
-        self.alive_cells.is_empty()
-    }
-
-    pub fn count_alive_cells(&self) -> usize {
-        self.alive_cells.len()
     }
 
     #[cfg(test)]
@@ -155,10 +148,7 @@ impl Map {
     }
 
     /// Return a new map from list of alive cells
-    pub fn new_from_alive_list<'a, I>(list: I) -> Map
-    where
-        I: IntoIterator<Item = &'a Pos>,
-    {
+    pub fn from_alives_list(list: Vec<Pos>) -> Map {
         let mut result = Map::new();
         for pos in list {
             result.set_cell_alive(pos);
@@ -190,10 +180,10 @@ impl Map {
             .collect::<Vec<_>>();
 
         for pos in new_alive {
-            self.set_cell_alive(&pos);
+            self.set_cell_alive(pos);
         }
         for pos in new_dead {
-            self.set_cell_dead(&pos);
+            self.set_cell_dead(pos);
         }
     }
 
@@ -212,24 +202,24 @@ impl Map {
     }
 
     /// Force a cell to be alive
-    pub fn set_cell_alive(&mut self, pos: &Pos) {
-        if self.alive_cells.insert(*pos) {
+    pub fn set_cell_alive(&mut self, pos: Pos) {
+        if self.alive_cells.insert(pos) {
             let mut new_state = 0;
             for (nei, i) in neighbors(pos) {
-                if self.cell_is_alive(&nei) {
+                if self.cell_is_alive(nei) {
                     new_state |= 1 << i;
                 }
                 let state = self.neighbors_state.entry(nei).or_insert(0);
                 *state |= 1 << (7 ^ i);
             }
-            let state = self.neighbors_state.entry(*pos).or_insert(0);
+            let state = self.neighbors_state.entry(pos).or_insert(0);
             *state = new_state;
         }
     }
 
     /// Kill a cell
-    pub fn set_cell_dead(&mut self, pos: &Pos) {
-        if self.alive_cells.remove(pos) {
+    pub fn set_cell_dead(&mut self, pos: Pos) {
+        if self.alive_cells.remove(&pos) {
             for (nei, i) in neighbors(pos) {
                 let mut rm = false;
                 if let Some(state) = self.neighbors_state.get_mut(&nei) {
@@ -238,7 +228,7 @@ impl Map {
                         rm = true;
                     }
                 }
-                if rm && !self.cell_is_alive(&nei) {
+                if rm && !self.cell_is_alive(nei) {
                     self.neighbors_state.remove(&nei);
                 }
             }
@@ -247,8 +237,8 @@ impl Map {
 
     /// Check if a cell is alive or not
     #[inline]
-    pub fn cell_is_alive(&self, pos: &Pos) -> bool {
-        self.alive_cells.contains(pos)
+    pub fn cell_is_alive(&self, pos: Pos) -> bool {
+        self.alive_cells.contains(&pos)
     }
 
     #[inline]

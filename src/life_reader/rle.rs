@@ -17,7 +17,8 @@ pub enum Error {
 
 // Read file's header, return dimensions of the pattern
 fn parse_header<'a, I>(lines: &mut I) -> Result<(usize, usize), Error>
-    where I: Iterator<Item=&'a str>
+where
+    I: Iterator<Item = &'a str>,
 {
     lazy_static! {
         // regex to match "x = m, y = n", ignore "rule = ..."
@@ -25,7 +26,7 @@ fn parse_header<'a, I>(lines: &mut I) -> Result<(usize, usize), Error>
     }
 
     for line in lines {
-        if line.starts_with("#") {
+        if line.starts_with('#') {
             // Other unsupported options, ignore
         } else if HEADER.is_match(line) {
             let cap = HEADER.captures_iter(line).next().unwrap();
@@ -35,7 +36,7 @@ fn parse_header<'a, I>(lines: &mut I) -> Result<(usize, usize), Error>
         } else {
             return Err(Error::Invalid(line.to_string()));
         }
-    };
+    }
 
     Err(Error::NoHeader)
 }
@@ -67,7 +68,7 @@ fn parse(line: &str, mut x: usize, mut y: usize) -> Result<Parse, Error> {
                 cnt = 1;
             }
             if ch == 'o' {
-                vec.extend((x..x+cnt).map(|x| (x, y)));
+                vec.extend((x..x + cnt).map(|x| (x, y)));
             }
             x += cnt;
             cnt = 0;
@@ -108,6 +109,9 @@ pub fn read_file<P: AsRef<Path>>(p: P) -> Result<Map, Error> {
             break;
         }
     }
-    let lives = lives.into_iter().map(|(x, y)| map::pos(x as i32, y as i32)).collect::<Vec<_>>();
-    Ok(Map::new_from_alive_list(&lives))
+    let lives = lives
+        .into_iter()
+        .map(|(x, y)| map::pos(x as i32, y as i32))
+        .collect::<Vec<_>>();
+    Ok(Map::from_alives_list(lives))
 }
