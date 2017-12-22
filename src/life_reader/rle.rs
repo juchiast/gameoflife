@@ -96,19 +96,18 @@ pub fn read_file<P: AsRef<Path>>(p: P) -> Result<Map, Error> {
 
     let mut lines = input.lines();
     parse_header(&mut lines)?;
-    let mut map = Map::new();
     let mut x = 0;
     let mut y = 0;
+    let mut lives = Vec::new();
     for line in lines {
-        let res = parse(line, x, y)?;
+        let mut res = parse(line, x, y)?;
         x = res.x;
         y = res.y;
-        for (x, y) in res.live {
-            map.set_cell_alive(&map::pos(x as i32, y as i32));
-        }
+        lives.append(&mut res.live);
         if res.stop {
             break;
         }
     }
-    Ok(map)
+    let lives = lives.into_iter().map(|(x, y)| map::pos(x as i32, y as i32)).collect::<Vec<_>>();
+    Ok(Map::new_from_alive_list(&lives))
 }
