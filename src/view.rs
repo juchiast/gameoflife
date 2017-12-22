@@ -1,8 +1,8 @@
 use ::*;
-use relm::{Relm, Widget, Update};
+use relm::{Relm, Update, Widget};
 use gtk::prelude::*;
-use gtk::{Window, WindowType, DrawingArea, Button};
-use gtk::{FileChooserDialog};
+use gtk::{Button, DrawingArea, Window, WindowType};
+use gtk::FileChooserDialog;
 use std::time::Duration;
 use futures_glib::Interval;
 
@@ -57,7 +57,12 @@ impl Win {
         cr.scale(self.model.scale as f64, self.model.scale as f64);
         cr.set_source_rgb(0., 0., 0.);
         for pos in cells {
-            cr.rectangle((pos.x - top_left.x) as f64, (pos.y - top_left.y) as f64, 1., 1.);
+            cr.rectangle(
+                (pos.x - top_left.x) as f64,
+                (pos.y - top_left.y) as f64,
+                1.,
+                1.,
+            );
         }
         cr.fill();
     }
@@ -82,15 +87,19 @@ impl Update for Win {
         match event {
             Tick(()) => {
                 self.model.map.next_generation();
-                let top_left = pos(self.model.center.x - self.model.size.x / 2, self.model.center.y - self.model.size.y / 2);
+                let top_left = pos(
+                    self.model.center.x - self.model.size.x / 2,
+                    self.model.center.y - self.model.size.y / 2,
+                );
                 let cells = self.model.map.get_alive_cells_in(top_left, self.model.size);
                 self.draw(&cells, &top_left);
-            },
+            }
             Save => {
                 let dialog = FileChooserDialog::new(
                     Some("Save File"),
                     Some(&self.window),
-                    gtk::FileChooserAction::Save);
+                    gtk::FileChooserAction::Save,
+                );
                 let cancel: i32 = gtk::ResponseType::Cancel.into();
                 let accept: i32 = gtk::ResponseType::Accept.into();
                 dialog.add_button("Cancel", cancel);
@@ -101,12 +110,13 @@ impl Update for Win {
                     }
                 }
                 dialog.close();
-            },
+            }
             Open => {
                 let dialog = FileChooserDialog::new(
                     Some("Open File"),
                     Some(&self.window),
-                    gtk::FileChooserAction::Open);
+                    gtk::FileChooserAction::Open,
+                );
                 let cancel: i32 = gtk::ResponseType::Cancel.into();
                 let accept: i32 = gtk::ResponseType::Accept.into();
                 dialog.add_button("Cancel", cancel);
@@ -117,7 +127,7 @@ impl Update for Win {
                     }
                 }
                 dialog.close();
-            },
+            }
             Motion(((x, y), t)) => {
                 let p = pos(x as i32, y as i32);
                 if (t & gdk::BUTTON1_MASK).bits() != 0 {
@@ -125,8 +135,8 @@ impl Update for Win {
                         let mut old_pos = self.model.mouse.unwrap();
                         let new_center = pos(
                             self.model.center.x + (old_pos.x - p.x) / self.model.scale,
-                            self.model.center.y + (old_pos.y - p.y) / self.model.scale
-                            );
+                            self.model.center.y + (old_pos.y - p.y) / self.model.scale,
+                        );
                         if new_center.x != self.model.center.x {
                             old_pos.x = p.x;
                         }
@@ -141,11 +151,10 @@ impl Update for Win {
                 } else {
                     self.model.mouse = None;
                 }
-            },
+            }
             Quit => gtk::main_quit(),
         }
     }
-
 }
 
 impl Widget for Win {
@@ -176,8 +185,21 @@ impl Widget for Win {
         window.show_all();
 
         use self::MyMsg::*;
-        connect!(relm, window, connect_delete_event(_, _), return (Some(Quit), Inhibit(false)));
-        connect!(relm, area, connect_motion_notify_event(_, ev), return (Some(Motion((ev.get_position(), ev.get_state()))), Inhibit(false)));
+        connect!(
+            relm,
+            window,
+            connect_delete_event(_, _),
+            return (Some(Quit), Inhibit(false))
+        );
+        connect!(
+            relm,
+            area,
+            connect_motion_notify_event(_, ev),
+            return (
+                Some(Motion((ev.get_position(), ev.get_state()))),
+                Inhibit(false)
+            )
+        );
         connect!(relm, save_button, connect_clicked(_), Save);
         connect!(relm, open_button, connect_clicked(_), Open);
 

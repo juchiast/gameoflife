@@ -6,8 +6,7 @@ use std::path::Path;
 const DX: [i32; 8] = [-1, 0, 1, -1, 1, -1, 0, 1];
 const DY: [i32; 8] = [-1, -1, -1, 0, 0, 1, 1, 1];
 
-#[derive(Eq, Ord, PartialEq, PartialOrd, Clone, Copy)]
-#[derive(Deserialize, Serialize)]
+#[derive(Eq, Ord, PartialEq, PartialOrd, Clone, Copy, Deserialize, Serialize)]
 pub struct Pos {
     pub x: i32,
     pub y: i32,
@@ -16,13 +15,10 @@ pub struct Pos {
 /// Return new position from `x` and `y`
 #[inline]
 pub fn pos(x: i32, y: i32) -> Pos {
-    Pos {
-        x: x,
-        y: y,
-    }
+    Pos { x: x, y: y }
 }
 
-pub struct Neighbors{
+pub struct Neighbors {
     origin: Pos,
     i: usize,
 }
@@ -37,11 +33,12 @@ pub fn neighbors(origin: &Pos) -> Neighbors {
 impl Iterator for Neighbors {
     type Item = (Pos, usize);
     fn next(&mut self) -> Option<Self::Item> {
-        if self.i >= 8 { None }
-        else {
+        if self.i >= 8 {
+            None
+        } else {
             self.i += 1;
             let j = self.i - 1;
-            Some( (pos(self.origin.x+DX[j], self.origin.y+DY[j]), j) )
+            Some((pos(self.origin.x + DX[j], self.origin.y + DY[j]), j))
         }
     }
 }
@@ -55,16 +52,35 @@ pub struct Map {
 impl Map {
     /// Acorn methuselah
     pub fn acorn() -> Map {
-        let list = [pos(3, 2), pos(5, 3), pos(2, 4), pos(3, 4), pos(6, 4), pos(7, 4), pos(8, 4)];
+        let list = [
+            pos(3, 2),
+            pos(5, 3),
+            pos(2, 4),
+            pos(3, 4),
+            pos(6, 4),
+            pos(7, 4),
+            pos(8, 4),
+        ];
         Map::new_from_alive_list(&list)
     }
 
     /// Blom methuselah
     pub fn blom() -> Map {
-        let list = [pos(1, 1), pos(12, 1),
-        pos(2, 2), pos(3, 2), pos(4, 2), pos(5, 2), pos(12, 2),
-        pos(3, 3), pos(4, 3), pos(12, 3),
-        pos(11, 4), pos(11, 5), pos(9, 5)];
+        let list = [
+            pos(1, 1),
+            pos(12, 1),
+            pos(2, 2),
+            pos(3, 2),
+            pos(4, 2),
+            pos(5, 2),
+            pos(12, 2),
+            pos(3, 3),
+            pos(4, 3),
+            pos(12, 3),
+            pos(11, 4),
+            pos(11, 5),
+            pos(9, 5),
+        ];
         Map::new_from_alive_list(&list)
     }
     pub fn save<P: AsRef<Path>>(&self, path: P) -> std::io::Result<()> {
@@ -109,7 +125,7 @@ impl Map {
             let mut new = 0;
             for (nei, i) in neighbors(pos) {
                 if self.cell_is_alive(&nei) {
-                    new |= 1<<i;
+                    new |= 1 << i;
                 }
             }
             assert_eq!(new, *state);
@@ -121,7 +137,7 @@ impl Map {
                 let mut new = 0;
                 for (nei, i) in neighbors(&pos) {
                     if self.cell_is_alive(&nei) {
-                        new |= 1<<i;
+                        new |= 1 << i;
                     }
                 }
                 assert_eq!(new, state);
@@ -140,7 +156,9 @@ impl Map {
 
     /// Return a new map from list of alive cells
     pub fn new_from_alive_list<'a, I>(list: I) -> Map
-    where I: IntoIterator<Item=&'a Pos> {
+    where
+        I: IntoIterator<Item = &'a Pos>,
+    {
         let mut result = Map::new();
         for pos in list {
             result.set_cell_alive(pos);
@@ -150,16 +168,26 @@ impl Map {
 
     /// Generate next generation
     pub fn next_generation(&mut self) {
-        let new_alive = self.neighbors_state.iter().filter_map(|(pos, state)| {
-            if self.eval_state(*state) == 2 {
-                Some(*pos)
-            } else { None }
-        }).collect::<Vec<_>>();
-        let new_dead = self.neighbors_state.iter().filter_map(|(pos, state)| {
-            if self.eval_state(*state) == 0 {
-                Some(*pos)
-            } else { None }
-        }).collect::<Vec<_>>();
+        let new_alive = self.neighbors_state
+            .iter()
+            .filter_map(|(pos, state)| {
+                if self.eval_state(*state) == 2 {
+                    Some(*pos)
+                } else {
+                    None
+                }
+            })
+            .collect::<Vec<_>>();
+        let new_dead = self.neighbors_state
+            .iter()
+            .filter_map(|(pos, state)| {
+                if self.eval_state(*state) == 0 {
+                    Some(*pos)
+                } else {
+                    None
+                }
+            })
+            .collect::<Vec<_>>();
 
         for pos in new_alive {
             self.set_cell_alive(&pos);
@@ -173,10 +201,14 @@ impl Map {
     /// to `bottom_right`
     pub fn get_alive_cells_in(&self, top_left: Pos, size: Pos) -> Vec<Pos> {
         let bottom_right = pos(top_left.x + size.x, top_left.y + size.y);
-        self.alive_cells.iter().filter(|&pos| {
-            top_left.x <= pos.x && pos.x <= bottom_right.x &&
-            top_left.y <= pos.y && pos.y <= bottom_right.y
-        }).cloned().collect()
+        self.alive_cells
+            .iter()
+            .filter(|&pos| {
+                top_left.x <= pos.x && pos.x <= bottom_right.x && top_left.y <= pos.y
+                    && pos.y <= bottom_right.y
+            })
+            .cloned()
+            .collect()
     }
 
     /// Force a cell to be alive
@@ -185,10 +217,10 @@ impl Map {
             let mut new_state = 0;
             for (nei, i) in neighbors(pos) {
                 if self.cell_is_alive(&nei) {
-                    new_state |= 1<<i;
+                    new_state |= 1 << i;
                 }
                 let state = self.neighbors_state.entry(nei).or_insert(0);
-                *state |= 1<<(7^i);
+                *state |= 1 << (7 ^ i);
             }
             let state = self.neighbors_state.entry(*pos).or_insert(0);
             *state = new_state;
@@ -201,7 +233,7 @@ impl Map {
             for (nei, i) in neighbors(pos) {
                 let mut rm = false;
                 if let Some(state) = self.neighbors_state.get_mut(&nei) {
-                    *state &= !(1<<(7^i));
+                    *state &= !(1 << (7 ^ i));
                     if *state == 0 {
                         rm = true;
                     }
@@ -239,8 +271,11 @@ fn new_state_eval_table() -> [u8; 256] {
     let mut result = [0; 256];
     for (i, x) in result.iter_mut().enumerate() {
         let count = usize::count_ones(i);
-        if count == 3 { *x = 2; }
-        else if count == 2 { *x = 1; }
+        if count == 3 {
+            *x = 2;
+        } else if count == 2 {
+            *x = 1;
+        }
     }
     result
 }
@@ -254,13 +289,13 @@ mod test {
         let mut i = 0;
         let mut max_population = 0;
         let mut max_generation = 0;
-        while i<=6000 {
-            assert!(i<5206 || map.count_alive_cells()==633);
+        while i <= 6000 {
+            assert!(i < 5206 || map.count_alive_cells() == 633);
             if map.count_alive_cells() > max_population {
                 max_population = map.count_alive_cells();
                 max_generation = i;
             }
-            i+=1;
+            i += 1;
             map.next_generation();
             map.check();
         }
