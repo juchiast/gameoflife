@@ -116,8 +116,8 @@ impl Map {
     pub fn check(&self) {
         for (pos, state) in &self.neighbors_state {
             let mut new = 0;
-            for (nei, i) in neighbors(pos) {
-                if self.cell_is_alive(&nei) {
+            for (nei, i) in neighbors(*pos) {
+                if self.cell_is_alive(nei) {
                     new |= 1 << i;
                 }
             }
@@ -125,17 +125,21 @@ impl Map {
         }
 
         for pos in &self.alive_cells {
-            for (pos, _) in neighbors(pos) {
+            for (pos, _) in neighbors(*pos) {
                 let state = self.neighbors_state[&pos];
                 let mut new = 0;
-                for (nei, i) in neighbors(&pos) {
-                    if self.cell_is_alive(&nei) {
+                for (nei, i) in neighbors(pos) {
+                    if self.cell_is_alive(nei) {
                         new |= 1 << i;
                     }
                 }
                 assert_eq!(new, state);
             }
         }
+    }
+
+    pub fn count_alive_cells(&self) -> usize {
+        self.alive_cells.len()
     }
 
     /// Return a new empty map

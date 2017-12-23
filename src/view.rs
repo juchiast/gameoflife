@@ -20,7 +20,7 @@ impl MyModel {
     fn new() -> Self {
         MyModel {
             map: Map::acorn(),
-            size: pos(500, 250),
+            size: pos(500, 300),
             center: pos(0, 0),
             scale: 2,
             mouse: None,
@@ -54,12 +54,12 @@ impl Win {
         let cr = cairo::Context::create_from_window(&self.area.get_window().unwrap());
         cr.set_source_rgb(1., 1., 1.);
         cr.paint();
-        cr.scale(self.model.scale as f64, self.model.scale as f64);
+        cr.scale(self.model.scale.into(), self.model.scale.into());
         cr.set_source_rgb(0., 0., 0.);
         for pos in cells {
             cr.rectangle(
-                (pos.x - top_left.x) as f64,
-                (pos.y - top_left.y) as f64,
+                (pos.x - top_left.x).into(),
+                (pos.y - top_left.y).into(),
                 1.,
                 1.,
             );
@@ -104,6 +104,11 @@ impl Update for Win {
                 let accept: i32 = gtk::ResponseType::Accept.into();
                 dialog.add_button("Cancel", cancel);
                 dialog.add_button("Save", accept);
+                if let Ok(p) = std::env::current_dir() {
+                    dialog.set_current_folder(p);
+                } else if let Some(p) = std::env::home_dir() {
+                    dialog.set_current_folder(p);
+                }
                 if accept == dialog.run() {
                     if let Some(path) = dialog.get_filename() {
                         self.model.map.save(path).unwrap();
@@ -121,9 +126,13 @@ impl Update for Win {
                 let accept: i32 = gtk::ResponseType::Accept.into();
                 dialog.add_button("Cancel", cancel);
                 dialog.add_button("Open", accept);
+                if let Ok(p) = std::env::current_dir() {
+                    dialog.set_current_folder(p);
+                } else if let Some(p) = std::env::home_dir() {
+                    dialog.set_current_folder(p);
+                }
                 if accept == dialog.run() {
                     if let Some(path) = dialog.get_filename() {
-                        //self.model.map = Map::open(path).unwrap();
                         self.model.map = life_reader::rle::read_file(path).unwrap();
                     }
                 }
