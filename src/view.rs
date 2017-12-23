@@ -134,13 +134,14 @@ impl Update for Win {
                 if accept == dialog.run() {
                     if let Some(path) = dialog.get_filename() {
                         self.model.map = life_reader::rle::read_file(path).unwrap();
+                        self.model.center = pos(0, 0);
                     }
                 }
                 dialog.close();
             }
             Motion(((x, y), t)) => {
                 let p = pos(x as i32, y as i32);
-                if (t & gdk::BUTTON1_MASK).bits() != 0 {
+                if (t & gdk::ModifierType::BUTTON1_MASK).bits() != 0 {
                     if self.model.mouse != None {
                         let mut old_pos = self.model.mouse.unwrap();
                         let new_center = pos(
@@ -182,8 +183,8 @@ impl Widget for Win {
         let save_button = Button::new_with_label("Save");
         let area = DrawingArea::new();
         area.set_size_request(model.size.x * model.scale, model.size.y * model.scale);
-        area.set_events(area.get_events() | gdk::POINTER_MOTION_MASK.bits() as i32);
-        area.set_events(area.get_events() | gdk::BUTTON_PRESS_MASK.bits() as i32);
+        area.set_events(area.get_events() | gdk::EventMask::POINTER_MOTION_MASK.bits() as i32);
+        area.set_events(area.get_events() | gdk::EventMask::BUTTON_PRESS_MASK.bits() as i32);
         button_box.set_layout(gtk::ButtonBoxStyle::Start);
 
         button_box.pack_start(&open_button, false, false, 0);
