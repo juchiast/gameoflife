@@ -5,7 +5,7 @@ use gtk::{Button, DrawingArea, Window, WindowType};
 use relm::{Relm, Update, Widget};
 use std::time::Duration;
 
-use gol::map::*;
+use gol::*;
 
 #[derive(Clone)]
 pub struct MyModel {

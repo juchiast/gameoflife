@@ -1,5 +1,6 @@
 #[macro_use]
 extern crate serde_derive;
-extern crate serde_json;
 
-pub mod map;
+mod map;
+
+pub use map::{pos, Map, Pos};

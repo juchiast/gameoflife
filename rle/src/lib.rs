@@ -86,7 +86,7 @@ impl Parser {
     }
 }
 
-pub fn read_file<P: AsRef<std::path::Path>>(p: P) -> Result<gol::map::Map, Error> {
+pub fn read_file<P: AsRef<std::path::Path>>(p: P) -> Result<gol::Map, Error> {
     let input = {
         use std::io::Read;
         let mut file = std::fs::File::open(p).map_err(Error::IO)?;
@@ -110,7 +110,7 @@ pub fn read_file<P: AsRef<std::path::Path>>(p: P) -> Result<gol::map::Map, Error
     let lives = p
         .lives
         .into_iter()
-        .map(|(x, y)| gol::map::pos(x as i32 - offset_x, y as i32 - offset_y))
+        .map(|(x, y)| gol::pos(x as i32 - offset_x, y as i32 - offset_y))
         .collect::<Vec<_>>();
-    Ok(gol::map::Map::from_alives_list(lives))
+    Ok(gol::Map::from_alives_list(lives))
 }

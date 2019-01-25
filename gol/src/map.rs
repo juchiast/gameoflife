@@ -12,17 +12,17 @@ pub struct Pos {
 }
 
 /// Return new position from `x` and `y`
-#[inline]
+#[inline(always)]
 pub fn pos(x: i32, y: i32) -> Pos {
     Pos { x: x, y: y }
 }
 
-pub struct Neighbors {
+struct Neighbors {
     origin: Pos,
     i: usize,
 }
 
-pub fn neighbors(origin: Pos) -> Neighbors {
+fn neighbors(origin: Pos) -> Neighbors {
     Neighbors {
         origin: origin,
         i: 0,
@@ -112,7 +112,7 @@ impl Map {
     }
 
     #[cfg(test)]
-    pub fn check(&self) {
+    fn check(&self) {
         for (pos, state) in &self.neighbors_state {
             let mut new = 0;
             for (nei, i) in neighbors(*pos) {
@@ -243,12 +243,12 @@ impl Map {
     }
 
     /// Check if a cell is alive or not
-    #[inline]
-    pub fn cell_is_alive(&self, pos: Pos) -> bool {
+    #[inline(always)]
+    fn cell_is_alive(&self, pos: Pos) -> bool {
         self.alive_cells.contains(&pos)
     }
 
-    #[inline]
+    #[inline(always)]
     fn eval_state(&self, state: u8) -> u8 {
         self.state_eval_table[state as usize]
     }
