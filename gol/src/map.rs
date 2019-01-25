@@ -34,16 +34,16 @@ impl Iterator for Neighbors {
         if self.i >= 8 {
             None
         } else {
+            let ii = self.i;
             self.i += 1;
-            let j = self.i - 1;
-            Some((pos(self.origin.x + DX[j], self.origin.y + DY[j]), j))
+            Some((pos(self.origin.x + DX[ii], self.origin.y + DY[ii]), ii))
         }
     }
 }
 
 pub struct Map {
     neighbors_state: BTreeMap<Pos, u8>,
-    pub alive_cells: BTreeSet<Pos>,
+    alive_cells: BTreeSet<Pos>,
     state_eval_table: [u8; 256],
 }
 
