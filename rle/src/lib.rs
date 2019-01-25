@@ -1,3 +1,5 @@
+use lazy_static::lazy_static;
+
 // Parse errors
 #[derive(Debug)]
 pub enum Error {

@@ -3,4 +3,5 @@
 members = [
     "relm-frontend",
     "gol",
+    "rle",
 ]

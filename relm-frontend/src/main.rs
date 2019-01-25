@@ -1,11 +1,8 @@
 #[macro_use]
-extern crate lazy_static;
-#[macro_use]
 extern crate relm;
 #[macro_use]
 extern crate relm_derive;
 
-mod rle;
 mod view;
 
 fn main() {

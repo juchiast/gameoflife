@@ -132,7 +132,7 @@ impl Update for Win {
                 }
                 if accept == dialog.run() {
                     if let Some(path) = dialog.get_filename() {
-                        self.model.map = crate::rle::read_file(path).unwrap();
+                        self.model.map = rle::read_file(path).unwrap();
                         self.model.center = pos(0, 0);
                     }
                 }
