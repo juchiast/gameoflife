@@ -1,6 +1,5 @@
+use hashbrown::{HashMap, HashSet};
 use lazy_static::lazy_static;
-use std::collections::BTreeMap;
-use std::collections::BTreeSet;
 
 const DX: [i32; 8] = [-1, 0, 1, -1, 1, -1, 0, 1];
 const DY: [i32; 8] = [-1, -1, -1, 0, 0, 1, 1, 1];
@@ -25,7 +24,7 @@ fn eval_state(state: u8) -> u8 {
     STATE_EVAL_TABLE[state as usize]
 }
 
-#[derive(Eq, Ord, PartialEq, PartialOrd, Clone, Copy)]
+#[derive(Eq, PartialEq, Clone, Copy, Hash)]
 pub struct Pos {
     pub x: i32,
     pub y: i32,
@@ -61,8 +60,8 @@ impl Iterator for Neighbors {
 
 #[derive(Clone, Default)]
 pub struct Map {
-    neighbors_state: BTreeMap<Pos, u8>,
-    alive_cells: BTreeSet<Pos>,
+    neighbors_state: HashMap<Pos, u8>,
+    alive_cells: HashSet<Pos>,
 }
 
 impl Map {
