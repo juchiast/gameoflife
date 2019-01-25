@@ -1,9 +1,7 @@
-use futures_glib::Interval;
 use gtk::prelude::*;
 use gtk::FileChooserDialog;
 use gtk::{Button, DrawingArea, Window, WindowType};
-use relm::{Relm, Update, Widget};
-use std::time::Duration;
+use relm::{DrawHandler, Relm, Update, Widget};
 
 use gol::*;
 
@@ -13,6 +11,7 @@ pub struct MyModel {
     center: Pos,
     scale: i32,
     mouse: Option<Pos>,
+    draw_handler: DrawHandler<DrawingArea>,
 }
 
 impl MyModel {
@@ -23,6 +22,7 @@ impl MyModel {
             center: pos(0, 0),
             scale: 2,
             mouse: None,
+            draw_handler: DrawHandler::new().unwrap(),
         }
     }
 }
@@ -31,20 +31,19 @@ impl MyModel {
 pub enum MyMsg {
     Motion(((f64, f64), gdk::ModifierType)),
     Open,
-    Tick(()),
+    Draw,
     Quit,
+    Next,
 }
 
 pub struct Win {
-    area: DrawingArea,
     window: Window,
     model: MyModel,
 }
 
 impl Win {
     fn draw(&mut self, cells: &[Pos], top_left: Pos) {
-        use gdk::prelude::ContextExt;
-        let cr = cairo::Context::create_from_window(&self.area.get_window().unwrap());
+        let cr = self.model.draw_handler.get_context();
         cr.set_source_rgb(1., 1., 1.);
         cr.paint();
         cr.scale(self.model.scale.into(), self.model.scale.into());
@@ -71,14 +70,15 @@ impl Update for Win {
     }
 
     fn subscriptions(&mut self, relm: &Relm<Self>) {
-        let stream = Interval::new(Duration::from_millis(30));
-        relm.connect_exec_ignore_err(stream, MyMsg::Tick);
+        relm::interval(relm.stream(), 1000 / 30, || MyMsg::Next);
     }
 
     fn update(&mut self, event: MyMsg) {
         match event {
-            MyMsg::Tick(()) => {
+            MyMsg::Next => {
                 self.model.map.next_generation();
+            }
+            MyMsg::Draw => {
                 let top_left = pos(
                     self.model.center.x - self.model.size.x / 2,
                     self.model.center.y - self.model.size.y / 2,
@@ -93,7 +93,7 @@ impl Update for Win {
                     gtk::FileChooserAction::Open,
                 );
                 let cancel = gtk::ResponseType::Cancel.into();
-                let accept= gtk::ResponseType::Accept.into();
+                let accept = gtk::ResponseType::Accept.into();
                 dialog.add_button("Cancel", cancel);
                 dialog.add_button("Open", accept);
                 if let Ok(p) = std::env::current_dir() {
@@ -144,19 +144,23 @@ impl Widget for Win {
         self.window.clone()
     }
 
-    fn view(relm: &Relm<Self>, model: MyModel) -> Self {
+    fn view(relm: &Relm<Self>, mut model: MyModel) -> Self {
         let window = Window::new(WindowType::Toplevel);
+
         let hbox = gtk::Box::new(gtk::Orientation::Horizontal, 0);
         let button_box = gtk::ButtonBox::new(gtk::Orientation::Vertical);
+
         let open_button = Button::new_with_label("Open");
         let save_button = Button::new_with_label("Save");
         save_button.set_sensitive(false);
+
         let area = DrawingArea::new();
         area.set_size_request(model.size.x * model.scale, model.size.y * model.scale);
-        area.set_events(area.get_events() | gdk::EventMask::POINTER_MOTION_MASK.bits() as i32);
-        area.set_events(area.get_events() | gdk::EventMask::BUTTON_PRESS_MASK.bits() as i32);
-        button_box.set_layout(gtk::ButtonBoxStyle::Start);
+        area.add_events(gdk::EventMask::POINTER_MOTION_MASK.bits() as i32);
+        area.add_events(gdk::EventMask::BUTTON_PRESS_MASK.bits() as i32);
+        model.draw_handler.init(&area);
 
+        button_box.set_layout(gtk::ButtonBoxStyle::Start);
         button_box.pack_start(&open_button, false, false, 0);
         button_box.pack_start(&save_button, false, false, 0);
         hbox.pack_start(&area, false, false, 0);
@@ -181,11 +185,13 @@ impl Widget for Win {
             )
         );
         connect!(relm, open_button, connect_clicked(_), MyMsg::Open);
-
-        Win {
+        connect!(
+            relm,
             area,
-            window,
-            model,
-        }
+            connect_draw(_, _),
+            return (MyMsg::Draw, Inhibit(false))
+        );
+
+        Win { window, model }
     }
 }
