@@ -1,8 +1,29 @@
+use lazy_static::lazy_static;
 use std::collections::BTreeMap;
 use std::collections::BTreeSet;
 
 const DX: [i32; 8] = [-1, 0, 1, -1, 1, -1, 0, 1];
 const DY: [i32; 8] = [-1, -1, -1, 0, 0, 1, 1, 1];
+
+lazy_static! {
+    static ref STATE_EVAL_TABLE: [u8; 256] = {
+        let mut result = [0; 256];
+        for (i, x) in result.iter_mut().enumerate() {
+            let count = usize::count_ones(i);
+            if count == 3 {
+                *x = 2;
+            } else if count == 2 {
+                *x = 1;
+            }
+        }
+        result
+    };
+}
+
+#[inline(always)]
+fn eval_state(state: u8) -> u8 {
+    STATE_EVAL_TABLE[state as usize]
+}
 
 #[derive(Eq, Ord, PartialEq, PartialOrd, Clone, Copy)]
 pub struct Pos {
@@ -41,13 +62,22 @@ impl Iterator for Neighbors {
     }
 }
 
+#[derive(Default, Clone)]
 pub struct Map {
     neighbors_state: BTreeMap<Pos, u8>,
     alive_cells: BTreeSet<Pos>,
-    state_eval_table: [u8; 256],
 }
 
 impl Map {
+    /// Return a new map from list of alive cells
+    pub fn from_alives_list(list: Vec<Pos>) -> Map {
+        let mut result = Map::default();
+        for pos in list {
+            result.set_cell_alive(pos);
+        }
+        result
+    }
+
     /// Acorn methuselah
     pub fn acorn() -> Map {
         let list = vec![
@@ -82,53 +112,6 @@ impl Map {
         Map::from_alives_list(list)
     }
 
-    #[cfg(test)]
-    fn check(&self) {
-        for (pos, state) in &self.neighbors_state {
-            let mut new = 0;
-            for (nei, i) in neighbors(*pos) {
-                if self.cell_is_alive(nei) {
-                    new |= 1 << i;
-                }
-            }
-            assert_eq!(new, *state);
-        }
-
-        for pos in &self.alive_cells {
-            for (pos, _) in neighbors(*pos) {
-                let state = self.neighbors_state[&pos];
-                let mut new = 0;
-                for (nei, i) in neighbors(pos) {
-                    if self.cell_is_alive(nei) {
-                        new |= 1 << i;
-                    }
-                }
-                assert_eq!(new, state);
-            }
-        }
-    }
-
-    pub fn count_alive_cells(&self) -> usize {
-        self.alive_cells.len()
-    }
-
-    /// Return a new empty map
-    pub fn new() -> Map {
-        Map {
-            neighbors_state: BTreeMap::new(),
-            alive_cells: BTreeSet::new(),
-            state_eval_table: new_state_eval_table(),
-        }
-    }
-
-    /// Return a new map from list of alive cells
-    pub fn from_alives_list(list: Vec<Pos>) -> Map {
-        let mut result = Map::new();
-        for pos in list {
-            result.set_cell_alive(pos);
-        }
-        result
-    }
 
     /// Generate next generation
     pub fn next_generation(&mut self) {
@@ -136,7 +119,7 @@ impl Map {
             .neighbors_state
             .iter()
             .filter_map(|(pos, state)| {
-                if self.eval_state(*state) == 2 {
+                if eval_state(*state) == 2 {
                     Some(*pos)
                 } else {
                     None
@@ -147,7 +130,7 @@ impl Map {
             .neighbors_state
             .iter()
             .filter_map(|(pos, state)| {
-                if self.eval_state(*state) == 0 {
+                if eval_state(*state) == 0 {
                     Some(*pos)
                 } else {
                     None
@@ -219,33 +202,36 @@ impl Map {
         self.alive_cells.contains(&pos)
     }
 
-    #[inline(always)]
-    fn eval_state(&self, state: u8) -> u8 {
-        self.state_eval_table[state as usize]
+    #[cfg(test)]
+    fn count_alive_cells(&self) -> usize {
+        self.alive_cells.len()
     }
-}
 
-impl Clone for Map {
-    fn clone(&self) -> Map {
-        Map {
-            neighbors_state: self.neighbors_state.clone(),
-            alive_cells: self.alive_cells.clone(),
-            state_eval_table: self.state_eval_table,
+    #[cfg(test)]
+    fn check(&self) {
+        for (pos, state) in &self.neighbors_state {
+            let mut new = 0;
+            for (nei, i) in neighbors(*pos) {
+                if self.cell_is_alive(nei) {
+                    new |= 1 << i;
+                }
+            }
+            assert_eq!(new, *state);
+        }
+
+        for pos in &self.alive_cells {
+            for (pos, _) in neighbors(*pos) {
+                let state = self.neighbors_state[&pos];
+                let mut new = 0;
+                for (nei, i) in neighbors(pos) {
+                    if self.cell_is_alive(nei) {
+                        new |= 1 << i;
+                    }
+                }
+                assert_eq!(new, state);
+            }
         }
     }
-}
-
-fn new_state_eval_table() -> [u8; 256] {
-    let mut result = [0; 256];
-    for (i, x) in result.iter_mut().enumerate() {
-        let count = usize::count_ones(i);
-        if count == 3 {
-            *x = 2;
-        } else if count == 2 {
-            *x = 1;
-        }
-    }
-    result
 }
 
 #[cfg(test)]
@@ -254,16 +240,14 @@ mod test {
     #[ignore]
     fn test_with_acorn() {
         let mut map = super::Map::acorn();
-        let mut i = 0;
         let mut max_population = 0;
         let mut max_generation = 0;
-        while i <= 6000 {
+        for i in 0..6000 {
             assert!(i < 5206 || map.count_alive_cells() == 633);
             if map.count_alive_cells() > max_population {
                 max_population = map.count_alive_cells();
                 max_generation = i;
             }
-            i += 1;
             map.next_generation();
             map.check();
         }
