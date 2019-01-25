@@ -92,8 +92,8 @@ impl Update for Win {
                     Some(&self.window),
                     gtk::FileChooserAction::Open,
                 );
-                let cancel: i32 = gtk::ResponseType::Cancel.into();
-                let accept: i32 = gtk::ResponseType::Accept.into();
+                let cancel = gtk::ResponseType::Cancel.into();
+                let accept= gtk::ResponseType::Accept.into();
                 dialog.add_button("Cancel", cancel);
                 dialog.add_button("Open", accept);
                 if let Ok(p) = std::env::current_dir() {
@@ -112,8 +112,7 @@ impl Update for Win {
             MyMsg::Motion(((x, y), t)) => {
                 let p = pos(x as i32, y as i32);
                 if (t & gdk::ModifierType::BUTTON1_MASK).bits() != 0 {
-                    if self.model.mouse != None {
-                        let mut old_pos = self.model.mouse.unwrap();
+                    if let Some(mut old_pos) = self.model.mouse {
                         let new_center = pos(
                             self.model.center.x + (old_pos.x - p.x) / self.model.scale,
                             self.model.center.y + (old_pos.y - p.y) / self.model.scale,
