@@ -59,7 +59,7 @@ impl Iterator for Neighbors {
     }
 }
 
-#[derive(Default)]
+#[derive(Clone, Default)]
 pub struct Map {
     neighbors_state: BTreeMap<Pos, u8>,
     alive_cells: BTreeSet<Pos>,
