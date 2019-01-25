@@ -7,7 +7,6 @@ use std::time::Duration;
 
 use gol::*;
 
-#[derive(Clone)]
 pub struct MyModel {
     map: Map,
     size: Pos,
@@ -15,6 +14,7 @@ pub struct MyModel {
     scale: i32,
     mouse: Option<Pos>,
 }
+
 impl MyModel {
     fn new() -> Self {
         MyModel {
@@ -35,12 +35,7 @@ pub enum MyMsg {
     Quit,
 }
 
-#[derive(Clone)]
 pub struct Win {
-    hbox: gtk::Box,
-    button_box: gtk::ButtonBox,
-    open_button: Button,
-    save_button: Button,
     area: DrawingArea,
     window: Window,
     model: MyModel,
@@ -81,9 +76,8 @@ impl Update for Win {
     }
 
     fn update(&mut self, event: MyMsg) {
-        use self::MyMsg::*;
         match event {
-            Tick(()) => {
+            MyMsg::Tick(()) => {
                 self.model.map.next_generation();
                 let top_left = pos(
                     self.model.center.x - self.model.size.x / 2,
@@ -92,7 +86,7 @@ impl Update for Win {
                 let cells = self.model.map.get_alive_cells_in(top_left, self.model.size);
                 self.draw(&cells, top_left);
             }
-            Open => {
+            MyMsg::Open => {
                 let dialog = FileChooserDialog::new(
                     Some("Open File"),
                     Some(&self.window),
@@ -115,7 +109,7 @@ impl Update for Win {
                 }
                 dialog.close();
             }
-            Motion(((x, y), t)) => {
+            MyMsg::Motion(((x, y), t)) => {
                 let p = pos(x as i32, y as i32);
                 if (t & gdk::ModifierType::BUTTON1_MASK).bits() != 0 {
                     if self.model.mouse != None {
@@ -139,7 +133,7 @@ impl Update for Win {
                     self.model.mouse = None;
                 }
             }
-            Quit => gtk::main_quit(),
+            MyMsg::Quit => gtk::main_quit(),
         }
     }
 }
@@ -172,29 +166,24 @@ impl Widget for Win {
         window.set_title("Game of Life");
         window.show_all();
 
-        use self::MyMsg::*;
         connect!(
             relm,
             window,
             connect_delete_event(_, _),
-            return (Some(Quit), Inhibit(false))
+            return (Some(MyMsg::Quit), Inhibit(false))
         );
         connect!(
             relm,
             area,
             connect_motion_notify_event(_, ev),
             return (
-                Some(Motion((ev.get_position(), ev.get_state()))),
+                Some(MyMsg::Motion((ev.get_position(), ev.get_state()))),
                 Inhibit(false)
             )
         );
-        connect!(relm, open_button, connect_clicked(_), Open);
+        connect!(relm, open_button, connect_clicked(_), MyMsg::Open);
 
         Win {
-            hbox,
-            button_box,
-            open_button,
-            save_button,
             area,
             window,
             model,
