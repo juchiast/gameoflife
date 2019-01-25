@@ -31,7 +31,6 @@ impl MyModel {
 pub enum MyMsg {
     Motion(((f64, f64), gdk::ModifierType)),
     Open,
-    Draw,
     Quit,
     Next,
 }
@@ -77,8 +76,6 @@ impl Update for Win {
         match event {
             MyMsg::Next => {
                 self.model.map.next_generation();
-            }
-            MyMsg::Draw => {
                 let top_left = pos(
                     self.model.center.x - self.model.size.x / 2,
                     self.model.center.y - self.model.size.y / 2,
@@ -185,12 +182,6 @@ impl Widget for Win {
             )
         );
         connect!(relm, open_button, connect_clicked(_), MyMsg::Open);
-        connect!(
-            relm,
-            area,
-            connect_draw(_, _),
-            return (MyMsg::Draw, Inhibit(false))
-        );
 
         Win { window, model }
     }
