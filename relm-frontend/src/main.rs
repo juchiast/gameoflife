@@ -12,9 +12,10 @@ extern crate relm_derive;
 #[macro_use]
 extern crate serde_derive;
 extern crate serde_json;
+extern crate gol;
 
+pub use gol::map;
 mod life_reader;
-mod map;
 mod view;
 
 fn main() {

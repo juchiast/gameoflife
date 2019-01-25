@@ -1,0 +1,10 @@
+[package]
+name = "gol"
+version = "0.1.0"
+authors = ["Do Duy <juchiast@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+serde = "1"
+serde_derive = "1"
+serde_json = "1"
