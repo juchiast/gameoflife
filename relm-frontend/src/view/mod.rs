@@ -1,10 +1,10 @@
-use ::*;
-use relm::{Relm, Update, Widget};
-use gtk::prelude::*;
-use gtk::{Button, DrawingArea, Window, WindowType};
-use gtk::FileChooserDialog;
-use std::time::Duration;
 use futures_glib::Interval;
+use gtk::prelude::*;
+use gtk::FileChooserDialog;
+use gtk::{Button, DrawingArea, Window, WindowType};
+use relm::{Relm, Update, Widget};
+use std::time::Duration;
+use *;
 
 use map::*;
 

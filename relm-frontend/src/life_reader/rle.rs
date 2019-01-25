@@ -1,10 +1,10 @@
-use std;
-use std::io;
-use std::path::Path;
-use std::fs::File;
 use map;
 use map::Map;
 use regex::Regex;
+use std;
+use std::fs::File;
+use std::io;
+use std::path::Path;
 
 // Parse errors
 #[derive(Debug)]
@@ -103,7 +103,7 @@ pub fn read_file<P: AsRef<Path>>(p: P) -> Result<Map, Error> {
     let mut lines = input.lines();
 
     let (m, n) = parse_header(&mut lines)?;
-    let (offset_x, offset_y) = (m/2, n/2);
+    let (offset_x, offset_y) = (m / 2, n / 2);
 
     let mut p = Parser::new();
     for line in lines {
@@ -113,7 +113,8 @@ pub fn read_file<P: AsRef<Path>>(p: P) -> Result<Map, Error> {
         }
     }
 
-    let lives = p.lives
+    let lives = p
+        .lives
         .into_iter()
         .map(|(x, y)| map::pos(x as i32 - offset_x, y as i32 - offset_y))
         .collect::<Vec<_>>();

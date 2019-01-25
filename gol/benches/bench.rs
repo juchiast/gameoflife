@@ -1,10 +1,10 @@
 #![feature(test)]
 
-extern crate test;
 extern crate gol;
+extern crate test;
 
-use test::Bencher;
 use gol::map;
+use test::Bencher;
 
 #[bench]
 fn benchmark_with_acorn(b: &mut Bencher) {

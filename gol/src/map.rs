@@ -84,8 +84,8 @@ impl Map {
     }
     pub fn save<P: AsRef<Path>>(&self, path: P) -> std::io::Result<()> {
         use std::fs;
-        use std::io::Write;
         use std::io::BufWriter;
+        use std::io::Write;
         let file = fs::File::create(path)?;
         let mut writer = BufWriter::new(file);
         for x in &self.alive_cells {
@@ -161,7 +161,8 @@ impl Map {
 
     /// Generate next generation
     pub fn next_generation(&mut self) {
-        let new_alive = self.neighbors_state
+        let new_alive = self
+            .neighbors_state
             .iter()
             .filter_map(|(pos, state)| {
                 if self.eval_state(*state) == 2 {
@@ -171,7 +172,8 @@ impl Map {
                 }
             })
             .collect::<Vec<_>>();
-        let new_dead = self.neighbors_state
+        let new_dead = self
+            .neighbors_state
             .iter()
             .filter_map(|(pos, state)| {
                 if self.eval_state(*state) == 0 {
@@ -197,7 +199,9 @@ impl Map {
         self.alive_cells
             .iter()
             .filter(|&pos| {
-                top_left.x <= pos.x && pos.x <= bottom_right.x && top_left.y <= pos.y
+                top_left.x <= pos.x
+                    && pos.x <= bottom_right.x
+                    && top_left.y <= pos.y
                     && pos.y <= bottom_right.y
             })
             .cloned()

@@ -11,8 +11,8 @@ extern crate relm;
 extern crate relm_derive;
 #[macro_use]
 extern crate serde_derive;
-extern crate serde_json;
 extern crate gol;
+extern crate serde_json;
 
 pub use gol::map;
 mod life_reader;
