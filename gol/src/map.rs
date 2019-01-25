@@ -43,10 +43,7 @@ struct Neighbors {
 }
 
 fn neighbors(origin: Pos) -> Neighbors {
-    Neighbors {
-        origin,
-        i: 0,
-    }
+    Neighbors { origin, i: 0 }
 }
 
 impl Iterator for Neighbors {
