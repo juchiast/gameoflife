@@ -4,9 +4,8 @@ use gtk::FileChooserDialog;
 use gtk::{Button, DrawingArea, Window, WindowType};
 use relm::{Relm, Update, Widget};
 use std::time::Duration;
-use *;
 
-use map::*;
+use gol::map::*;
 
 #[derive(Clone)]
 pub struct MyModel {
@@ -133,7 +132,7 @@ impl Update for Win {
                 }
                 if accept == dialog.run() {
                     if let Some(path) = dialog.get_filename() {
-                        self.model.map = life_reader::rle::read_file(path).unwrap();
+                        self.model.map = crate::rle::read_file(path).unwrap();
                         self.model.center = pos(0, 0);
                     }
                 }

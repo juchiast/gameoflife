@@ -2,6 +2,7 @@
 name = "relm-frontend"
 version = "0.1.0"
 authors = ["Do Duy <doduycm@gmail.com>"]
+edition = "2018"
 
 [dependencies]
 relm = "0.11"

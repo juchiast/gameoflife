@@ -1,15 +1,7 @@
-use map;
-use map::Map;
-use regex::Regex;
-use std;
-use std::fs::File;
-use std::io;
-use std::path::Path;
-
 // Parse errors
 #[derive(Debug)]
 pub enum Error {
-    IO(io::Error),
+    IO(std::io::Error),
     Invalid(String),
     IntParse(std::num::ParseIntError),
     NoHeader,
@@ -22,7 +14,7 @@ where
 {
     lazy_static! {
         // regex to match "x = m, y = n", ignore "rule = ..."
-        static ref HEADER: Regex = Regex::new(r"^\s*x\s*=\s*(\d+)\s*,\s*y\s*=\s*(\d+)").unwrap();
+        static ref HEADER: regex::Regex = regex::Regex::new(r"^\s*x\s*=\s*(\d+)\s*,\s*y\s*=\s*(\d+)").unwrap();
     }
 
     for line in lines {
@@ -92,10 +84,10 @@ impl Parser {
     }
 }
 
-pub fn read_file<P: AsRef<Path>>(p: P) -> Result<Map, Error> {
+pub fn read_file<P: AsRef<std::path::Path>>(p: P) -> Result<gol::map::Map, Error> {
     let input = {
         use std::io::Read;
-        let mut file = File::open(p).map_err(Error::IO)?;
+        let mut file = std::fs::File::open(p).map_err(Error::IO)?;
         let mut s = String::new();
         file.read_to_string(&mut s).map_err(Error::IO)?;
         s
@@ -116,7 +108,7 @@ pub fn read_file<P: AsRef<Path>>(p: P) -> Result<Map, Error> {
     let lives = p
         .lives
         .into_iter()
-        .map(|(x, y)| map::pos(x as i32 - offset_x, y as i32 - offset_y))
+        .map(|(x, y)| gol::map::pos(x as i32 - offset_x, y as i32 - offset_y))
         .collect::<Vec<_>>();
-    Ok(Map::from_alives_list(lives))
+    Ok(gol::map::Map::from_alives_list(lives))
 }
