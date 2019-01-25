@@ -36,10 +36,10 @@ where
 }
 
 struct Parser {
-    pub x: usize,
-    pub y: usize,
-    pub stop: bool,
-    pub lives: Vec<(usize, usize)>,
+    x: usize,
+    y: usize,
+    stop: bool,
+    lives: Vec<(usize, usize)>,
 }
 
 impl Parser {
@@ -87,17 +87,10 @@ impl Parser {
 }
 
 pub fn read_file<P: AsRef<std::path::Path>>(p: P) -> Result<gol::Map, Error> {
-    let input = {
-        use std::io::Read;
-        let mut file = std::fs::File::open(p).map_err(Error::IO)?;
-        let mut s = String::new();
-        file.read_to_string(&mut s).map_err(Error::IO)?;
-        s
-    };
+    let input = std::fs::read_to_string(p).map_err(Error::IO)?;
     let mut lines = input.lines();
 
     let (m, n) = parse_header(&mut lines)?;
-    let (offset_x, offset_y) = (m / 2, n / 2);
 
     let mut p = Parser::new();
     for line in lines {
@@ -107,10 +100,12 @@ pub fn read_file<P: AsRef<std::path::Path>>(p: P) -> Result<gol::Map, Error> {
         }
     }
 
+    let offset_x = m / 2;
+    let offset_y = n / 2;
     let lives = p
         .lives
         .into_iter()
         .map(|(x, y)| gol::pos(x as i32 - offset_x, y as i32 - offset_y))
-        .collect::<Vec<_>>();
+        .collect();
     Ok(gol::Map::from_alives_list(lives))
 }
