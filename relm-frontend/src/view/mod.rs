@@ -106,7 +106,7 @@ impl Update for Win {
                 dialog.add_button("Save", accept);
                 if let Ok(p) = std::env::current_dir() {
                     dialog.set_current_folder(p);
-                } else if let Some(p) = std::env::home_dir() {
+                } else if let Some(p) = dirs::home_dir() {
                     dialog.set_current_folder(p);
                 }
                 if accept == dialog.run() {
@@ -128,7 +128,7 @@ impl Update for Win {
                 dialog.add_button("Open", accept);
                 if let Ok(p) = std::env::current_dir() {
                     dialog.set_current_folder(p);
-                } else if let Some(p) = std::env::home_dir() {
+                } else if let Some(p) = dirs::home_dir() {
                     dialog.set_current_folder(p);
                 }
                 if accept == dialog.run() {

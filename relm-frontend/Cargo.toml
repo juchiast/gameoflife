@@ -16,6 +16,7 @@ futures-glib = "0.3"
 regex = "0.2"
 lazy_static = "1.0"
 gol = { path = "../gol" }
+dirs = "1"
 
 [dependencies.gtk]
 version = "0.3"

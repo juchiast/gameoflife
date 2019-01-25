@@ -9,7 +9,6 @@ extern crate regex;
 extern crate relm;
 #[macro_use]
 extern crate relm_derive;
-#[macro_use]
 extern crate serde_derive;
 extern crate gol;
 extern crate serde_json;
@@ -19,7 +18,6 @@ mod life_reader;
 mod view;
 
 fn main() {
-    let a = 1;
     std::env::set_var("GDK_BACKEND", "x11");
     relm::run::<view::Win>(()).unwrap();
 }
