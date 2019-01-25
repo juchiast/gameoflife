@@ -47,7 +47,7 @@ pub struct Win {
 }
 
 impl Win {
-    fn draw(&mut self, cells: &[Pos], top_left: &Pos) {
+    fn draw(&mut self, cells: &[Pos], top_left: Pos) {
         use gdk::prelude::ContextExt;
         let cr = cairo::Context::create_from_window(&self.area.get_window().unwrap());
         cr.set_source_rgb(1., 1., 1.);
@@ -90,7 +90,7 @@ impl Update for Win {
                     self.model.center.y - self.model.size.y / 2,
                 );
                 let cells = self.model.map.get_alive_cells_in(top_left, self.model.size);
-                self.draw(&cells, &top_left);
+                self.draw(&cells, top_left);
             }
             Open => {
                 let dialog = FileChooserDialog::new(
@@ -191,13 +191,13 @@ impl Widget for Win {
         connect!(relm, open_button, connect_clicked(_), Open);
 
         Win {
-            hbox: hbox,
-            button_box: button_box,
-            open_button: open_button,
-            save_button: save_button,
-            area: area,
-            window: window,
-            model: model,
+            hbox,
+            button_box,
+            open_button,
+            save_button,
+            area,
+            window,
+            model,
         }
     }
 }

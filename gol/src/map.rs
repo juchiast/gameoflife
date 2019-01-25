@@ -34,7 +34,7 @@ pub struct Pos {
 /// Return new position from `x` and `y`
 #[inline(always)]
 pub fn pos(x: i32, y: i32) -> Pos {
-    Pos { x: x, y: y }
+    Pos { x, y }
 }
 
 struct Neighbors {
@@ -44,7 +44,7 @@ struct Neighbors {
 
 fn neighbors(origin: Pos) -> Neighbors {
     Neighbors {
-        origin: origin,
+        origin,
         i: 0,
     }
 }
@@ -111,7 +111,6 @@ impl Map {
         ];
         Map::from_alives_list(list)
     }
-
 
     /// Generate next generation
     pub fn next_generation(&mut self) {
