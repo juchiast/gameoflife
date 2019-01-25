@@ -1,11 +1,10 @@
 use std::collections::BTreeMap;
 use std::collections::BTreeSet;
-use std::path::Path;
 
 const DX: [i32; 8] = [-1, 0, 1, -1, 1, -1, 0, 1];
 const DY: [i32; 8] = [-1, -1, -1, 0, 0, 1, 1, 1];
 
-#[derive(Eq, Ord, PartialEq, PartialOrd, Clone, Copy, Deserialize, Serialize)]
+#[derive(Eq, Ord, PartialEq, PartialOrd, Clone, Copy)]
 pub struct Pos {
     pub x: i32,
     pub y: i32,
@@ -81,34 +80,6 @@ impl Map {
             pos(9, 5),
         ];
         Map::from_alives_list(list)
-    }
-    pub fn save<P: AsRef<Path>>(&self, path: P) -> std::io::Result<()> {
-        use std::fs;
-        use std::io::BufWriter;
-        use std::io::Write;
-        let file = fs::File::create(path)?;
-        let mut writer = BufWriter::new(file);
-        for x in &self.alive_cells {
-            if let Ok(mut s) = serde_json::to_string(x) {
-                s.push('\n');
-                writer.write_all(s.as_bytes())?;
-            }
-        }
-        Ok(())
-    }
-    pub fn open<P: AsRef<Path>>(path: P) -> std::io::Result<Map> {
-        use std::fs;
-        use std::io::Read;
-        let mut contents = String::new();
-        let mut file = fs::File::open(path)?;
-        file.read_to_string(&mut contents)?;
-        let mut map = Map::new();
-        for line in contents.lines() {
-            if let Ok(pos) = serde_json::from_str::<Pos>(line) {
-                map.set_cell_alive(pos);
-            }
-        }
-        Ok(map)
     }
 
     #[cfg(test)]

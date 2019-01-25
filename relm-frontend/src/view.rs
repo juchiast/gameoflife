@@ -30,7 +30,6 @@ impl MyModel {
 #[derive(Msg)]
 pub enum MyMsg {
     Motion(((f64, f64), gdk::ModifierType)),
-    Save,
     Open,
     Tick(()),
     Quit,
@@ -92,28 +91,6 @@ impl Update for Win {
                 );
                 let cells = self.model.map.get_alive_cells_in(top_left, self.model.size);
                 self.draw(&cells, &top_left);
-            }
-            Save => {
-                let dialog = FileChooserDialog::new(
-                    Some("Save File"),
-                    Some(&self.window),
-                    gtk::FileChooserAction::Save,
-                );
-                let cancel: i32 = gtk::ResponseType::Cancel.into();
-                let accept: i32 = gtk::ResponseType::Accept.into();
-                dialog.add_button("Cancel", cancel);
-                dialog.add_button("Save", accept);
-                if let Ok(p) = std::env::current_dir() {
-                    dialog.set_current_folder(p);
-                } else if let Some(p) = dirs::home_dir() {
-                    dialog.set_current_folder(p);
-                }
-                if accept == dialog.run() {
-                    if let Some(path) = dialog.get_filename() {
-                        self.model.map.save(path).unwrap();
-                    }
-                }
-                dialog.close();
             }
             Open => {
                 let dialog = FileChooserDialog::new(
@@ -180,6 +157,7 @@ impl Widget for Win {
         let button_box = gtk::ButtonBox::new(gtk::Orientation::Vertical);
         let open_button = Button::new_with_label("Open");
         let save_button = Button::new_with_label("Save");
+        save_button.set_sensitive(false);
         let area = DrawingArea::new();
         area.set_size_request(model.size.x * model.scale, model.size.y * model.scale);
         area.set_events(area.get_events() | gdk::EventMask::POINTER_MOTION_MASK.bits() as i32);
@@ -210,7 +188,6 @@ impl Widget for Win {
                 Inhibit(false)
             )
         );
-        connect!(relm, save_button, connect_clicked(_), Save);
         connect!(relm, open_button, connect_clicked(_), Open);
 
         Win {
