@@ -1,9 +1,6 @@
 use hashbrown::{HashMap, HashSet};
 use lazy_static::lazy_static;
 
-const DX: [i32; 8] = [-1, 0, 1, -1, 1, -1, 0, 1];
-const DY: [i32; 8] = [-1, -1, -1, 0, 0, 1, 1, 1];
-
 lazy_static! {
     static ref STATE_EVAL_TABLE: [u8; 256] = {
         let mut result = [0; 256];
@@ -48,6 +45,8 @@ fn neighbors(origin: Pos) -> Neighbors {
 impl Iterator for Neighbors {
     type Item = (Pos, usize);
     fn next(&mut self) -> Option<Self::Item> {
+        static DX: [i32; 8] = [-1, 0, 1, -1, 1, -1, 0, 1];
+        static DY: [i32; 8] = [-1, -1, -1, 0, 0, 1, 1, 1];
         if self.i >= 8 {
             None
         } else {
@@ -110,28 +109,15 @@ impl Map {
 
     /// Generate next generation
     pub fn next_generation(&mut self) {
-        let new_alive = self
-            .neighbors_state
-            .iter()
-            .filter_map(|(pos, state)| {
-                if eval_state(*state) == 2 {
-                    Some(*pos)
-                } else {
-                    None
-                }
-            })
-            .collect::<Vec<_>>();
-        let new_dead = self
-            .neighbors_state
-            .iter()
-            .filter_map(|(pos, state)| {
-                if eval_state(*state) == 0 {
-                    Some(*pos)
-                } else {
-                    None
-                }
-            })
-            .collect::<Vec<_>>();
+        let mut new_alive = Vec::new();
+        let mut new_dead = Vec::new();
+        for (&pos, &state) in &self.neighbors_state {
+            match eval_state(state) {
+                0 => new_dead.push(pos),
+                2 => new_alive.push(pos),
+                _ => {}
+            }
+        }
 
         for pos in new_alive {
             self.set_cell_alive(pos);
