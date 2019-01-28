@@ -88,6 +88,10 @@ impl Parser {
 
 pub fn read_file<P: AsRef<std::path::Path>>(p: P) -> Result<gol::Map, Error> {
     let input = std::fs::read_to_string(p).map_err(Error::IO)?;
+    read_str(&input)
+}
+
+pub fn read_str(input: &str) -> Result<gol::Map, Error> {
     let mut lines = input.lines();
 
     let (m, n) = parse_header(&mut lines)?;
