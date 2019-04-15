@@ -218,7 +218,6 @@ impl Map {
 #[cfg(test)]
 mod test {
     #[test]
-    #[ignore]
     fn test_with_acorn() {
         let mut map = super::Map::acorn();
         let mut max_population = 0;
