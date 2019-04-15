@@ -94,8 +94,8 @@ impl relm::Update for Win {
                     Some(&self.window),
                     gtk::FileChooserAction::Open,
                 );
-                let cancel = gtk::ResponseType::Cancel.into();
-                let accept = gtk::ResponseType::Accept.into();
+                let cancel = gtk::ResponseType::Cancel;
+                let accept = gtk::ResponseType::Accept;
                 dialog.add_button("Cancel", cancel);
                 dialog.add_button("Open", accept);
                 if let Ok(p) = std::env::current_dir() {
@@ -103,7 +103,7 @@ impl relm::Update for Win {
                 } else if let Some(p) = dirs::home_dir() {
                     dialog.set_current_folder(p);
                 }
-                if accept == dialog.run() {
+                if accept == dialog.run().into() {
                     if let Some(path) = dialog.get_filename() {
                         self.model.map = rle::read_file(path).unwrap();
                         self.model.center = pos(0, 0);
@@ -158,8 +158,8 @@ impl relm::Widget for Win {
 
         let area = DrawingArea::new();
         area.set_size_request(model.size.x * model.scale, model.size.y * model.scale);
-        area.add_events(gdk::EventMask::POINTER_MOTION_MASK.bits() as i32);
-        area.add_events(gdk::EventMask::BUTTON_PRESS_MASK.bits() as i32);
+        area.add_events(gdk::EventMask::POINTER_MOTION_MASK);
+        area.add_events(gdk::EventMask::BUTTON_PRESS_MASK);
         model.draw_handler.init(&area);
 
         button_box.set_layout(gtk::ButtonBoxStyle::Start);

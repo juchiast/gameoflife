@@ -5,14 +5,14 @@ authors = ["Do Duy <doduycm@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-relm = "0.15"
-relm-derive = "0.15"
-cairo-rs = "0.5"
-gdk = "0.9"
+relm = "0.16"
+relm-derive = "0.16"
+cairo-rs = "0.6"
+gdk = "0.10"
 gol = { path = "../gol" }
 rle = { path = "../rle" }
 dirs = "1"
 
 [dependencies.gtk]
-version = "0.5"
-features = ["v3_10"]
+version = "0.6"
+features = ["v3_16"]
