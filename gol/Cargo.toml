@@ -6,7 +6,7 @@ edition = "2018"
 
 [dependencies]
 lazy_static = "1"
-hashbrown = "0.2"
+hashbrown = "0.6"
 
 [dev-dependencies]
 rle = { path = "../rle" }
